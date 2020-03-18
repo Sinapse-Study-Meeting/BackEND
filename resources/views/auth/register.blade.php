@@ -26,7 +26,7 @@
 
 <body>
    @include('layouts.navbar')
-   
+
    <main>
       <section class="register-section">
          <div class="register-section__item">
@@ -51,17 +51,28 @@
                   <label for="estado">Estados</label>
                     <select class="form-control" id="estado" name="state" class="@error('state') is-invalid @enderror" required>
                       <option disabled selected>Selecione</option>
-                     
+
                     </select>
+                    @error('state')
+                    <span class="invalid-feedback" role="alert" style="display: block;">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+
                   </div>
-                  <div class="form-group"> 
+                  <div class="form-group">
                     <label for="cidade">Cidades</label>
                       <select class="form-control" id="cidade"  name="city" class="@error('city') is-invalid @enderror" required>
                         <option disabled selected>Selecione o estado primeiro</option>
-                       
+
                       </select>
+                      @error('city')
+                    <span class="invalid-feedback" role="alert" style="display: block;">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
                     </div>
-           
+
                 <div class="input-field">
                     <input type="text" id="email" name="email" class="@error('email') is-invalid @enderror" value="{{ old('email') }}" required autocomplete="email" >
                     <label for="email">E-mail</label>
@@ -89,12 +100,12 @@
                      </span>
                   @enderror
               </div>
-                
+
                <div class="bt">
                   <input type="submit" class="button-proximo" value="PRÓXIMO">
                </div>
             </form>
-            
+
          </div>
          <div class="register-section__item">
             <img class="estudos" src="{{  asset('img/estudos.png') }}">
