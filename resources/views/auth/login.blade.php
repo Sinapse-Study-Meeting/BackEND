@@ -59,6 +59,9 @@
                         <strong>{{ $message }}</strong>
                      </span>
                   @enderror
+
+                    <a href="{{ route('password.request') }}" name="" id="">Esqueci a senha</a>
+
                </div>
                <br>
                <div class="form-group row">
