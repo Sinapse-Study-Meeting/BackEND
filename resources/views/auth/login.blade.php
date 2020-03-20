@@ -20,7 +20,7 @@
    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 
-   <link rel="stylesheet" href="{{ asset('css/cadastro.min.css') }}">
+   <link rel="stylesheet" href="{{ asset('css/base.min.css') }}">
 
 </head>
 
@@ -51,7 +51,7 @@
                   <br>
                </div>
 
-               <div class="input-field">
+               {{-- <div class="input-field">
                   <input type="password" id="senha" name="password" class="@error('password') is-invalid @enderror" required="required">
                   <label for="senha">Senha</label>
                   @error('password')
@@ -78,9 +78,32 @@
              <input class="submit-entrar" type="submit" value="ENTRAR">
 
             </form>
-         </div>
+         </div> --}}
+
+         <div class="input-field">
+            <input type="password" class="senha" id="senha" name="senha" required="required">
+            <label for="senha">Senha</label>
+         <div class="mostrarsenha" onclick="mostrarSenha()"><img src="{{ asset('img/bxs-show.svg') }}" alt="Mostrar senha"></div>
+            @error('password')
+            <span class="invalid-feedback" role="alert" style="display: block;">
+               <strong>{{ $message }}</strong>
+            </span>
+         @enderror
+
+        </div>
+        <input type="checkbox" id="lembredemim" name="remember">
+        <label for="checkbox"> Lembre-se de mim </label>
+        <input class="submit-entrar " type="submit" value="ENTRAR">
+
+        <div class="top">
+            <a href="{{ route('password.request') }}" class="negrito link right">Esqueceu senha?</a>
+        <a href="{{ route('register') }}" class="negrito link position-left">Cadastre-se</a>
+        </div>
+    </form>
+</div>
+
          <div class="register-section__item">
-            <img class="coruja" src="{{  asset('img/estudos.png') }}">
+            <img class="coruja" src="{{  asset('img/coruja-prof.png') }}">
          </div>
       </section>
 
@@ -89,6 +112,7 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
    <script src="{{asset('js/bootstrap.min.js')}}"></script>
       <script src="{{asset('js/navbar.js') }}"></script>
+      <script src="{{asset('js/mostrarsenha.js') }}"></script>
 </body>
 
 </html>

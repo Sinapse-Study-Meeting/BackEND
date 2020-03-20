@@ -1,0 +1,177 @@
+.register-section,
+.creategroup-section {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 3em 20px 0 20px;
+    padding: 0 calc((100% - 1200px)/2);
+}
+
+.register-section__item,
+.creategroup-section__item {
+    flex: 1 1 0;
+}
+
+.welcome-info,
+.welcome-sub-info,
+.creategroup-info {
+    flex: 1 1 0;
+}
+
+.welcome-info,
+.welcome-sub-info {
+    text-align: center;
+    color: #0b0b31;
+    display: block;
+    font-weight: bold;
+    font-family: 'Nunito', sans-serif;
+}
+
+.welcome-info {
+    font-size: 1.5em;
+    margin-top: -20px;
+    margin-bottom: 1em;
+}
+
+.welcome-sub-info {
+    font-size: 1.17em;
+    margin-bottom: 1em;
+}
+
+.social-login {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.submit-f {
+    text-align: center;
+    flex: 1 1 200px;
+    color: #fff;
+    background-color: #3b5998;
+    border: 2px solid #fff;
+    padding: 10px 10px;
+    border-radius: 60px;
+    font-weight: 700;
+    display: block;
+}
+
+.submit-g {
+    flex: 1 1 200px;
+    text-align: center;
+    color: #0b0b31;
+    display: block;
+    background-color: #eae3e3;
+    border: 2px solid #fff;
+    padding: 10px 10px;
+    border-radius: 60px;
+    font-weight: 700;
+}
+
+hr {
+    margin: 2em 0;
+}
+
+.coruja,
+.grupodeestudos {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    margin: 0 auto;
+}
+
+.estudos {
+    width: 120%;
+    display: block;
+    margin: 0 auto;
+}
+
+@media(max-width: 740px) {
+    .coruja {
+        display: none;
+    }
+    .estudos {
+        display: none;
+    }
+    .register-section {
+        display: block;
+        margin-top: 2em;
+    }
+    .grupodeestudos {
+        display: none;
+    }
+}
+
+.categoria {
+    padding: 20px;
+    border: 2px solid gray;
+}
+
+.modal-title {
+    color: black;
+}
+
+.image-circle {
+    height: 170px;
+    width: 170px;
+    border-radius: 50%;
+    border: 1px solid rgb(204, 204, 204);
+}
+
+.position-right {
+    width: 65%;
+    float: right;
+    border: 1px solid rgb(231, 231, 231);
+    border-radius: 4px;
+    padding: 30px;
+    margin-top: 80px;
+}
+
+.position-left {
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.mostrarsenha {
+    position: relative;
+    display: block;
+    float: right;
+    cursor: pointer;
+    top: -30px;
+    margin-right: 8px;
+}
+
+.center {
+    display: block;
+    text-align: center;
+    margin-top: -20px;
+}
+
+.right {
+    position: relative;
+    display: block;
+    float: right;
+}
+
+.negrito {
+    margin-right: 20px;
+    font-weight: bold;
+    color: #0b0b31;
+}
+
+.top {
+    margin-top: 10px;
+}
+
+.imagemgrupo img {
+    height: 90px;
+    width: 90px;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 50%;
+}
+
+.grupo {
+    background-color: rgb(230, 230, 230);
+    padding: 20px;
+    border-radius: 60px;
+}

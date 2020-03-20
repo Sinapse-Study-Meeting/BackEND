@@ -20,7 +20,7 @@
    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 
-   <link rel="stylesheet" href="{{ asset('css/cadastro.min.css') }}">
+   <link rel="stylesheet" href="{{ asset('css/base.min.css') }}">
 
 </head>
 
@@ -121,6 +121,7 @@
 
     <script src="{{asset('js/navbar.js') }}"></script>
     <script src="{{ asset('js/cidade_estado.js') }}"></script>
+    <script src="{{asset('js/mostrarsenha.js') }}"></script>
 </body>
 
 </html>
