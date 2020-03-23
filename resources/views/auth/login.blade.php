@@ -81,7 +81,7 @@
          </div> --}}
 
          <div class="input-field">
-            <input type="password" class="senha" id="senha" name="senha" required="required">
+            <input type="password" class="senha" id="senha" name="password" required="required">
             <label for="senha">Senha</label>
          <div class="mostrarsenha" onclick="mostrarSenha()"><img src="{{ asset('img/bxs-show.svg') }}" alt="Mostrar senha"></div>
             @error('password')
