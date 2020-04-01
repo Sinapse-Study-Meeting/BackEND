@@ -31,82 +31,56 @@
       <section class="register-section">
          <div class="register-section__item">
             <h1 class="welcome-info">Seja bem-vindo de volta ao SINAPSE!</h1>
-            <h2 class="welcome-sub-info"> Entre com:</h2>
-            <div class="social-login">
-            <a href="" class="submit-f">Facebook</a><a href="" class="submit-g">Google</a>
-         </div>
+            <h2 class="welcome-sub-info">Faça seu login usando o endereço de email e senha abaixo:</h2>
             <hr>
-            <h3 class="welcome-sub-info">Ou faça seu login usando o endereço de email e senha abaixo:</h3>
-      <form action="{{ route('login') }}" method="POST">
-         @csrf
+
+            <form action="{{ route('login') }}" method="POST">
+               @csrf
 
                <div class="input-field">
                   <input type="text" id="email" name="email" required="required" class="@error('email') is-invalid @enderror">
                   <label for="email">Email</label>
+                  <div class="icones">
+                     <img src="{{asset('img/mail-send.svg')}}">
+                  </div>
                   @error('email')
-                     <span class="invalid-feedback" role="alert" style="display: block;">
-                        <strong>{{ $message }}</strong>
-                     </span>
-                  @enderror
-                  <br>
+                  <span class="invalid-feedback" role="alert" style="display: block;">
+                     <strong>{{ $message }}</strong>
+                  </span>
+               @enderror
                </div>
-
-               {{-- <div class="input-field">
-                  <input type="password" id="senha" name="password" class="@error('password') is-invalid @enderror" required="required">
+               
+            
+               <div class="input-field">
+                  <input type="password" class="senha" id="senha" name="password" required="required">
                   <label for="senha">Senha</label>
+               <div class="mostrarsenha" onclick="mostrarSenha()"><img src="{{ asset('img/bxs-show.svg') }}" alt="Mostrar senha"></div>
+               <div class="icones">
+                  <img src="{{asset('img/key.svg')}}">
+               </div>
                   @error('password')
                      <span class="invalid-feedback" role="alert" style="display: block;">
                         <strong>{{ $message }}</strong>
                      </span>
                   @enderror
-
-                    <a href="{{ route('password.request') }}" name="" id="">Esqueci a senha</a>
-
                </div>
                <br>
-               <div class="form-group row">
-                  <div class="col-md-6 offset-md-4">
-                      <div class="form-check">
-                          <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                          <label class="form-check-label" for="remember">
-                              Lembre de mim
-                          </label>
-                      </div>
-                  </div>
-              </div>
-             <input class="submit-entrar" type="submit" value="ENTRAR">
-
+               <div class="custom-control custom-switch">
+                  <input type="checkbox" name="remember" class="custom-control-input" id="lembrar">
+                  <label class="custom-control-label" for="lembrar">Lembre de mim</label>
+               </div>
+               
+               <input class="submit-entrar " type="submit" value="ENTRAR">
+               <div class="top">
+                     <a href="{{ route('password.request') }}" class="negrito link right">Esqueceu senha?</a>
+                     <a href="{{ route('register') }}" class="negrito link position-left">Cadastre-se</a>
+               </div>
             </form>
-         </div> --}}
-
-         <div class="input-field">
-            <input type="password" class="senha" id="senha" name="password" required="required">
-            <label for="senha">Senha</label>
-         <div class="mostrarsenha" onclick="mostrarSenha()"><img src="{{ asset('img/bxs-show.svg') }}" alt="Mostrar senha"></div>
-            @error('password')
-            <span class="invalid-feedback" role="alert" style="display: block;">
-               <strong>{{ $message }}</strong>
-            </span>
-         @enderror
-
-        </div>
-        <input type="checkbox" id="lembredemim" name="remember">
-        <label for="checkbox"> Lembre-se de mim </label>
-        <input class="submit-entrar " type="submit" value="ENTRAR">
-
-        <div class="top">
-            <a href="{{ route('password.request') }}" class="negrito link right">Esqueceu senha?</a>
-        <a href="{{ route('register') }}" class="negrito link position-left">Cadastre-se</a>
-        </div>
-    </form>
-</div>
-
+         </div>
          <div class="register-section__item">
             <img class="coruja" src="{{  asset('img/coruja-prof.png') }}">
          </div>
       </section>
-
    </main>
    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

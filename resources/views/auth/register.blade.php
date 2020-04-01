@@ -30,23 +30,24 @@
    <main>
       <section class="register-section">
          <div class="register-section__item">
-            <h2 class="welcome-sub-info"> Entre com:</h2>
-            <div class="social-login">
-            <a href="" class="submit-f">Facebook</a><a href="" class="submit-g">Google</a>
-         </div>
+            <h2 class="welcome-sub-info">Faça seu cadastro abaixo:</h2>
             <hr>
-            <h3 class="welcome-sub-info">Ou faça seu cadastro abaixo:</h3>
             <form method="POST" action="{{ route('register') }}">
                @csrf
                 <div class="input-field">
                     <input type="text" id="name" name="name" class="@error('name') is-invalid @enderror" value="{{ old('name') }}" required autocomplete="name" autofocus>
                     <label for="name">Nome</label>
-                    @error('name')
-                    <span class="invalid-feedback" role="alert" style="display: block;">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                @enderror
+                    <div class="icones">
+                        <img src="{{asset('img/bxs-user.svg')}}">
+                     </div>
+                     @error('name')
+                     <span class="invalid-feedback" role="alert" style="display: block;">
+                           <strong>{{ $message }}</strong>
+                     </span>
+                  @enderror
                 </div>
+               
+             
                 <div class="form-group">
                   <label for="estado">Estados</label>
                     <select class="form-control" id="estado" name="state" class="@error('state') is-invalid @enderror" required>
@@ -76,31 +77,45 @@
                 <div class="input-field">
                     <input type="text" id="email" name="email" class="@error('email') is-invalid @enderror" value="{{ old('email') }}" required autocomplete="email" >
                     <label for="email">E-mail</label>
-                    @error('email')
-                     <span class="invalid-feedback" role="alert" style="display: block;">
-                           <strong>{{ $message }}</strong>
-                     </span>
-                     @enderror
-                </div>
-                <div class="input-field">
-                    <input type="password" id="password" name="password" class="@error('password') is-invalid @enderror" value="{{ old('password') }}" required autocomplete="new-password">
-                    <label for="password">Senha</label>
-                     @error('password')
-                        <span class="invalid-feedback" role="alert" style="display: block;">
-                              <strong>{{ $message }}</strong>
-                        </span>
-                     @enderror
-                </div>
-                <div class="input-field">
-                  <input type="password" id="password_confirmation" name="password_confirmation" class="@error('password_confirmation') is-invalid @enderror" value="{{ old('password_confirmation') }}" required autocomplete="new-password">
-                  <label for="password_confirmation">Confirmar senha</label>
-                  @error('password_confirmation')
-                     <span class="invalid-feedback" role="alert" style="display: block;">
+                    <div class="icones">
+                     <img src="{{asset('img/mail-send.svg')}}">
+                  </div>
+                  @error('email')
+                  <span class="invalid-feedback" role="alert" style="display: block;">
                         <strong>{{ $message }}</strong>
-                     </span>
+                  </span>
                   @enderror
+                </div>
+                
+            
+                <div class="input-field">
+                    <input type="password" id="senha" name="password" class="@error('password') is-invalid @enderror" value="{{ old('password') }}" required autocomplete="new-password">
+                    <label for="senha">Senha</label>
+                    <div class="mostrarsenha" onclick="mostrarSenha()"><img src="{{asset('img/bxs-show.svg')}}" alt="Mostrar senha"></div>
+                    <div class="icones">
+                     <img src="{{asset('img/key.svg')}}">
+                  </div>
+                  @error('password')
+                  <span class="invalid-feedback" role="alert" style="display: block;">
+                        <strong>{{ $message }}</strong>
+                  </span>
+                  @enderror
+                </div>
+             
+             
+                <div class="input-field">
+                  <input type="password" id="confirmarsenha" name="password_confirmation" class="@error('password_confirmation') is-invalid @enderror" value="{{ old('password_confirmation') }}" required autocomplete="new-password">
+                  <label for="confirmarsenha">Confirmar senha</label>
+                  <div class="mostrarsenha" onclick="mostrarSenha2()"><img src="{{asset('img/bxs-show.svg')}}" alt="Mostrar senha"></div>
+                  <div class="icones">
+                     <img src="{{asset('img/key.svg')}}">
+                  </div>
+                  @error('password_confirmation')
+                  <span class="invalid-feedback" role="alert" style="display: block;">
+                     <strong>{{ $message }}</strong>
+                  </span>
+               @enderror
               </div>
-
                <div class="bt">
                   <input type="submit" class="button-proximo" value="PRÓXIMO">
                </div>
@@ -122,6 +137,7 @@
     <script src="{{asset('js/navbar.js') }}"></script>
     <script src="{{ asset('js/cidade_estado.js') }}"></script>
     <script src="{{asset('js/mostrarsenha.js') }}"></script>
+
 </body>
 
 </html>
