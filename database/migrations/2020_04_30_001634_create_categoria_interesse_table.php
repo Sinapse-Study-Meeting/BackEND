@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateInteressesTable extends Migration
+class CreateCategoriaInteresseTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateInteressesTable extends Migration
      */
     public function up()
     {
-        Schema::create('interesses', function (Blueprint $table) {
+        Schema::create('categoria_interesse', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('categoria_id')->constrained('');
-            $table->string('assunto');
-            $table->enum('nivel_conhecimento', ['basico', 'intermediario', 'avancado']);
+            $table->foreignId('interesse_id')->constrained()->onDelete('cascade');
+            $table->foreignId('categoria_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ class CreateInteressesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('interesses');
+        Schema::dropIfExists('categoria_interesse');
     }
 }
