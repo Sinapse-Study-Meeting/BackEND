@@ -11,6 +11,7 @@ class Categoria extends Model
     protected $fillable = [
         'nome'
     ];
+    public $timestamps = false;
 
     public function interesses(){
         return $this->hasMany('App\Interesse');
