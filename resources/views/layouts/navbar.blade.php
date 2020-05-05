@@ -1,34 +1,70 @@
-<header class="navbar">
+ <header class="navbar">
     <!-- ínicio header -->
     <a href="/" class="logo">
-       <h1 class="logo__replacement">Sinapse</h1>
+        <h1 class="logo__replacement">Sinapse</h1>
     </a>
-    <img src="{{ asset('img/menu.svg') }}" class="navbar__trigger" alt="Menu" title="Menu">
+    <img src="{{asset('img/menu.svg')}}" class="navbar__trigger" alt="Menu" title="Menu">
 
     <nav class="navbar__menu">
-        @guest
-        <a href="/login"><i class="fas fa-graduation-cap fa-1x"></i> LOGIN</a>
-        <a href="/register"><i class="fas fa-graduation-cap fa-1x"></i> CADASTRE-SE</a>
-       @else
-       <li class="nav-item dropdown">
-            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                {{ Auth::user()->name }} <span class="caret"></span>
+        @auth
+        <div class="dropdown-nav">
+            <a role="button" class="dropdown-nav__trigger navbar__menu__item" data-target="notifications">
+                <i class='bx bxs-bell notification-bell notification-bell--active' aria-label="Sino de notificação"></i>
+                <span class="only-sm">Notificações</span>
             </a>
-
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{{ route('logout') }}"
-                onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();">
-                    {{ __('Logout') }}
+            <nav class="dropdown-nav__menu notifications-menu" id="notifications">
+                <a href="#" class="dropdown-nav__menu__item">
+                    <i class='bx bxs-message-alt-error notification-warning' ></i>
+                    Programação PP marcou um encontro
                 </a>
-
+                <a href="#" class="dropdown-nav__menu__item">
+                    <i class='bx bxs-message-alt-error notification-warning'></i>
+                    Programação PP marcou um encontro
+                </a>
+            </nav>
+        </div>
+        <a href="#" class="navbar__menu__item btn-primary">
+            <i class='bx bx-plus-circle left-button-icon' ></i>
+            Grupo
+        </a>
+        <a href="#" class="navbar__menu__item ">
+            <i class='bx bxs-chat left-button-icon'></i>
+            Chat
+        </a>
+        <div class="dropdown-nav">
+            <a role="button" class="dropdown-nav__trigger navbar__menu__item" data-target="user-options">
+                <img src="{{asset('img/user.png')}}" alt="Sua foto de perfil" class="profile-image-header left-button-icon">
+                {{Auth::user()->name}} 
+                <i class='bx bx-chevron-down dropdown-icon'></i>
+            </a>
+            <nav class="dropdown-nav__menu" id="user-options">
+                <a href="#" class="dropdown-nav__menu__item">
+                    <i class='bx bxs-user-rectangle left-button-icon user-options-icon' ></i>
+                    Meu Perfil
+                </a>
+                <a href="#" class="dropdown-nav__menu__item">
+                    <i class='bx bxs-message-alt-error left-button-icon user-options-icon'></i>
+                    Amigos
+                </a>
+                <a href="{{route('logout')}}" class="dropdown-nav__menu__item"
+                onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();">
+                    <i class='bx bxs-exit left-button-icon user-options-icon'></i>
+                    Sair
+                </a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     @csrf
                 </form>
-            </div>
-        </li>
-        @endguest
-       <a href="#"><i class="fas fa-graduation-cap fa-1x"></i> PREMIUM</a>
-       <a href="#"><i class="fas fa-graduation-cap fa-1x"></i> SOBRE</a>
+                @else
+                <a href="{{route('register')}}" class="navbar__menu__item">
+                    Cadastrar
+                
+                </a>
+                <a href="{{route('login')}}" class="navbar__menu__item ">
+                    Login
+                </a>
+                @endauth
+            </nav>
+        </div>
     </nav>
- </header> <!-- fim do header -->
+</header>

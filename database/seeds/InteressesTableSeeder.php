@@ -16,7 +16,6 @@ class InteressesTableSeeder extends Seeder
         Interesse::truncate();
         DB::table('categoria_interesse')->truncate();
 
-
         $pro = Categoria::where('nome','Programacao')->first();
         $adm = Categoria::where('nome','Administracao')->first();
         $jobs = Categoria::where('nome','Milionario')->first();

@@ -1,9 +1,12 @@
 @extends('layouts.base')
-
+@include('vendor.bootstrap')
 @section('title',"Sinapse Grupo de Estudos")
 @section('metas')
    <meta name="description" content="A plataforma para você encontrar sua companhia de estudos">
    <meta name="keywords" content="Sinapse, estudar, grupos, login">
+@endsection
+@section('css')
+    <link rel="stylesheet" href="{{ asset('css/base.min.css') }}">
 @endsection
 @section('content')
    @include('layouts.navbar')
@@ -56,7 +59,6 @@
    </main>
 @endsection
 @section('scripts')
-   <script src="{{asset('js/navbar.js') }}"></script>
    <script src="{{asset('js/mostrarsenha.js') }}"></script>
 @endsection
 
