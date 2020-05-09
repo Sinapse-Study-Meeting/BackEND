@@ -18,6 +18,7 @@ class CreateInteressesTable extends Migration
             $table->string('assunto');
             $table->enum('nivel_conhecimento', ['basico', 'intermediario', 'avancado']);
             $table->timestamps();
+            $table->engine = 'MyISAM';
         });
     }
 

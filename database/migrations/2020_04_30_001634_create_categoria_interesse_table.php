@@ -18,6 +18,7 @@ class CreateCategoriaInteresseTable extends Migration
             $table->foreignId('interesse_id')->constrained()->onDelete('cascade');
             $table->foreignId('categoria_id')->constrained()->onDelete('cascade');
             $table->timestamps();
+            $table->engine = 'MyISAM';
         });
     }
 

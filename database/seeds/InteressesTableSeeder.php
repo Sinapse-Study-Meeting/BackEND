@@ -13,14 +13,15 @@ class InteressesTableSeeder extends Seeder
      * @return void     */
     public function run()
     {
-        Interesse::truncate();
         DB::table('categoria_interesse')->truncate();
+        Interesse::truncate();
+
 
         $pro = Categoria::where('nome','Programacao')->first();
         $adm = Categoria::where('nome','Administracao')->first();
         $jobs = Categoria::where('nome','Milionario')->first();
 
-        
+
         $php = Interesse::create(['assunto'=>'Php']);
         $gp = Interesse::create(['assunto'=>'Gestao de Pessoas']);
         $mb = Interesse::create(['assunto'=>'Money no bolso']);

@@ -12,6 +12,7 @@ class CategoriasTableSeeder extends Seeder
      */
     public function run()
     {
+        DB::table('categoria_interesse')->truncate();
         Categoria::truncate();
 
         Categoria::create(['nome'=>'Programacao']);

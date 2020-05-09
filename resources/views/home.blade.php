@@ -25,6 +25,31 @@
             </form>
         </div>
     </section>
+
+    @if(!$teminteresses)
+
+
+    <form action="">
+
+        Informe seu interesse:
+        <input list="interesse">
+
+        Informe a categoria:
+        <input list="categoria">
+
+       <datalist id="categoria">
+
+        @foreach ($categorias as $item)
+             <option value="{{$item->nome}}">{{$item->nome}}</option>
+        @endforeach
+
+
+       </datalist>
+
+    </form>
+
+    @endif
+
     @section('scripts')
         <script src="{{asset('js/search-bar.js')}}"></script>
     @endsection

@@ -16,6 +16,7 @@ class CreateCategorias extends Migration
         Schema::create('categorias', function (Blueprint $table) {
             $table->id();
             $table->string('nome');
+            $table->engine = 'MyISAM';
         });
     }
 

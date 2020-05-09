@@ -38,6 +38,6 @@ class User extends Authenticatable
     ];
 
     public function interesses(){
-        return $this->hasMany('App\Interesse');
+        return $this->belongsToMany('App\Interesse');
     }
 }
