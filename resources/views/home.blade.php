@@ -26,25 +26,55 @@
         </div>
     </section>
 
-    @if(!$teminteresses)
-
-
-    <form action="">
+@if(!$teminteresses)
+<br>
+<br>
+    <form action="{{route('criarinteresse')}}" method="post">
+        @csrf
 
         Informe seu interesse:
-        <input list="interesse">
+        <input list="interesse" name="interesse">
+         @error('interesse')
+        <p>{{$message}}</p>
+        @enderror
+
+        <datalist id="interesse">
+
+            @foreach ($interesses as $item)
+                <option value="{{$item->assunto}}">{{$item->assunto}}</option>
+            @endforeach
+
+
+        </datalist>
 
         Informe a categoria:
-        <input list="categoria">
+        <select name="categoria">
+            <option disabled selected></option>
+            @foreach ($categorias as $item)
+                <option value="{{$item->nome}}">{{$item->nome}}</option>
+            @endforeach
+        </select>
 
-       <datalist id="categoria">
-
-        @foreach ($categorias as $item)
-             <option value="{{$item->nome}}">{{$item->nome}}</option>
-        @endforeach
+        @error('categoria')
+        <p>{{$message}}</p>
+        @enderror
 
 
-       </datalist>
+
+
+
+        Nível
+        <select name="nivel">
+            <option disabled selected></option>
+            <option value="basico">Básico</option>
+            <option value="intermediario">Intermediário</option>
+            <option value="avancado">Avançado</option>
+        </select>
+        @error('nivel')
+        <p>{{$message}}</p>
+        @enderror
+
+        <button type="submit"> Enviar </button>
 
     </form>
 

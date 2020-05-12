@@ -16,7 +16,6 @@ class CreateInteressesTable extends Migration
         Schema::create('interesses', function (Blueprint $table) {
             $table->id();
             $table->string('assunto');
-            $table->enum('nivel_conhecimento', ['basico', 'intermediario', 'avancado']);
             $table->timestamps();
             $table->engine = 'MyISAM';
         });

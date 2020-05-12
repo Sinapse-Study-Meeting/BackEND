@@ -17,6 +17,7 @@ class CreateInteresseUserTable extends Migration
             $table->id();
             $table->foreignId('interesse_id')->constrained();
             $table->foreignId('user_id')->constrained();
+            $table->enum('nivel_conhecimento', ['basico', 'intermediario', 'avancado']);
             $table->timestamps();
             $table->engine = 'MyISAM';
         });

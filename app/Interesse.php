@@ -8,7 +8,7 @@ class Interesse extends Model
 {
 
     protected $fillable = [
-        'nome', 'nivel'
+        'assunto'
     ];
 
     //

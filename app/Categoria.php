@@ -14,6 +14,6 @@ class Categoria extends Model
     public $timestamps = false;
 
     public function interesses(){
-        return $this->hasMany('App\Interesse');
+        return $this->belongsToMany('App\Interesse');
     }
 }

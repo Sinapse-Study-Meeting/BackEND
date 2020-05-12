@@ -17,8 +17,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::post('/interesse/criar', 'InteresseController@create')->name('criarinteresse');
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
 
 
