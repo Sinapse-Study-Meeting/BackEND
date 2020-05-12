@@ -14,7 +14,7 @@
    <meta charset="utf-8">
    @yield('metas')
  
-   <link rel="shortcut icon" href="f{{asset('img/favicon.svg')}}" type="image/x-icon">
+   <link rel="shortcut icon" href="{{asset('img/favicon.svg')}}" type="image/x-icon">
    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
    @yield('bootstrap_css')
