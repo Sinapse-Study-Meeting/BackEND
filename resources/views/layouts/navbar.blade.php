@@ -38,10 +38,16 @@
                 <i class='bx bx-chevron-down dropdown-icon'></i>
             </a>
             <nav class="dropdown-nav__menu" id="user-options">
-                <a href="#" class="dropdown-nav__menu__item">
+                <a href="#" class="dropdown-nav__menu__item dropdown-nav__trigger" data-target="sub_meu_perfil">
                     <i class='bx bxs-user-rectangle left-button-icon user-options-icon' ></i>
                     Meu Perfil
+                    <i class='bx bx-chevron-down dropdown-icon'></i>
                 </a>
+                <nav class="dropdown-nav__sub" id="sub_meu_perfil">
+                    <a href="#" class="dropdown-nav__sub__item">Ver Meu Perfil</a>
+                    <a href="#" class="dropdown-nav__sub__item">Meus Interesses</a>
+                    <a href="#" class="dropdown-nav__sub__item">PREMIUM GRÁTIS</a>
+                </nav>
                 <a href="#" class="dropdown-nav__menu__item">
                     <i class='bx bxs-message-alt-error left-button-icon user-options-icon'></i>
                     Amigos

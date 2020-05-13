@@ -24,14 +24,19 @@ window.addEventListener('click', function(e) {
 document.querySelectorAll('.dropdown-nav__trigger').forEach(function(item){
     item.addEventListener('click', (e) => {
         e.stopPropagation();
-        
         let target = document.getElementById(item.getAttribute('data-target'));
-
-        if(target.classList.contains('dropdown-nav__menu--active')) {
-            target.classList.remove('dropdown-nav__menu--active');
+        let classTarget;
+        target.classList.forEach(element => {
+                if(element.search('dropdown-nav') != -1){
+                    classTarget = element;
+                    return;
+                }
+        });
+        if(classTarget.search('--active') != -1) {
+            target.classList.remove(classTarget);
         }
         else {
-            target.classList.add('dropdown-nav__menu--active');
+            target.classList.add(classTarget+'--active');
         }
 
     });
