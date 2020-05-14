@@ -1,0 +1,16 @@
+@import '../../assets/variables';
+.form-field {
+    display: block;
+    outline-color: $primary-color;
+    border-radius: 5px;
+    border: 1px solid $border-color;
+    width: 100%;
+    padding: 5px 10px;
+    color: lighten($color: $text-color, $amount: 10);
+    font-family: $font-stack;
+    font-size: 1rem;
+
+    &--invalid {
+        border-color: $danger-color;
+    }
+}

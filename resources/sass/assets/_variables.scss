@@ -1,0 +1,19 @@
+//Colors
+$primary-color: #2C3E50;
+$shadow-color: rgba(0,0,0,.04);
+$border-color: #E1E1E1;
+$text-color: #707070;
+$danger-color: #e63e3e;
+
+
+//Typography
+$font-stack: 'Nunito', sans-serif;
+
+
+//Layout
+$side-spaces: 8%;
+
+//Mixins
+@mixin basicBorderBox {
+    border: 1px solid $border-color;
+}

@@ -1,0 +1,19 @@
+.form-group {
+    margin-bottom: 1.5em;
+    label {
+        display: block;
+        margin-bottom: .7rem;
+        font-family: $font-stack;
+        font-size: 1.1em;
+    }
+    &--invalid {
+        label {
+            color: $danger-color;
+        }
+    }
+    &__error {
+        color: $danger-color;
+        margin-top: .4em;
+        display: block;
+    }
+}

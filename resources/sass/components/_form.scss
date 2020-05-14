@@ -17,10 +17,11 @@
 }
 
 textarea {
-    border: 2px solid #0b0b31;
+    border: 2px solid #3a3a3a;
     line-height: 20px;
     padding: 10px;
     height: 90px;
+    width: 100%;
     resize: none;
     border-radius: 10px;
 }
@@ -28,7 +29,7 @@ textarea {
 .input-field label {
     top: 50%;
     transform: translateY(-50%);
-    left: 40px;
+    left: 20px;
     position: absolute;
     pointer-events: none;
     font-size: 16px;
@@ -44,7 +45,7 @@ textarea {
 .input-field input:focus+label,
 .input-field input:valid+label {
     top: -1.0em;
-    left: 20px;
+    left: 0px;
     font-weight: bold;
     border-radius: 5px;
 }
@@ -87,6 +88,11 @@ textarea {
     cursor: pointer;
     display: block;
     margin: 0 auto;
+    margin-top: 30px;
+}
+
+a:hover{
+    text-decoration:none;
 }
 
 .submit-entrar:hover,
