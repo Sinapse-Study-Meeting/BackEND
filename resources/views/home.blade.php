@@ -9,7 +9,6 @@
 @section('css')
     <link rel="stylesheet" href="{{asset('css/home.min.css')}}">
 @endsection
-
 @section('content')
     @include("layouts.navbar")
     @include("layouts.search-bar")
