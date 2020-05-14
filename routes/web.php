@@ -25,7 +25,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::view('/grupo', 'criar_grupo');
 
+<<<<<<< HEAD
 Route::view('/interesses', 'interesses');
     
 
+=======
+>>>>>>> 00457262aeb5950362d4268b0cdf59e3dc27ba98
 

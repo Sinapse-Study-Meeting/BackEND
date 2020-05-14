@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{asset('css/home.min.css')}}">
 @endsection
 
+<<<<<<< HEAD
 @section('bootstrap')
 @endsection
 
@@ -18,6 +19,11 @@
 
     
 
+=======
+@section('content')
+    @include("layouts.navbar")
+
+>>>>>>> 00457262aeb5950362d4268b0cdf59e3dc27ba98
     <section class="search-bar">
         <div class="container">
             <a role="button" class="search-bar__trigger">

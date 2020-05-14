@@ -1,6 +1,7 @@
 @extends('layouts.base')
 
 
+<<<<<<< HEAD
 @section('title', 'Interesses')
 
 @section('css')
@@ -101,5 +102,20 @@
             </section>
         </div>
     </main>
+=======
+@section('title', 'Criar Grupos')
+
+
+@section('css')
+
+<link rel="stylesheet" href="{{asset('css/criar_grupo.min.css')}}">
+
+@endsection
+
+@section('content')
+    @include('layouts.navbar')
+
+    @include('layouts.card')
+>>>>>>> 00457262aeb5950362d4268b0cdf59e3dc27ba98
 
 @endsection
