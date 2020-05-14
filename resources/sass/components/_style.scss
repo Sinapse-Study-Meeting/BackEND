@@ -1,41 +1,8 @@
-<<<<<<< HEAD
 .register-section,
 .creategroup-section {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-=======
-/* Customizar barra de rolagem */
-
-::-webkit-scrollbar {
-    width: 15px;
-    background-color: #f8f8f8;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: #e6e6e6;
-}
-
-::-webkit-scrollbar-button {
-    background-color: #e6e6e6;
-}
-
-
-/*Fundo azul Onda */
-
-.wave {
-    background-image: url("../imagens/curva.png");
-    background-position-x: right;
-    background-size: 35% 100%;
-    background-repeat: no-repeat;
-}
-
-.register-section,
-.creategroup-section {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
->>>>>>> 00457262aeb5950362d4268b0cdf59e3dc27ba98
     margin: 5em 20px 0 20px;
     padding: 0 calc((100% - 1200px)/2);
 }
@@ -43,10 +10,7 @@
 .register-section__item,
 .creategroup-section__item {
     flex: 1 1 0;
-<<<<<<< HEAD
   
-=======
->>>>>>> 00457262aeb5950362d4268b0cdf59e3dc27ba98
 }
 
 .welcome-info,
@@ -70,7 +34,6 @@
     margin-bottom: 1em;
 }
 
-<<<<<<< HEAD
 
 
 #interesses .register-section--flex{
@@ -105,8 +68,6 @@
 
 
 
-=======
->>>>>>> 00457262aeb5950362d4268b0cdf59e3dc27ba98
 .welcome-sub-info {
     font-size: 1.17em;
     margin-bottom: 1em;
@@ -145,7 +106,6 @@ hr {
     margin: 2em 0;
 }
 
-<<<<<<< HEAD
 .coruja-livro{
     width: 65%;
     margin-left: 50px;
@@ -160,19 +120,12 @@ hr {
 
 
 .coruja, 
-=======
-.coruja,
->>>>>>> 00457262aeb5950362d4268b0cdf59e3dc27ba98
 .estudos {
     width: 100%;
     display: block;
     margin-left: 40px;
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 00457262aeb5950362d4268b0cdf59e3dc27ba98
 .estudos {
     width: 100%;
     display: block;
@@ -182,13 +135,10 @@ hr {
     .coruja {
         display: none;
     }
-<<<<<<< HEAD
 
     .coruja-livro{
         display: none;
     }
-=======
->>>>>>> 00457262aeb5950362d4268b0cdf59e3dc27ba98
     .estudos {
         display: none;
     }
@@ -318,91 +268,4 @@ input[type="file"] {
 
 .label-bordered:hover {
     background-color: rgb(247, 247, 247);
-<<<<<<< HEAD
-=======
-}
-
-.control-label img {
-    height: 24px;
-    width: 24px;
-}
-
-.adicionar {
-    background-color: #111147;
-    color: white;
-}
-
-.conversar {
-    background-color: #e8e6ee;
-    color: rgb(0, 0, 0);
-}
-
-.adicionar:hover {
-    background-color: #0b0b2c;
-    color: white;
-}
-
-.conversar:hover {
-    background-color: #cbcacf;
-    color: rgb(0, 0, 0);
-}
-
-.bloco a {
-    padding: 10px 20px;
-    border-radius: 60px;
-}
-
-.bloco a img {
-    padding: 0px 5px 4px 0px;
-}
-
-.bloco a:hover {
-    text-decoration: none;
-}
-
-.main {
-    margin: 0px 0px 0px 60px;
-    width: 60%;
-}
-
-.main h1 {
-    margin-top: 20px;
-}
-
-.bloco {
-    padding: 20px 40px 20px 40px;
-}
-
-.barra {
-    width: 60%;
-}
-
-.position-button {
-    float: right;
-    margin-top: -20px;
-}
-
-.position-button a {
-    margin-left: 20px;
-}
-
-.sugestao {
-    border: 1px solid #e7e7e7;
-    border-radius: 5px;
-}
-
-.position-topo {
-    position: relative;
-    left: 65%;
-    margin-top: -110px;
-}
-
-.alinhar {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-.totalgrupo {
-    margin-bottom: 15px;
->>>>>>> 00457262aeb5950362d4268b0cdf59e3dc27ba98
 }
