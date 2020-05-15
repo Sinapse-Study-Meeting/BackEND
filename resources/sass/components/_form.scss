@@ -1,7 +1,7 @@
 .input-field {
     position: relative;
     width: 100%;
-    margin-bottom: .5em;
+    margin-bottom: 20px;
     margin-top: 3em;
 }
 
@@ -29,7 +29,7 @@ textarea {
 .input-field label {
     top: 50%;
     transform: translateY(-50%);
-    left: 20px;
+    left: 40px;
     position: absolute;
     pointer-events: none;
     font-size: 16px;
@@ -91,8 +91,8 @@ textarea {
     margin-top: 30px;
 }
 
-a:hover{
-    text-decoration:none;
+a:hover {
+    text-decoration: none;
 }
 
 .submit-entrar:hover,
@@ -113,5 +113,6 @@ a:hover{
 .custom-switch {
     align-items: center;
 }
+
 
 /*Personalizando botões Facebook, Google e Entrar*/
