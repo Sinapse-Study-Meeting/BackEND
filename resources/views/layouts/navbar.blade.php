@@ -34,7 +34,7 @@
         <div class="dropdown-nav">
             <a role="button" class="dropdown-nav__trigger navbar__menu__item" data-target="user-options">
                 <img src="{{asset('img/user.png')}}" alt="Sua foto de perfil" class="profile-image-header left-button-icon">
-                {{Auth::user()->name}} 
+                {{Auth::user()->name}}
                 <i class='bx bx-chevron-down dropdown-icon'></i>
             </a>
             <nav class="dropdown-nav__menu" id="user-options">
@@ -45,7 +45,7 @@
                 </a>
                 <nav class="dropdown-nav__sub" id="sub_meu_perfil">
                     <a href="#" class="dropdown-nav__sub__item">Ver Meu Perfil</a>
-                    <a href="#" class="dropdown-nav__sub__item">Meus Interesses</a>
+                    <a href="{{route('interesses')}}" class="dropdown-nav__sub__item">Meus Interesses</a>
                     <a href="#" class="dropdown-nav__sub__item">PREMIUM GRÁTIS</a>
                 </nav>
                 <a href="#" class="dropdown-nav__menu__item">
@@ -64,7 +64,7 @@
                 @else
                 <a href="{{route('register')}}" class="navbar__menu__item">
                     Cadastrar
-                
+
                 </a>
                 <a href="{{route('login')}}" class="navbar__menu__item ">
                     Login
