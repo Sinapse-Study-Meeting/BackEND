@@ -23,7 +23,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-Route::view('/grupo', 'criar_grupo1');
+Route::view('/teste', 'perfilinteresses');
 
 Route::get('/interesses', 'InteresseController@interesses')->name('interesses');
 
