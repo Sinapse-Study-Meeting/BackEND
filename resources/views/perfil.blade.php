@@ -16,7 +16,7 @@
         <div class="information">
             <div class="fundo-perfil text-center">
                 <div class="image-circle">
-                    <img src="{!! asset('img/user.png')!!}" alt="usuario" id="imagemusuario">
+                    <img src="{!! asset('img/coruja-perfil.svg')!!}" alt="usuario" id="imagemusuario">
                 </div>
                 <div class="form-group">
                     <label for="fupload" class="control-label label-bordered"><img src="{!! asset('img/pencil-regular-36.png')!!}" id="trocarfoto"></label>

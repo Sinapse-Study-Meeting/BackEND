@@ -33,7 +33,7 @@
         </a>
         <div class="dropdown-nav">
             <a role="button" class="dropdown-nav__trigger navbar__menu__item" data-target="user-options">
-                <img src="{{asset('img/user.png')}}" alt="Sua foto de perfil" class="profile-image-header left-button-icon">
+                <img src="{{asset('img/coruja-perfil.svg')}}" alt="Sua foto de perfil" class="profile-image-header left-button-icon">
                 {{Auth::user()->name}}
                 <i class='bx bx-chevron-down dropdown-icon'></i>
             </a>
