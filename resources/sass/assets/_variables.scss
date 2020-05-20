@@ -4,7 +4,7 @@ $shadow-color: rgba(0,0,0,.04);
 $border-color: #E1E1E1;
 $text-color: #707070;
 $danger-color: #e63e3e;
-
+$background-color: #F9F9F9;
 
 //Typography
 $font-stack: 'Nunito', sans-serif;
@@ -16,4 +16,12 @@ $side-spaces: 8%;
 //Mixins
 @mixin basicBorderBox {
     border: 1px solid $border-color;
+}
+
+@mixin hoverDarkenEffect($COLOR) {
+    transition: ease-in-out .2s;
+      &:hover, &:focus {
+          color: white;
+        background-color: darken($color: $COLOR, $amount: 10);
+      }
 }

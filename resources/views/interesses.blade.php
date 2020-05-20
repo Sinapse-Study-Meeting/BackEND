@@ -10,27 +10,25 @@
 @endsection
 
 
-@section('bootstrap_css')
-
-<link rel="stylesheet" href="css/bootstrap.min.css">
-
-@endsection
-
-
 @section('content')
 
 @include('layouts.navbar')
 
-@foreach($ListarInteresses as $interesse)
+
+
+@forelse($ListarInteresses as $interesse)
 
 <div> <p> Interesse: {{$interesse->assunto}} </p>
       <p> Nível conhecimento: {{$interesse->pivot->nivel_conhecimento}} </p>
       <p> Categoria: {{$interesse->categorias->first()->nome}} </p>
 <br>
  </div>
-@endforeach
 
-    <main id="interesses">
+@empty
+<p>Você não possui interesses</p> 
+@endforelse
+
+    {{-- <main id="interesses">
         <div class="container d-flex d-wrap d-row">
             <section class="register-section--flex ">
                 <div class="register-section__item--flex" >
@@ -93,6 +91,6 @@
 
             </section>
         </div>
-    </main>
+    </main> --}}
 
 @endsection

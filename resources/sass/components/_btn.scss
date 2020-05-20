@@ -1,0 +1,17 @@
+@import "../assets/variables";
+
+%btn {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn--primary {
+    @extend %btn;
+    background-color: $primary-color;
+    color: white;
+    font-weight: bold;
+    @include hoverDarkenEffect($primary-color)
+}

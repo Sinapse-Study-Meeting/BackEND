@@ -1,11 +1,13 @@
-@import 'components/reset';
-@import "components/navbar";
-@import 'components/logo';
-@import 'components/search-bar';
-@import 'components/forms/form';
-@import 'layouts/l-content-aside';
+@import '../assets/variables';
+@import '../components/reset';
+@import "../components/navbar";
+@import '../components/logo';
+@import '../components/search-bar';
+@import '../components/forms/form';
+@import '../layouts/l-content-aside';
+@import "../components/btn";
 body {
-    background-color: #F9F9F9;
+    background-color: $background-color;
 }
 
 .home-adicionar-interesse {
