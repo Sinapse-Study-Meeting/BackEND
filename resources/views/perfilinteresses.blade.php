@@ -11,6 +11,23 @@
 @section('content')
 @include('layouts.navbar')
 
+@if(session('status'))
+    <p>{{session('status')}}</p>
+@endif
+
+@foreach($ListarInteresses as $interesse)
+
+    <form action="{{url("/perfil/interesses/$interesse->id/editar")}}" method="post">
+        @csrf
+        Interesse: <input type="text" value="{{$interesse->assunto}}" name="interesse"> <br>
+        Nível conhecimento: <input name="nivel" type="text" value="{{$interesse->nivel_conhecimento}}">  <br>
+        Categoria: <input type="text" value="{{$interesse->categorias->first()->nome}}" name="categoria"> <br>
+        <input type="submit"><br>
+        <br>
+    </form>
+@endforeach
+
+
 <main>
     <div class="container d-flex flex-row justify-content-around flex-wrap">
         <div class="information">

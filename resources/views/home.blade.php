@@ -12,6 +12,12 @@
 @section('content')
     @include("layouts.navbar")
     @include("layouts.search-bar")
+
+    @if(session('status'))
+        <p>{{session('status')}}</p>
+    @endif
+
+
     <main class="container l-content-aside">
         <article class="l-content-aside__main">
         @if(!$teminteresses)
