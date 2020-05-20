@@ -91,11 +91,8 @@
                   </span>
                @enderror
                <div class="bt">
-<<<<<<< HEAD
                   <a href="interesses.blade.php"><input type="submit" class="button-proximo" value="PRÓXIMO"></a>
-=======
-                  <input type="submit" class="button-proximo" value="PRÓXIMO">
->>>>>>> 00457262aeb5950362d4268b0cdf59e3dc27ba98
+                  
                </div>
             </form>
 
