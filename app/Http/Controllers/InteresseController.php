@@ -7,9 +7,15 @@ use App\Interesse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\Rule;
+use function GuzzleHttp\describe_type;
 
 class InteresseController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function create (Request $request)
     {
         $request->validate([
@@ -17,30 +23,49 @@ class InteresseController extends Controller
             'categoria' => ['required', 'exists:categorias,nome'],
             'nivel' => ['required', Rule::in(['basico', 'intermediario', 'avancado'])],
         ]);
-        $InteresseExiste = Interesse::where('assunto', $request->interesse)->first();
 
-        if ((bool)$InteresseExiste) {
-            Auth::user()->interesses()->attach($InteresseExiste, ['nivel_conhecimento' => $request->nivel]);
-        } else {
+        $interessecriado = Auth::user()->interesses()->create([
+           'assunto'=>$request->interesse,
+           'nivel_conhecimento'=>$request->nivel,
+        ]);
 
-            $categoria = Categoria::where('nome', $request->categoria)->first();
+       $criacaocategoria = Categoria::where('nome', $request->categoria)->first();
 
-            $InteresseCriado = $categoria->interesses()->create([
-                'assunto' => $request->interesse
-            ]);
+       $interessecriado->categorias()->attach($criacaocategoria);
 
-            Auth::user()->interesses()->attach($InteresseCriado, ['nivel_conhecimento' => $request->nivel]);
-
-        }
+        return redirect()->back()->with('status', 'Interesse atualizado com sucesso');
     }
-        public function interesses(){
+
+
+    public function interesses(){
 
         $ListarInteresses = Auth::user()->interesses()->get();
 
-        return view('interesses', ['ListarInteresses' => $ListarInteresses]);
-
+        return view('perfilinteresses', ['ListarInteresses' => $ListarInteresses]);
     }
 
 
 
+    public function  editar(Request $request, Interesse $interesse){
+
+        $request->validate([
+            'interesse' => ['required'],
+            'categoria' => ['required', 'exists:categorias,nome'],
+            'nivel' => ['required', Rule::in(['basico', 'intermediario', 'avancado'])],
+        ]);
+
+        $interesse->update(['assunto'=>$request->interesse, 'nivel_conhecimento' => $request->nivel]);
+        //novo interesse desejado atualização
+
+        $novacategoria = Categoria::where('nome', $request->interesse)->first();
+        //obtendo a primeira condigitção que bate com o que o usuário escolheu
+
+        $interesse->categorias()->detach();
+
+        $interesse->categorias()->attach($novacategoria);
+        //relacionando novo interesse com nova categoria
+
+        return redirect()->back()->with('status', 'Interesse atualizado com sucesso');
+
+    }
 }

@@ -8,12 +8,13 @@ class Interesse extends Model
 {
 
     protected $fillable = [
-        'assunto'
+        'assunto', 'nivel_conhecimento'
+
     ];
 
     //
-    public function users(){
-         return $this->belongsToMany('App\User');
+    public function user(){
+         return $this->belongsTo('App\User');
     }
 
     public function categorias(){

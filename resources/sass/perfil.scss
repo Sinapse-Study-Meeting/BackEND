@@ -1,0 +1,93 @@
+@import 'components/reset';
+@import 'components/logo';
+@import 'components/navbar';
+@import 'components/style';
+@import 'components/form';
+.dados-pessoais-perfil {
+    width: 65%;
+}
+
+.editar {
+    border: 1px solid rgb(235, 235, 235);
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    background-color: white;
+}
+
+.editar img {
+    position: relative;
+    display: block;
+    float: right;
+    opacity: 0.5;
+}
+
+.editar h4 {
+    color: #0b0b31;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0px 0px 10px 0px;
+    text-align: center;
+}
+
+.editar p {
+    margin-left: 20px;
+}
+
+.information {
+    background-color: #2C3E50;
+    padding-top: 20px;
+    margin-top: 25px;
+    border: 1px solid rgb(235, 235, 235);
+    width: 300px;
+    height: 100%;
+    border-radius: 7px;
+}
+
+.information ul {
+    border-radius: 0px;
+    background-color: white;
+}
+
+.information h5 {
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+}
+
+body {
+    background-color: #F9F9F9;
+}
+
+ul .list-group-item {
+    border: none;
+}
+
+.list-group-item a {
+    color: #2C3E50;
+}
+
+.list-group-item a:hover {
+    text-decoration: none;
+    color: rgb(34, 47, 61);
+    font-weight: 500;
+}
+
+.fundo-perfil {
+    background-color: #2C3E50;
+}
+
+.form-perfil {
+    margin-top: 25px;
+    background-color: white;
+    padding: 50px 40px 20px 40px;
+    border: 1px solid rgb(235, 235, 235);
+}
+
+.img-redefinirsenha {
+    display: block;
+    float: right;
+    height: 200px;
+    width: 200px;
+}
