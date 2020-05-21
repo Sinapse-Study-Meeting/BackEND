@@ -22,8 +22,15 @@
         Interesse: <input type="text" value="{{$interesse->assunto}}" name="interesse"> <br>
         Nível conhecimento: <input name="nivel" type="text" value="{{$interesse->nivel_conhecimento}}">  <br>
         Categoria: <input type="text" value="{{$interesse->categorias->first()->nome}}" name="categoria"> <br>
+        
         <input type="submit"><br>
+
         <br>
+    </form>
+    
+<form action="{{url("/perfil/interesses/$interesse->id/apagar")}}" method="POST">
+    @csrf
+        <button type="submit">EXCLUIR</button>
     </form>
 @endforeach
 

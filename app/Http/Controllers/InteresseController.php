@@ -36,15 +36,12 @@ class InteresseController extends Controller
         return redirect()->back()->with('status', 'Interesse atualizado com sucesso');
     }
 
-
     public function interesses(){
 
         $ListarInteresses = Auth::user()->interesses()->get();
 
         return view('perfilinteresses', ['ListarInteresses' => $ListarInteresses]);
     }
-
-
 
     public function  editar(Request $request, Interesse $interesse){
 
@@ -66,5 +63,10 @@ class InteresseController extends Controller
 
         return redirect()->back()->with('status', 'Interesse atualizado com sucesso');
 
+    }
+    public function apagar(Interesse $interesse) {
+        $interesse->categorias()->detach();
+        $interesse->delete();
+        return redirect()->back()->with('status', 'Interesse atualizado com sucesso');
     }
 }

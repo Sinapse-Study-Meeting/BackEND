@@ -17,7 +17,6 @@ Route::view('/', 'welcome');
 
 Route::post('/interesse/criar', 'InteresseController@create')->name('criarinteresse');
 
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -26,4 +25,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/perfil/interesses', 'InteresseController@interesses')->name('interesses');
 
 Route::post('/perfil/interesses/{interesse}/editar', 'InteresseController@editar');
+Route::post('/perfil/interesses/{interesse}/apagar', 'InteresseController@apagar');
 
