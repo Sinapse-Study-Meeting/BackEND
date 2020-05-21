@@ -40,7 +40,7 @@
                                     <img src="{{  asset('img/bxs-group.svg') }}">
                                 </div>
                             </div>
-                            <div class="">
+                            <div class=" ">
                                 <label for="categoria">Categoria</label>
                                 <select class="form-control" id="categoria">
                                     <option disabled selected>Selecione</option>
