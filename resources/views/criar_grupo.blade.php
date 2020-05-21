@@ -40,7 +40,7 @@
                                     <img src="{{  asset('img/bxs-group.svg') }}">
                                 </div>
                             </div>
-                            <div class="input-select">
+                            <div class="">
                                 <label for="categoria">Categoria</label>
                                 <select class="form-control" id="categoria">
                                     <option disabled selected>Selecione</option>
@@ -54,7 +54,7 @@
                                     <img src="{{  asset('img/bxs-book-open.svg') }}">
                                 </div>
                             </div>
-                            <div class="input-field">
+                            <div class="">
                             <label for="nivel">Nível de Conhecimento</label>
                             <select class="form-control" id="nivel">
                                 <option disabled selected>Selecione</option>
