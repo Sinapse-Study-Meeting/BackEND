@@ -57,9 +57,8 @@ class InteresseController extends Controller
         $interesse->update(['assunto'=>$request->interesse, 'nivel_conhecimento' => $request->nivel]);
         //novo interesse desejado atualização
 
-        $novacategoria = Categoria::where('nome', $request->interesse)->first();
+        $novacategoria = Categoria::where('nome', $request->categoria)->first();
         //obtendo a primeira condigitção que bate com o que o usuário escolheu
-
         $interesse->categorias()->detach();
 
         $interesse->categorias()->attach($novacategoria);

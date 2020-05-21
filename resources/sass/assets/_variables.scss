@@ -22,6 +22,6 @@ $side-spaces: 8%;
     transition: ease-in-out .2s;
       &:hover, &:focus {
           color: white;
-        background-color: darken($color: $COLOR, $amount: 10);
+            background-color: darken($color: $COLOR, $amount: 20);
       }
 }
