@@ -1,9 +1,8 @@
-@import 'components/reset';
-@import 'components/logo';
-@import 'components/navbar';
-@import 'components/style';
-@import 'components/form';
-
+@import '../components/reset';
+@import '../components/logo';
+@import '../components/style';
+@import '../components/form';
+@import '../components/navbar';
 .dados-pessoais-perfil {
     width: 65%;
 }

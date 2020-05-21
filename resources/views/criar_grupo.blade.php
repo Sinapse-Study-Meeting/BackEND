@@ -1,8 +1,12 @@
 @extends('layouts.base')
-
+@include('vendor.bootstrap')
 
 @section('title', 'Criar Grupos')
 
+@section('bootstrap_css')
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+@endsection
 
 @section('css')
 
@@ -12,44 +16,63 @@
 
 @section('content')
 @include('layouts.navbar')
-
-<section class="register-section">
-    <div class="register-section__item">
-        <h1 class="welcome-info">Crie grupos para se conectar com pessoas de mesmo interesse!</h1>
-        <form action="home.html">
-            <div class="input-field">
-                <input type="text" id="email" name="email" required="required">
-                <label for="email">Nome do grupo</label>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<main>
+    <a href="#" data-toggle="modal" data-target="#grupoModal">Criar Grupo </a>
+    <div>
+        <!-- The Modal -->
+        <div class="modal" id="grupoModal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <h1 class="welcome-info">Crie o seu grupo!</h1>
+                        <div class="form-group">
+                            <h2 class="welcome-sub-info">Preencha o campo a seguir</h2>
+                            <div class="input-field">
+                                <input type="text" class="nome" id="nome" name="nome" required="required">
+                                <label for="nome">Nome do grupo</label>
+                                <div class="icones">
+                                    <img src="{{  asset('img/bxs-group.svg') }}">
+                                </div>
+                            </div>
+                            <div class="input-select">
+                                <label for="categoria">Categoria</label>
+                                <select class="form-control" id="categoria">
+                                    <option disabled selected>Selecione</option>
+                                    <option value="matematica">Matematica</option>
+                                </select>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" id="assunto" name="assunto" required="required">
+                                <label for="assunto">Assunto </label>
+                                <div class="icones">
+                                    <img src="{{  asset('img/bxs-book-open.svg') }}">
+                                </div>
+                            </div>
+                            <div class="input-field">
+                            <label for="nivel">Nível de Conhecimento</label>
+                            <select class="form-control" id="nivel">
+                                <option disabled selected>Selecione</option>
+                                <option value="0">Básico</option>
+                                <option value="1">Básico a Intermediário</option>
+                                <option value="2">Intermediário a Avançado</option>
+                                <option value="3">Especialista</option>
+                            </select>
+                            </div>
+                        </div>
+                        <input class="submit-entrar" type="submit" value="PROXIMO">
+                    </div>
+                    <div>
+                        <img src="{{  asset('img/coruja-asas.png') }}" alt="">
+                    </div>
+                </div>
             </div>
-            <div class="icones">
-                <img src="{!! asset('img/bxs-group.svg')!!}" />
-            </div>
-            <br>
-            <h2 class="welcome-sub-info"> Agora selecione se deseja criar um grupo público ou privado</h2>
-            <br>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="grupo" id="grupopublico" value="grupopublico" checked>
-                <label class="form-check-label" for="grupopublico">
-                    <span class="cor_titulogrupo">Grupo público</span> - permite que somente pessoas que qualquer pessoa que tenha o mesmo interesse que você adentre no seu grupo.
-                </label>
-            </div>
-
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="grupo" id="grupoprivado" value="grupoprivado">
-                <label class="form-check-label" for="grupoprivado">
-                    <span class="cor_titulogrupo">Grupo privado</span> - permite que somente pessoas que você adicionar tenha acesso ao seu grupo. Qualquer pessoa que queira adentrar no seu grupo terá que solicitar permissão.
-                </label>
-            </div>
-            <br>
-            <div class="bt">
-                <a href="criargrupo1.html" class="button-proximo">PRÓXIMO </a>
-            </div>
-
-        </form>
+        </div>
     </div>
-    <div class="register-section__item">
-        <img class="coruja-selection" src="{!! asset('img/coruja-checkbox.svg')!!}" />
-    </div>
-    </div>
-</section>
+</main>
 @endsection

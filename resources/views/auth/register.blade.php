@@ -30,7 +30,6 @@
                   <label for="estado">Estados</label>
                     <select class="form-control" id="estado" name="state" class="@error('state') is-invalid @enderror" required>
                       <option disabled selected>Selecione</option>
-
                     </select>
                   </div>
                   @error('state')

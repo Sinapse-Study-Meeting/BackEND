@@ -5,12 +5,18 @@
 <meta name="description" content="A plataforma para você encontrar sua companhia de estudos">
 <meta name="keywords" content="Sinapse, estudar, grupos, login">
 @endsection
+@section('bootstrap_css')
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+@endsection
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/perfil.min.css') }}">
 @endsection
 @section('content')
 @include('layouts.navbar')
 
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <main>
     <div class="container d-flex flex-row justify-content-around flex-wrap">
         <div class="information">
@@ -66,54 +72,53 @@
             </div>
         </div>
     </div>
-</main>
-<aside>
-    <!-- The Modal -->
-    <div class="modal" id="myModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <!-- Modal Header -->
-                <div class="modal-header">
-                    <h4 class="modal-title">Redefinir Senha</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
+    <div>
+        <!-- The Modal -->
+        <div class="modal" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Redefinir Senha</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="input-field">
+                            <input type="password" class="senha" id="senha" name="senha" required="required">
+                            <label for="senha">Senha</label>
+                            <div class="mostrarsenha" onclick="mostrarSenha()"><img src="{{ asset('img/bxs-show.svg') }}" alt="Mostrar senha"></div>
+                            <div class="icones">
+                                <img src="{{  asset('img/key.svg') }}">
+                            </div>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" id="novasenha" name="novasenha" required="required">
+                            <label for="novasenha">Nova Senha </label>
+                            <div class="mostrarsenha" onclick="mostrarSenha1()"><img src="{{ asset('img/bxs-show.svg') }}" alt="Mostrar senha"></div>
+                            <div class="icones">
+                                <img src="{{  asset('img/key.svg') }}">
+                            </div>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" id="confirmarsenha" name="confirmarsenha" required="required">
+                            <label for="confirmarsenha">Confirmar Senha </label>
+                            <div class="mostrarsenha" onclick="mostrarSenha2()"><img src="{{ asset('img/bxs-show.svg') }}" alt="Mostrar senha"></div>
+                            <div class="icones">
+                                <img src="{{  asset('img/key.svg') }}">
+                            </div>
+                        </div>
+                    </div>
 
-                <!-- Modal body -->
-                <div class="modal-body">
-                    <div class="input-field">
-                        <input type="password" class="senha" id="senha" name="senha" required="required">
-                        <label for="senha">Senha</label>
-                        <div class="mostrarsenha" onclick="mostrarSenha()"><img src="{{ asset('img/bxs-show.svg') }}" alt="Mostrar senha"></div>
-                        <div class="icones">
-                            <img src="{{  asset('img/key.svg') }}">
-                        </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success">Salvar</button>
                     </div>
-                    <div class="input-field">
-                        <input type="password" id="novasenha" name="novasenha" required="required">
-                        <label for="novasenha">Nova Senha </label>
-                        <div class="mostrarsenha" onclick="mostrarSenha1()"><img src="{{ asset('img/bxs-show.svg') }}" alt="Mostrar senha"></div>
-                        <div class="icones">
-                            <img src="{{  asset('img/key.svg') }}">
-                        </div>
-                    </div>
-                    <div class="input-field">
-                        <input type="password" id="confirmarsenha" name="confirmarsenha" required="required">
-                        <label for="confirmarsenha">Confirmar Senha </label>
-                        <div class="mostrarsenha" onclick="mostrarSenha2()"><img src="{{ asset('img/bxs-show.svg') }}" alt="Mostrar senha"></div>
-                        <div class="icones">
-                            <img src="{{  asset('img/key.svg') }}">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Modal footer -->
-                <div class="modal-footer">
-                    <button type="button" class="button-coruja"><br><br>Salvar</button>
                 </div>
             </div>
         </div>
     </div>
-</aside>
+</main>
 @endsection
 @section('scripts')
 <script src="{{asset('js/navbar.js') }}"></script>

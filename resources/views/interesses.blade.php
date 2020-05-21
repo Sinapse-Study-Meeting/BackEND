@@ -18,17 +18,18 @@
 
 @forelse($ListarInteresses as $interesse)
 
-<div> <p> Interesse: {{$interesse->assunto}} </p>
-      <p> Nível conhecimento: {{$interesse->pivot->nivel_conhecimento}} </p>
-      <p> Categoria: {{$interesse->categorias->first()->nome}} </p>
-<br>
- </div>
+<div>
+    <p> Interesse: {{$interesse->assunto}} </p>
+    <p> Nível conhecimento: {{$interesse->pivot->nivel_conhecimento}} </p>
+    <p> Categoria: {{$interesse->categorias->first()->nome}} </p>
+    <br>
+</div>
 
 @empty
-<p>Você não possui interesses</p> 
+<p>Você não possui interesses</p>
 @endforelse
 
-    {{-- <main id="interesses">
+{{-- <main id="interesses">
         <div class="container d-flex d-wrap d-row">
             <section class="register-section--flex ">
                 <div class="register-section__item--flex" >
@@ -45,11 +46,11 @@
                         <div class="input-field">
                             <input type="text" id="assunto" name="assunto" required="required">
                             <label for="assunto">Assunto </label>
-                        </div>
-
-                        <div class="icones">
+                            <div class="icones">
                             <img src="imagens/icones/bxs-book-open.svg">
                         </div>
+                        </div>
+    
 
                         <br>
 
@@ -86,11 +87,11 @@
 
                     <!--<div class="image-section__item--flex ">
                         <img class="coruja-livro" src="{{  asset('img/coruja-livro.svg') }}" >
-                    </div>-->
+</div>-->
 
 
-            </section>
-        </div>
-    </main> --}}
+</section>
+</div>
+</main> --}}
 
 @endsection
