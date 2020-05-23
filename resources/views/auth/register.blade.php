@@ -90,7 +90,7 @@
                   </span>
                @enderror
                <div class="bt">
-                  <a href="interesses.blade.php"><input type="submit" class="button-proximo" value="PRÓXIMO"></a>
+                  <a href="interesses.blade.php"><input type="submit" class="button-proximo" value="SALVAR"></a>
                   
                </div>
             </form>
