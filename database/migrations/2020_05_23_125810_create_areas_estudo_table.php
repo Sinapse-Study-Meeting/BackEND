@@ -4,8 +4,8 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-    class CreateInteressesTable extends Migration
-    {
+class CreateAreasEstudoTable extends Migration
+{
     /**
      * Run the migrations.
      *
@@ -13,13 +13,11 @@ use Illuminate\Support\Facades\Schema;
      */
     public function up()
     {
-        Schema::create('interesses', function (Blueprint $table) {
+        Schema::create('areas_estudo', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained();
-            $table->enum('nivel_conhecimento', ['basico', 'intermediario', 'avancado']);
-            $table->string('assunto');
+            $table->string('area');
+            $table->foreignId('grupo_id')->constrainded();
             $table->timestamps();
-            $table->engine = 'MyISAM';
         });
     }
 
@@ -30,6 +28,6 @@ use Illuminate\Support\Facades\Schema;
      */
     public function down()
     {
-        Schema::dropIfExists('interesses');
+        Schema::dropIfExists('areas_estudo');
     }
 }
