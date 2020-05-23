@@ -16,6 +16,25 @@
     outline-color: lightskyblue;
 }
 
+.form-group select {
+    padding-left: 35px;
+    border: 1px solid rgb(223, 223, 223);
+    color: #3a3a3a;
+    font-family: 'Nunito', sans-serif;
+}
+
+.form-group select:focus {
+    border: 1px solid rgb(223, 223, 223);
+    box-shadow: none;
+    color: #0b0b31;
+    font-weight: bold;
+    border-bottom: 2px solid rgb(177, 177, 177);
+}
+
+.form-group select:active {
+    border-bottom: 2px solid rgb(177, 177, 177);
+}
+
 textarea {
     border: 2px solid #3a3a3a;
     line-height: 20px;

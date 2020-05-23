@@ -35,9 +35,6 @@
                     <a href="perfil.html"><i class='bx bxs-user-rectangle left-button-icon user-options-icon'></i>Perfil</a>
                 </li>
                 <li class="list-group-item">
-                    <a href="perfilinteresses.blade.php"><i class='far fa-list-alt left-button-icon user-options-icon'></i>Adicionar Interesse</a>
-                </li>
-                <li class="list-group-item">
                     <a href="perfilgruposcriado.html"><i class='fas fa-users left-button-icon user-options-icon'></i>Grupos</a>
                 </li>
                 <li class="list-group-item">
@@ -58,17 +55,17 @@
             </div>
             <div class="editar">
                 <h4>Interesses</h4>
+                <a href="perfilInteresses.html"><img src="{!! asset('img/bxs-trash.svg')!!}"></a>
                 <a href="perfilInteresses.html"><img src="{!! asset('img/bxs-pencil.svg')!!}"></a>
                 <p>Assunto</p>
                 <p>Categoria</p>
                 <p>Nivel de Conhecimento</p>
-                <p>Descrição </p>
                 <hr>
+                <a href="perfilInteresses.html"><img src="{!! asset('img/bxs-trash.svg')!!}"></a>
                 <a href="perfilInteresses.html"><img src="{!! asset('img/bxs-pencil.svg')!!}"></a>
                 <p>Assunto</p>
                 <p>Categoria</p>
                 <p>Nivel de Conhecimento</p>
-                <p>Descrição </p>
             </div>
         </div>
     </div>

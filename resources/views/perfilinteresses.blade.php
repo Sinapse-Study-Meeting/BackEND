@@ -57,9 +57,7 @@
                 <li class="list-group-item">
                     <a href="perfil.html"><i class='bx bxs-user-rectangle left-button-icon user-options-icon'></i>Perfil</a>
                 </li>
-                <li class="list-group-item">
-                    <a href="perfilinteresses.blade.php"><i class='far fa-list-alt left-button-icon user-options-icon'></i>Adicionar Interesse</a>
-                </li>
+                
                 <li class="list-group-item">
                     <a href="perfilgruposcriado.html"><i class='fas fa-users left-button-icon user-options-icon'></i>Grupos</a>
                 </li>
@@ -104,9 +102,6 @@
                     <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
                 </div>
                 <br>
-                <label for="descricao">Descrição</label><br>
-
-                <textarea name="descricao"></textarea>
 
 
                 <a href="criargrupo.html"><input class="submit-entrar" type="submit" value="CONFIRMAR"></a>

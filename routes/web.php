@@ -28,4 +28,4 @@ Route::post('/perfil/interesses/{interesse}/editar', 'InteresseController@editar
 Route::post('/perfil/interesses/{interesse}/apagar', 'InteresseController@apagar');
 
 
-Route::view('/teste', 'criar_grupo');
+Route::view('/teste', 'perfil');
