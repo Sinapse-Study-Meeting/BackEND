@@ -1,0 +1,9 @@
+@import '../../assets/variables';
+
+.field-helper {
+    font-size: .8rem;
+    display: block;
+    font-family: $font-stack;
+    color: $text-color;
+    margin-top: 7px;
+}

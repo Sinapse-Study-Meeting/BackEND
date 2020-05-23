@@ -1,0 +1,30 @@
+@import '../assets/variables';
+.modal {
+    border-radius: 5px;
+    @include basicBorderBox;
+    box-shadow: $box-shadow;
+    padding: 20px 15px;
+    background: white;
+    display: flex;
+    max-width: 400px;
+    width: 100%;
+    position: absolute;
+    transform: scale(0) translate(-50%, -50%);
+    transform-origin: top left;
+    top: 50%;
+    left: 50%;
+    transition: transform .2s;
+    max-height: 100%;
+    overflow-y: scroll;
+}
+.modal-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+.toggle-target__modal--active {
+    transform: scale(1) translate(-50%, -50%);
+}
+

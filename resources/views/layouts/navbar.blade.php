@@ -23,7 +23,7 @@
                 </a>
             </nav>
         </div>
-        <a href="#" class="navbar__menu__item btn-primary">
+        <a href="#" class="navbar__menu__item btn-primary toggle" data-target="grupoModal">
             <i class='bx bx-plus-circle left-button-icon' ></i>
             Grupo
         </a>
@@ -74,3 +74,5 @@
         </div>
     </nav>
 </header>
+
+@include('layouts.modal')

@@ -5,7 +5,6 @@
    <meta name="description" content="A plataforma para você encontrar sua companhia de estudos">
    <meta name="keywords" content="Sinapse, estudar, grupos, login">
 @endsection
-
 @section('css')
     <link rel="stylesheet" href="{{asset('css/home.min.css')}}">
 @endsection
@@ -73,5 +72,6 @@
     </main>
     @section('scripts')
         <script src="{{asset('js/search-bar.js')}}"></script>
+        <script src="{{asset('js/toggle.js')}}"></script>
     @endsection
 @endsection
