@@ -30,12 +30,12 @@
                     </div>
                     <!-- Modal body -->
                     <div class="modal-body">
-                    <div class="form-group">
-                        <div class="fundo-perfil text-center">
-                            <h2 class="welcome-sub-info">Nome do grupo</h2>
-                            <div class="image-circle">
-                                <img src="{!! asset('img/coruja-perfil.svg')!!}" alt="usuario" id="imagemusuario">
-                            </div>
+                        <div class="form-group">
+                            <div class="fundo-perfil text-center">
+                                <h2 class="welcome-sub-info">Nome do grupo</h2>
+                                <div class="image-circle">
+                                    <img src="{!! asset('img/coruja-perfil.svg')!!}" alt="usuario" id="imagemusuario">
+                                </div>
                                 <label for="fupload" class="control-label label-bordered"><img src="{!! asset('img/pencil-regular-36.png')!!}" id="trocarfoto"></label>
                                 <input type="file" accept="image/*" id="fupload" name="fupload" class="upload fupload form-control" />
                             </div>
@@ -47,13 +47,15 @@
                                 </div>
                             </div>
                             <label for="estado">Estados</label>
-                            <select class="form-control" id="estado" >
+                            <select class="form-control" id="estado">
                                 <option disabled selected>Selecione</option>
                             </select>
-                            <label for="cidade">Cidades</label>
-                            <select class="form-control" id="cidade" name="city" >
-                                <option disabled selected>Selecione o estado primeiro</option>
-                            </select>
+                            <div class="form-group">
+                                <label for="cidade">Cidades</label>
+                                <select class="form-control" id="cidade" name="city">
+                                    <option disabled selected>Selecione o estado primeiro</option>
+                                </select>
+                            </div>
                         </div>
                         <input class="submit-entrar" type="submit" value="CRIAR">
                     </div>

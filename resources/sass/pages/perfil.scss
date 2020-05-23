@@ -15,6 +15,19 @@
     background-color: white;
 }
 
+.button-excluir {
+    background-color: white;
+    border: none;
+    position: relative;
+    display: block;
+    float: right;
+    margin-left: 10px;
+}
+
+.editar p {
+    margin-bottom: 12px;
+}
+
 .editar img {
     position: relative;
     display: block;
@@ -32,7 +45,7 @@
 }
 
 .editar p {
-    margin-left: 20px;
+    margin-left: 30px;
 }
 
 .information {
@@ -90,4 +103,10 @@ ul .list-group-item {
     float: right;
     height: 200px;
     width: 200px;
+}
+
+.alert {
+    font-size: 25px;
+    text-align: center;
+    color: rgb(128, 128, 128);
 }

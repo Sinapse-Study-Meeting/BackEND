@@ -34,3 +34,5 @@ Route::post('/criargrupos', 'GruposController@criargrupo')->name('criargrupo');
 Route::post('/grupo/{grupo}/apagar', 'GruposController@apagar');
 
 Route::post('/grupo/{grupo}/editar', 'GruposController@editar');
+
+Route::view('/teste', 'perfil');
