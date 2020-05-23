@@ -15,29 +15,6 @@
 @section('content')
 @include('layouts.navbar')
 
-@if(session('status'))
-<p>{{session('status')}}</p>
-@endif
-
-@foreach($ListarInteresses as $interesse)
-
-<form action="{{url("/perfil/interesses/$interesse->id/editar")}}" method="post">
-    @csrf
-    Interesse: <input type="text" value="{{$interesse->assunto}}" name="interesse"> <br>
-    Nível conhecimento: <input name="nivel" type="text" value="{{$interesse->nivel_conhecimento}}"> <br>
-    Categoria: <input type="text" value="{{$interesse->categorias->first()->nome}}" name="categoria"> <br>
-
-    <input type="submit"><br>
-
-    <br>
-</form>
-
-<form action="{{url("/perfil/interesses/$interesse->id/apagar")}}" method="POST">
-    @csrf
-    <button type="submit">EXCLUIR</button>
-</form>
-@endforeach
-
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <main>
@@ -57,7 +34,9 @@
                 <li class="list-group-item">
                     <a href="perfil.html"><i class='bx bxs-user-rectangle left-button-icon user-options-icon'></i>Perfil</a>
                 </li>
-                
+                <li class="list-group-item">
+                    <a href="perfilInteresses.html"><i class='far fa-list-alt left-button-icon user-options-icon'></i>Adicionar Interesse</a>
+                </li>
                 <li class="list-group-item">
                     <a href="perfilgruposcriado.html"><i class='fas fa-users left-button-icon user-options-icon'></i>Grupos</a>
                 </li>
@@ -67,95 +46,84 @@
             </ul>
 
         </div>
+
         <div class="dados-pessoais-perfil">
-            <form class="form-perfil">
-                <h1 class="welcome-info">Cadastre seu interesse abaixo!</h1>
-                <div class="form-group">
-                    <label for="categoria">Categoria</label>
-                    <select class="form-control" id="categoria">
-                        <option disabled selected>Selecione</option>
-                        <option value="matematica">Matematica</option>
-                    </select>
-                </div>
-                <div class="input-field">
-                    <input type="text" id="assunto" name="assunto" required="required">
-                    <label for="assunto">Assunto </label>
-                    <div class="icones">
-                        <img src="{!! asset('img/bxs-book-open.svg')!!}">
-                    </div>
-                </div>
-                <br>
-                <div class="form-group">
-                    <label for="nivel">Nível de Conhecimento</label>
-                    <select class="form-control" id="nivel">
-                        <option disabled selected>Selecione</option>
-                        <option value="0">Básico</option>
-                        <option value="1">Básico a Intermediário</option>
-                        <option value="2">Intermediário a Avançado</option>
-                        <option value="3">Especialista</option>
+            <div class="editar">
+                <h4>Dados Pessoais</h4>
+                <a href="perfileditar.html"><img src="{!! asset('img/bxs-pencil.svg')!!}"></a>
+                <p>Nome completo</p>
+                <p>Email@gmail.com</p>
+                <p>Cidade </p>
+                <p>Estado</p>
+            </div>
 
-
-                    </select>
-                </div>
-
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-                </div>
-                <br>
-
-
-                <a href="criargrupo.html"><input class="submit-entrar" type="submit" value="CONFIRMAR"></a>
-
-            </form>
+            @forelse($ListarInteresses as $interesse)
+            <div class="editar">
+                <h4>Interesses</h4>
+                <form action="{{url("/perfil/interesses/$interesse->id/apagar")}}" method="POST">
+                    @csrf
+                    <button type="submit" class="button-excluir"><img src="{!! asset('img/bxs-trash.svg')!!}"></button>
+                </form>
+                <a href="perfilInteresses.html"><img src="{!! asset('img/bxs-pencil.svg')!!}"></a>
+                <p>Assunto: {{$interesse->assunto}}</p>
+                <p>Categoria: {{$interesse->nivel_conhecimento}}</p>
+                <p>Nivel de Conhecimento: {{$interesse->categorias->first()->nome}}</p>
+                <hr>
+            </div>
+            @empty
+            <div class="editar">
+                <h4>Interesses</h4>
+                <p class="alert">Você não tem interesse!<p>
+            </div>
+            @endforelse
         </div>
-
-        <div>
-            <!-- The Modal -->
-            <div class="modal" id="myModal">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <!-- Modal Header -->
-                        <div class="modal-header">
-                            <h4 class="modal-title">Redefinir Senha</h4>
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        </div>
-
-                        <!-- Modal body -->
-                        <div class="modal-body">
-                            <div class="input-field">
-                                <input type="password" class="senha" id="senha" name="senha" required="required">
-                                <label for="senha">Senha</label>
-                                <div class="mostrarsenha" onclick="mostrarSenha()"><img src="{{ asset('img/bxs-show.svg') }}" alt="Mostrar senha"></div>
-                                <div class="icones">
-                                    <img src="{{  asset('img/key.svg') }}">
-                                </div>
-                            </div>
-                            <div class="input-field">
-                                <input type="password" id="novasenha" name="novasenha" required="required">
-                                <label for="novasenha">Nova Senha </label>
-                                <div class="mostrarsenha" onclick="mostrarSenha1()"><img src="{{ asset('img/bxs-show.svg') }}" alt="Mostrar senha"></div>
-                                <div class="icones">
-                                    <img src="{{  asset('img/key.svg') }}">
-                                </div>
-                            </div>
-                            <div class="input-field">
-                                <input type="password" id="confirmarsenha" name="confirmarsenha" required="required">
-                                <label for="confirmarsenha">Confirmar Senha </label>
-                                <div class="mostrarsenha" onclick="mostrarSenha2()"><img src="{{ asset('img/bxs-show.svg') }}" alt="Mostrar senha"></div>
-                                <div class="icones">
-                                    <img src="{{  asset('img/key.svg') }}">
-                                </div>
+    </div>
+    <div>
+        <!-- The Modal -->
+        <div class="modal" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Redefinir Senha</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="input-field">
+                            <input type="password" class="senha" id="senha" name="senha" required="required">
+                            <label for="senha">Senha</label>
+                            <div class="mostrarsenha" onclick="mostrarSenha()"><img src="{{ asset('img/bxs-show.svg') }}" alt="Mostrar senha"></div>
+                            <div class="icones">
+                                <img src="{{  asset('img/key.svg') }}">
                             </div>
                         </div>
-
-                        <!-- Modal footer -->
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-success">Salvar</button>
+                        <div class="input-field">
+                            <input type="password" id="novasenha" name="novasenha" required="required">
+                            <label for="novasenha">Nova Senha </label>
+                            <div class="mostrarsenha" onclick="mostrarSenha1()"><img src="{{ asset('img/bxs-show.svg') }}" alt="Mostrar senha"></div>
+                            <div class="icones">
+                                <img src="{{  asset('img/key.svg') }}">
+                            </div>
                         </div>
+                        <div class="input-field">
+                            <input type="password" id="confirmarsenha" name="confirmarsenha" required="required">
+                            <label for="confirmarsenha">Confirmar Senha </label>
+                            <div class="mostrarsenha" onclick="mostrarSenha2()"><img src="{{ asset('img/bxs-show.svg') }}" alt="Mostrar senha"></div>
+                            <div class="icones">
+                                <img src="{{  asset('img/key.svg') }}">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success">Salvar</button>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 </main>
 @endsection
 @section('scripts')
