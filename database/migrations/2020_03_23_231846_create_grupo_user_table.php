@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-    class CreateInteressesTable extends Migration
+    class CreateGrupoUserTable extends Migration
     {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ use Illuminate\Support\Facades\Schema;
      */
     public function up()
     {
-        Schema::create('interesses', function (Blueprint $table) {
+        Schema::create('grupo_user', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->nullable()->constrained();
-            $table->foreignId('grupo_id')->nullable()->constrained();
-            $table->enum('nivel_conhecimento', ['basico', 'intermediario', 'avancado']);
-            $table->string('assunto');
+            $table->foreignId('grupo_id')->constrained()->onDelete('cascade');
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->enum('papel',['administrador','participante']);
             $table->timestamps();
             $table->engine = 'MyISAM';
         });
@@ -31,6 +30,6 @@ use Illuminate\Support\Facades\Schema;
      */
     public function down()
     {
-        Schema::dropIfExists('interesses');
+        Schema::dropIfExists('grupo_user');
     }
 }

@@ -18,6 +18,18 @@
     @endif
 
 
+    <form action="{{route('criargrupo')}}" method="post">
+        @csrf
+        Nome: <input type="text" name="nome"> <br>
+        Descrição: <input name="descricao" type="text"> <br>
+
+        <input type="submit"><br>
+
+        <br>
+    </form>
+
+
+
     <main class="container l-content-aside">
         <article class="l-content-aside__main">
         @if(!$teminteresses)
