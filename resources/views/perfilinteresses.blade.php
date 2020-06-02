@@ -51,7 +51,7 @@
             <div class="editar">
                 <h4>Dados Pessoais</h4>
                 <a href="perfileditar.html"><img src="{!! asset('img/bxs-pencil.svg')!!}"></a>
-                <p>Nome completo</p>
+                <p>Nome completo: </p>
                 <p>Email@gmail.com</p>
                 <p>Cidade </p>
                 <p>Estado</p>

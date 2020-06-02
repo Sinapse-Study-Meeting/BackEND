@@ -35,4 +35,4 @@ Route::post('/grupo/{grupo}/apagar', 'GruposController@apagar');
 
 Route::post('/grupo/{grupo}/editar', 'GruposController@editar');
 
-Route::view('/teste', 'perfil');
+Route::view('/teste', 'homeprincipal');
