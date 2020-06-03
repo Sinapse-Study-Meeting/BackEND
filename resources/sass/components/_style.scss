@@ -280,3 +280,13 @@ input[type="file"] {
     height: 24px;
     width: 24px;
 }
+
+.hpadrão {
+    font-family: $font-stack;
+    padding-bottom: 20px;
+    color: $text-color;
+}
+
+.h1-size {
+    font-size: 25px;
+}

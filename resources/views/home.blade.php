@@ -64,6 +64,17 @@
             </form>
         </section>
         @endif
+        <div class="grupospessoais">
+            <h1 class="hpadrão h1-size">Grupos que eu participo</h1>
+            <div class="gruposparticipo">
+                <img src="{!! asset('img/estudos.png')!!}">
+                <h3>Programação</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <button type="submit" class="btn--primary"> Ver grupo </button>
+                <button type="submit" class="btn--primary"> Abrir Chat </button>
+            </div>
+        </div>
+        
     </article>
     <aside class="l-content-aside__aside">
         <div class="box-aside">
@@ -87,6 +98,7 @@
             <a href="" class="button-chatCompleto"><img src="{!! asset('img/arrow-from-left.png')!!}"> Chat</a>
         </div>
     </aside>
+
 </main>
 @section('scripts')
 <script src="{{asset('js/search-bar.js')}}"></script>

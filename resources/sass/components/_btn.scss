@@ -1,5 +1,4 @@
 @import "../assets/variables";
-
 %btn {
     padding: 10px 15px;
     font-size: 1rem;
@@ -12,6 +11,5 @@
     @extend %btn;
     background-color: $primary-color;
     color: white;
-    font-weight: bold;
-    @include hoverDarkenEffect($primary-color) 
+    @include hoverDarkenEffect($primary-color)
 }

@@ -3,13 +3,12 @@
     margin-top: 2em;
     display: flex;
     flex-wrap: wrap-reverse;
-
     &__main {
         flex: 8 1 400px;
         margin-right: 20px;
     }
     &__aside {
-        flex: 2 1 300px;
-        background-color: #fff;
+        flex: 2 1 250px;
+        float: left;
     }
 }
