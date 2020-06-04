@@ -36,3 +36,5 @@ Route::post('/grupo/{grupo}/apagar', 'GruposController@apagar');
 Route::post('/grupo/{grupo}/editar', 'GruposController@editar');
 
 Route::view('/teste', 'homeprincipal');
+
+Route::post('/enviar_mensagem/{id?}', 'ChatController@enviar_mensagem')->name('enviar_mensagem');

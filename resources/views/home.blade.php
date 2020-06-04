@@ -74,8 +74,36 @@
                 <button type="submit" class="btn--primary"> Abrir Chat </button>
             </div>
         </div>
-        
+
+            <br>
+
+        <form action="">
+@csrf
+
+            <label for="user"> Selecione os usuários: </label>
+
+
+            <select name="usuarios" id="users">
+
+     @foreach(\App\User::all() as $user)
+                <option value="{{$user->id}}">{{$user->name}}</option>
+                @endforeach
+
+
+            </select>
+            <br>
+            Mensagem:
+            <br>
+            <textarea>
+
+            </textarea>
+
+            <input type="submit" value="Submit">
+
+        </form>
+
     </article>
+
     <aside class="l-content-aside__aside">
         <div class="box-aside">
             <div class="online"><img src="{!! asset('img/circle-solid-24.png')!!}" alt="">Online Agora</div>
