@@ -111,6 +111,12 @@ aside {
     opacity: 0.2;
 }
 
+.chat {
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+}
+
 .box-post p {
     text-align: justify;
     padding: 0px 20px 0px 20px;
@@ -119,18 +125,24 @@ aside {
 .button-chat {
     color: $primary-color;
     background-color: #fff;
-    padding: 5px 150px 5px 10px;
-    border-radius: 5px 5px 0px 0px;
+    border: 1px solid $border-color;
+    margin-bottom: -10px;
+    padding: 7px 150px 7px 10px;
+    border-radius: 4px 4px 0px 0px;
 }
 
 .button-chatCompleto {
     background-color: $primary-color;
     color: #fff;
-    border-radius: 5px 5px 0px 0px;
-    padding: 5px 40px 5px 10px;
+    border-radius: 4px 4px 0px 0px;
+    padding: 7px 10px 7px 10px;
 }
 
-.gruposparticipo img {
+.button-chatCompleto img {
+    margin-bottom: -5px;
+}
+
+.participoimg {
     height: 50px;
     width: 50px;
     border-radius: 50%;
@@ -141,10 +153,40 @@ aside {
     background-color: white;
     border: 1px solid $border-color;
     padding: 20px;
+    margin-bottom: 20px;
+}
+
+.notgrupo {
+    background-color: white;
+    border: 1px solid $border-color;
+    padding: 20px;
+    text-align: center;
+}
+
+.notgrupo img {
+    width: 50px;
+    height: 50px;
 }
 
 @media(max-width: 800px) {
     aside {
         display: none;
     }
+}
+
+.btn--primary img {
+    margin-bottom: -5px;
+    margin-right: 5px;
+    height: 21px;
+    width: 21px;
+}
+
+.btn--primary {
+    margin-bottom: 10px;
+}
+
+.btmbig {
+    margin-right: 30px;
+    margin-left: 30px;
+    width: 15rem;
 }

@@ -24,6 +24,7 @@
                 @csrf
                 <div class="home-adicionar-interesse__fields">
                     <div class="form-group home-interesse-form-group">
+                        <h1 class="hformat">Grupos que eu participo</h1>
                         <label for="interesse-field">No que você tem interesse em estudar?</label>
                         <input class="form-field" id="interesse-field" list="interesse" name="interesse">
                         @error('interesse')
@@ -48,7 +49,7 @@
                         </datalist>
                     </div>
                     <div class="form-group home-interesse-form-group">
-                        <label for="nivel">O que você sabe a respeito disso?</label>
+                        <label for="nivel">Quanto você conhece a respeito</label>
                         <select class="form-field" name="nivel" id="nivel" class="">
                             <option disabled selected></option>
                             <option value="basico">Básico</option>
@@ -65,16 +66,23 @@
         </section>
         @endif
         <div class="grupospessoais">
-            <h1 class="hpadrão h1-size">Grupos que eu participo</h1>
+            <h1 class="hclaro h1-size">Grupos que eu participo</h1>
             <div class="gruposparticipo">
-                <img src="{!! asset('img/estudos.png')!!}">
-                <h3>Programação</h3>
+                <img src="{!! asset('img/estudos.png')!!}" class="participoimg">
+                <h1 class="hclaro h1-size">Programação PP</h1>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                <button type="submit" class="btn--primary"> Ver grupo </button>
-                <button type="submit" class="btn--primary"> Abrir Chat </button>
+                <button type="submit" class="btn--primary"><img src="{!! asset('img/group-solid.png')!!}"> Ver grupo </button>
+                <button type="submit" class="btn--primary"><img src="{!! asset('img/message-add.png')!!}"> Abrir Chat </button>
+            </div>
+            <div class="notgrupo">
+                <img src="{!! asset('img/coruja-triste.svg')!!}">
+                <h2 class="hclaro h2-size">Você não participa de nenhum grupo de estudos</h2>
+                <h3 class="hclaro h3-size"> Você pode</h3>
+                <button type="submit" class="btn--primary btmbig"><img src="{!! asset('img/plus-circle.png')!!}"> Criar um grupo </button>
+                <button type="submit" class="btn--primary btmbig"><img src="{!! asset('img/search-white.png')!!}"> Encontrar um grupo </button>
             </div>
         </div>
-        
+
     </article>
     <aside class="l-content-aside__aside">
         <div class="box-aside">
@@ -93,12 +101,11 @@
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
             </div>
         </div>
-        <div class="chat">
-            <a href="" class="button-chat"><i class='bx bxs-chat'></i> Chat</a>
-            <a href="" class="button-chatCompleto"><img src="{!! asset('img/arrow-from-left.png')!!}"> Chat</a>
-        </div>
     </aside>
-
+    <div class="chat">
+        <a href="" class="button-chat"><i class='bx bxs-chat'></i> Chat</a>
+        <a href="" class="button-chatCompleto"><img src="{!! asset('img/arrow-from-left.png')!!}"> Chat Completo</a>
+    </div>
 </main>
 @section('scripts')
 <script src="{{asset('js/search-bar.js')}}"></script>

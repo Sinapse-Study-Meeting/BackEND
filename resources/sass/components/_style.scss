@@ -281,7 +281,7 @@ input[type="file"] {
     width: 24px;
 }
 
-.hpadrão {
+.hclaro {
     font-family: $font-stack;
     padding-bottom: 20px;
     color: $text-color;
@@ -289,4 +289,12 @@ input[type="file"] {
 
 .h1-size {
     font-size: 25px;
+}
+
+.h2-size {
+    font-size: 22px;
+}
+
+.h3-size {
+    font-size: 19px;
 }
