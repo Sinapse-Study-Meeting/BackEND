@@ -42,11 +42,11 @@ class User extends Authenticatable
     }
 
     public function chats(){
-        return $this->belongsToMany('App/Chat');
+        return $this->belongsToMany('App\Chat');
     }
 
     public function mensagens(){
-        return $this->hasMany('App/Mensagem');
+        return $this->hasMany('App\Mensagem');
     }
 
 }

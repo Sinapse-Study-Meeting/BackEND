@@ -77,13 +77,13 @@
 
             <br>
 
-        <form action="">
+        <form action="/enviar_mensagem" method="post">
 @csrf
 
             <label for="user"> Selecione os usuários: </label>
 
 
-            <select name="usuarios" id="users">
+            <select name="user" id="users">
 
      @foreach(\App\User::all() as $user)
                 <option value="{{$user->id}}">{{$user->name}}</option>
@@ -94,7 +94,7 @@
             <br>
             Mensagem:
             <br>
-            <textarea>
+            <textarea name="mensagem">
 
             </textarea>
 
@@ -102,6 +102,21 @@
 
         </form>
 
+
+        @foreach(Auth::user()->chats as $chat)
+                <h2>
+                    @foreach($chat->users as $user)
+                    {{$user->name}},
+                    @endforeach
+                </h2>
+
+            <p>
+                @foreach($chat->mensagens as $user)
+                    {{$user->mensagem}},
+                @endforeach
+            </p>
+
+            @endforeach
     </article>
 
     <aside class="l-content-aside__aside">

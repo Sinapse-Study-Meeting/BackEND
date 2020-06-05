@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'welcome');
 
+Route::post('/enviar_mensagem/{chat?}', 'ChatController@enviar_mensagem');
+
 Route::post('/interesse/criar', 'InteresseController@create')->name('criarinteresse');
 
 Auth::routes();
@@ -37,4 +39,4 @@ Route::post('/grupo/{grupo}/editar', 'GruposController@editar');
 
 Route::view('/teste', 'homeprincipal');
 
-Route::post('/enviar_mensagem/{id?}', 'ChatController@enviar_mensagem')->name('enviar_mensagem');
+

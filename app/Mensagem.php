@@ -2,11 +2,10 @@
 
 namespace App;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Model;
 
-class Mensagem{
+
+class Mensagem extends Model{
 
     /**
      * The attributes that are mass assignable.
@@ -14,13 +13,13 @@ class Mensagem{
      * @var array
      */
     protected $fillable = [
-        'mensagem',
+        'mensagem', 'user_id',
     ];
 
-    protected $table = 'mensagem';
+    protected $table = 'mensagens';
 
     public function user(){
-        return $this->belongsTo('App/User');
+        return $this->belongsTo('App\User');
     }
 
 }
