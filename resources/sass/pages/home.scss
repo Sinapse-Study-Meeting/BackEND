@@ -78,13 +78,15 @@ aside {
 
 .pessoas-online {
     padding: 7px;
-    display: block;
+    display: table;
     position: relative;
 }
 
 .pessoas-online a {
     color: rgb(56, 56, 56);
     font-weight: 600;
+    vertical-align: middle;
+    display: table-cell;
 }
 
 .post img {
@@ -105,9 +107,9 @@ aside {
 
 .box-post img {
     height: 120px;
-    width: 230px;
+    width: 100%;
     background-color: rgb(199, 199, 199);
-    opacity: 0.2;
+    opacity: 0.1;
 }
 
 .chat {
@@ -153,6 +155,27 @@ aside {
     border: 1px solid $border-color;
     padding: 20px;
     margin-bottom: 20px;
+}
+
+.gruposparticipo .participoimg {
+    display: inline-flex;
+    float: left;
+    margin-right: 15px;
+}
+
+.gruposparticipo h1 {
+    display: inline;
+}
+
+.gruposparticipo p {
+    position: relative;
+    top: 5px;
+}
+
+.gruposparticipo .btn--primary {
+    position: relative;
+    margin-right: 20px;
+    top: 15px;
 }
 
 .notgrupo {

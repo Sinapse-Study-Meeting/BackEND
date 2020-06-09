@@ -70,7 +70,7 @@
             <div class="gruposparticipo">
                 <img src="{!! asset('img/estudos.png')!!}" class="participoimg">
                 <h1 class="hclaro h1-size">Programação PP</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p><br>
                 <button type="submit" class="btn--primary"><img src="{!! asset('img/group-solid.png')!!}"> Ver grupo </button>
                 <button type="submit" class="btn--primary"><img src="{!! asset('img/message-add.png')!!}"> Abrir Chat </button>
             </div>
