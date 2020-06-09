@@ -130,10 +130,10 @@
     <aside class="l-content-aside__aside">
         <div class="box-aside">
             <div class="online"><img src="{!! asset('img/circle-solid-24.png')!!}" alt="">Online Agora</div>
-            <div class="pessoas-online"><img src="{!! asset('img/user.png')!!}" alt=""><a href="">Nome completo</a></div>
-            <div class="pessoas-online"><img src="{!! asset('img/user.png')!!}" alt=""><a href="">Nome completo</a></div>
-            <div class="pessoas-online"><img src="{!! asset('img/user.png')!!}" alt=""><a href="">Nome completo</a></div>
-            <div class="pessoas-online"><img src="{!! asset('img/user.png')!!}" alt=""><a href="">Nome completo</a></div>
+            <div class="pessoas-online"><img src="{!! asset('img/coruja-perfil.svg')!!}" alt=""><a href="">Nome completo</a></div>
+            <div class="pessoas-online"><img src="{!! asset('img/coruja-perfil.svg')!!}" alt=""><a href="">Nome completo</a></div>
+            <div class="pessoas-online"><img src="{!! asset('img/coruja-perfil.svg')!!}" alt=""><a href="">Nome completo</a></div>
+            <div class="pessoas-online"><img src="{!! asset('img/coruja-perfil.svg')!!}" alt=""><a href="">Nome completo</a></div>
         </div>
         <div class="box-aside">
             <div class="post"><img src="{!! asset('img/news-regular-24.png')!!}" alt="">Post</div>
