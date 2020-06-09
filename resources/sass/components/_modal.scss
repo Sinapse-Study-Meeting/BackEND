@@ -16,6 +16,7 @@
     transition: transform .2s;
     max-height: 100%;
 }
+
 .modal-close {
     position: absolute;
     right: 10px;
@@ -23,7 +24,7 @@
     font-size: 1.3rem;
     cursor: pointer;
 }
+
 .toggle-target__modal--active {
     transform: scale(1) translate(-50%, -50%);
 }
-

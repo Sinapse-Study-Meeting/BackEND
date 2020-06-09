@@ -82,8 +82,51 @@
                 <button type="submit" class="btn--primary btmbig"><img src="{!! asset('img/search-white.png')!!}"> Encontrar um grupo </button>
             </div>
         </div>
+        <br>
+
+        <form action="/enviar_mensagem" method="post">
+            @csrf
+
+            <label for="user"> Selecione os usuários: </label>
+
+
+            <select name="user" id="users">
+
+                @foreach(\App\User::all() as $user)
+                <option value="{{$user->id}}">{{$user->name}}</option>
+                @endforeach
+
+
+            </select>
+            <br>
+            Mensagem:
+            <br>
+            <textarea name="mensagem">
+
+            </textarea>
+
+            <input type="submit" value="Submit">
+
+        </form>
+
+
+        @foreach(Auth::user()->chats as $chat)
+        <h2>
+            @foreach($chat->users as $user)
+            {{$user->name}},
+            @endforeach
+        </h2>
+
+        <p>
+            @foreach($chat->mensagens as $user)
+            {{$user->mensagem}},
+            @endforeach
+        </p>
+
+        @endforeach
 
     </article>
+
     <aside class="l-content-aside__aside">
         <div class="box-aside">
             <div class="online"><img src="{!! asset('img/circle-solid-24.png')!!}" alt="">Online Agora</div>

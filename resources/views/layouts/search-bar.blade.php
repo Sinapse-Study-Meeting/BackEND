@@ -1,6 +1,6 @@
 <section class="search-bar">
     <div class="container">
-        <a role="button" class="search-bar__trigger">
+    <a role="button" class="search-bar__trigger">
             <i class='bx bx-search search-bar-icon'></i>
         </a>
         <form action="#" class="search-bar__form">

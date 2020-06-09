@@ -38,9 +38,6 @@
                     <a href="perfilInteresses.html"><i class='far fa-list-alt left-button-icon user-options-icon'></i>Adicionar Interesse</a>
                 </li>
                 <li class="list-group-item">
-                    <a href="perfilgruposcriado.html"><i class='fas fa-users left-button-icon user-options-icon'></i>Grupos</a>
-                </li>
-                <li class="list-group-item">
                     <a href="#" data-toggle="modal" data-target="#myModal"><i class='bx bxs-key left-button-icon user-options-icon'></i>Redefinir Senha </a>
                 </li>
             </ul>
@@ -118,7 +115,7 @@
 
                     <!-- Modal footer -->
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-success">Salvar</button>
+                        <button type="submit" class="btn--primary">Salvar</button>
                     </div>
                 </div>
             </div>

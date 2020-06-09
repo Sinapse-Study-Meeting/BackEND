@@ -15,14 +15,14 @@
    <section class="register-section">
       <div class="register-section__item">
          <h1 class="welcome-info">Seja bem-vindo de volta ao SINAPSE!</h1>
-         <h2 class="welcome-sub-info">Faça seu login usando o endereço de email e senha abaixo:</h2>
+         <h2 class="welcome-sub-info">Faça seu login usando o endereço de e-mail e senha abaixo:</h2>
          <hr>
          <form action="{{ route('login') }}" method="POST">
             @csrf
 
             <div class="input-field">
                <input type="text" id="email" name="email" required="required" class="@error('email') is-invalid @enderror">
-               <label for="email">Email</label>
+               <label for="email">E-mail</label>
                <div class="icones">
                   <img src="{{asset('img/mail-send.svg')}}">
                </div>

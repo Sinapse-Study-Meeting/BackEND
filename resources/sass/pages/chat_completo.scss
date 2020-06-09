@@ -1,0 +1,57 @@
+@import '../assets/variables';
+@import '../components/reset';
+@import "../components/navbar";
+@import '../components/logo';
+@import '../components/style';
+@import '../components/form';
+@import '../components/search-bar';
+@import '../layouts/l-content-aside';
+@import "../components/btn";
+@import "../components/modal";
+.menu_mensagem {
+    background-color: #D4D8DC;
+    padding: 10px;
+    height: 60px;
+}
+
+.imgmenu {
+    height: 35px;
+    width: 35px;
+    float: right;
+    margin-right: 5px;
+}
+
+.menu_chat {
+    border: 1px solid $border-color;
+    padding: 10px;
+    height: 60px;
+}
+
+.content_chat {
+    background-color: #F4F4F4;
+}
+
+.imgchat_inicio {
+    height: 50px;
+    width: 50px;
+    margin-top: -5px;
+    float: left;
+    margin-left: 30px;
+    border-radius: 50%;
+    border: 1px solid $border-color;
+}
+
+.imgmenuchat img {
+    height: 35px;
+    width: 35px;
+    float: right;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.boxtexto {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    padding: 0px 20px 0px 20px;
+}

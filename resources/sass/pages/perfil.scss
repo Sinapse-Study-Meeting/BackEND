@@ -2,7 +2,9 @@
 @import '../components/logo';
 @import '../components/style';
 @import '../components/form';
+@import '../components/btn';
 @import '../components/navbar';
+@import '../assets/variables';
 .dados-pessoais-perfil {
     width: 65%;
 }
@@ -52,7 +54,7 @@
     background-color: #2C3E50;
     padding-top: 20px;
     margin-top: 25px;
-    border: 1px solid rgb(235, 235, 235);
+    border: 2px solid rgb(235, 235, 235);
     width: 300px;
     height: 100%;
     border-radius: 7px;

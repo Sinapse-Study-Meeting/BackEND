@@ -40,4 +40,13 @@ class User extends Authenticatable
     public function interesses(){
         return $this->hasMany('App\Interesse');
     }
+
+    public function chats(){
+        return $this->belongsToMany('App\Chat');
+    }
+
+    public function mensagens(){
+        return $this->hasMany('App\Mensagem');
+    }
+
 }

@@ -64,7 +64,6 @@
                 @else
                 <a href="{{route('register')}}" class="navbar__menu__item">
                     Cadastrar
-
                 </a>
                 <a href="{{route('login')}}" class="navbar__menu__item ">
                     Login
