@@ -5,8 +5,13 @@
 @import '../components/btn';
 @import '../components/navbar';
 @import '../assets/variables';
-.dados-pessoais-perfil {
+body {
+    background-color: #F9F9F9;
+}
+
+.interesses-cadastrados {
     width: 65%;
+    padding-top: 20px;
 }
 
 .editar {
@@ -15,6 +20,7 @@
     border-radius: 5px;
     margin-top: 20px;
     background-color: white;
+    width: 320px;
 }
 
 .button-excluir {
@@ -27,52 +33,53 @@
 }
 
 .editar p {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
+    display: inline-flex;
 }
 
 .editar img {
     position: relative;
     display: block;
     float: right;
-    opacity: 0.5;
 }
 
-.editar h4 {
+.interesses-cadastrados h2 {
     color: #0b0b31;
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 22px;
     margin: 0px 0px 10px 0px;
     text-align: center;
 }
 
-.editar p {
-    margin-left: 30px;
+.interesses-cadastrados h3 {
+    color: #0b0b31;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    margin: 0px 0px 10px 0px;
+    text-align: left;
+    text-transform: capitalize;
 }
 
 .information {
-    background-color: #2C3E50;
-    padding-top: 20px;
     margin-top: 25px;
     border: 2px solid rgb(235, 235, 235);
-    width: 300px;
+    width: 320px;
     height: 100%;
     border-radius: 7px;
+    background-color: white;
 }
 
 .information ul {
     border-radius: 0px;
-    background-color: white;
 }
 
 .information h5 {
-    color: white;
+    color: $primary-color;
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
-}
-
-body {
-    background-color: #F9F9F9;
+    font-size: 25px;
 }
 
 ul .list-group-item {
@@ -90,12 +97,11 @@ ul .list-group-item {
 }
 
 .fundo-perfil {
-    background-color: #2C3E50;
+    padding-top: 50px;
 }
 
 .form-perfil {
     margin-top: 25px;
-    background-color: white;
     padding: 50px 40px 20px 40px;
     border: 1px solid rgb(235, 235, 235);
 }
@@ -111,4 +117,29 @@ ul .list-group-item {
     font-size: 25px;
     text-align: center;
     color: rgb(128, 128, 128);
+}
+
+.dadospessoais {
+    background-color: #F9F9F9;
+    padding: 20px;
+    border: 1px solid $border-color;
+    margin: 20px;
+}
+
+.dadospessoais p {
+    margin-bottom: 10px;
+}
+
+.botaowhite {
+    border: 1px solid rgb(235, 235, 235);
+    padding: 5px;
+    background-color: white;
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    box-shadow: 2px 2px 0 rgb(224, 224, 224);
+}
+
+.botaowhite:hover {
+    background-color: rgb(247, 247, 247);
 }

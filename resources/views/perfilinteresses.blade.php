@@ -25,10 +25,16 @@
                     <img src="{!! asset('img/coruja-perfil.svg')!!}" alt="usuario" id="imagemusuario">
                 </div>
                 <div class="form-group">
-                    <label for="fupload" class="control-label label-bordered"><img src="{!! asset('img/pencil-regular-36.png')!!}" id="trocarfoto"></label>
+                    <label for="fupload" class="control-label label-bordered"><img src="{!! asset('img/camera-solid-180.png')!!}" id="trocarfoto"></label>
                     <input type="file" accept="image/*" id="fupload" name="fupload" class="upload fupload form-control" />
                 </div>
-                <h5>Nome do Usuario</h5><br>
+                <h5>Nome do Usuario</h5>
+            </div>
+            <div class="dadospessoais">
+                <a href="perfileditar.html"><img src="{!! asset('img/pencil-regular-36.png')!!}" class="botaowhite"></a>
+                <p>Email@gmail.com</p>
+                <p>Cidade </p>
+                <p>Estado</p>
             </div>
             <ul class="list-group">
                 <li class="list-group-item">
@@ -38,35 +44,25 @@
 
         </div>
 
-        <div class="dados-pessoais-perfil">
-            <div class="editar">
-                <h4>Dados Pessoais</h4>
-                <a href="perfileditar.html"><img src="{!! asset('img/bxs-pencil.svg')!!}"></a>
-                <p>Nome completo: </p>
-                <p>Email@gmail.com</p>
-                <p>Cidade </p>
-                <p>Estado</p>
-            </div>
-
-            @forelse($ListarInteresses as $interesse)
-            <div class="editar">
-                <h4>Interesses</h4>
-                <form action="{{url("/perfil/interesses/$interesse->id/apagar")}}" method="POST">
-                    @csrf
-                    <button type="submit" class="button-excluir"><img src="{!! asset('img/bxs-trash.svg')!!}"></button>
-                </form>
-                <a href="perfilInteresses.html"><img src="{!! asset('img/bxs-pencil.svg')!!}"></a>
-                <p>Assunto: {{$interesse->assunto}}</p>
-                <p>Categoria: {{$interesse->nivel_conhecimento}}</p>
-                <p>Nivel de Conhecimento: {{$interesse->categorias->first()->nome}}</p>
-                <hr>
+        <div class="interesses-cadastrados">
+            <h2>Meus interesses</h2>
+            <button type="submit" class="btninteresse btn--primary "> Adicionar </button>
+            <div class="todosinteresses">
+                @forelse($ListarInteresses as $interesse)
+                <div class="editar">
+                    <form action="{{url("/perfil/interesses/$interesse->id/apagar")}}" method="POST">
+                        @csrf
+                        <button type="submit" class="button-excluir"><img src="{!! asset('img/trash-solid-180.png')!!} " class="botaowhite"></button>
+                    </form>
+                    <a href="perfilInteresses.html"><img src="{!! asset('img/pencil-regular-36.png')!!}" class="botaowhite"></a>
+                    <h3> {{$interesse->assunto}}</h3>
+                    <p>Categoria: {{$interesse->categorias->first()->nome}} </p>
+                    <p>Nivel de Conhecimento: {{$interesse->nivel_conhecimento}}</p>
+                </div>
             </div>
             @empty
-            <div class="editar">
-                <h4>Interesses</h4>
-                <p class="alert">Você não tem interesse!<p>
-            </div>
-            @endforelse
+            <p class="alert">Você não tem interesse!<p>
+                    @endforelse
         </div>
     </div>
     <div>
