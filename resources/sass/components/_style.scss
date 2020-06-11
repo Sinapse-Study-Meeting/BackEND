@@ -303,3 +303,14 @@ input[type="file"] {
 .h3-size {
     font-size: 19px;
 }
+
+.enviarmsg {
+    background-color: white;
+    border: none;
+    position: relative;
+    display: block;
+    float: right;
+    cursor: pointer;
+    top: -32px;
+    margin-right: 15px;
+}

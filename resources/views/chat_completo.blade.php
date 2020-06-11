@@ -26,13 +26,62 @@
                 <img src="{!! asset('img/search-alt.png')!!}">
             </div>
         </div>
-        <div class="content_chat">
-          
-            <div class="boxtexto">
-                <div class="form-group">
-                    <div class="input-field">
-                        <input type="text" id="email" name="email" value="Mensagens..">
+        <div class="mesgs">
+            <div class="msg_history">
+                <div class="incoming_msg">
+                    <div class="incoming_msg_img"> <img src="{!! asset('img/coruja-perfil.svg')!!}" alt="sunil"> </div>
+                    <div class="received_msg">
+                        <div class="received_withd_msg">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                            <span class="time_date"> 11:01 | 9 Junho</span>
+                        </div>
                     </div>
+                </div>
+                <div class="outgoing_msg">
+                    <div class="sent_msg">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do </p>
+                        <span class="time_date"> 11:02 | 9 Junho</span>
+                    </div>
+                </div>
+                <div class="incoming_msg">
+                    <div class="incoming_msg_img"> <img src="{!! asset('img/coruja-perfil.svg')!!}" alt="sunil"> </div>
+                    <div class="received_msg">
+                        <div class="received_withd_msg">
+                            <p>Lorem ipsum dolor sit amet, consectetur</p>
+                            <span class="time_date"> 21:01 | Quarta-feira</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="outgoing_msg">
+                    <div class="sent_msg">
+                        <p>Lorem ipsum dolor sit amet, consectetur</p>
+                        <span class="time_date"> 18:01 | Hoje</span>
+                    </div>
+                </div>
+                <div class="incoming_msg">
+                    <div class="incoming_msg_img"> <img src="{!! asset('img/coruja-perfil.svg')!!}" alt="sunil"> </div>
+                    <div class="received_msg">
+                        <div class="received_withd_msg">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                            <span class="time_date"> 18:30 | Hoje</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="outgoing_msg">
+                    <div class="sent_msg">
+                        <p>Lorem ipsum dolor sit amet, consectetur</p>
+                        <span class="time_date"> 18:01 | Hoje</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="boxtexto">
+            <div class="form-group">
+                <input type="text" id="email" name="email" value="Mensagens..">
+                <button class="enviarmsg"><img src="{{asset('img/navigation-solid-180.png')}}"></button>
+                <div class="form-group">
+                    <label for="fupload" class="control-label"><img src="{!! asset('img/camera-solid-180.png')!!}" id="trocarfoto"></label>
+                    <input type="file" accept="image/*" id="fupload" name="fupload" class="upload fupload form-control" />
                 </div>
             </div>
         </div>

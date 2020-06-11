@@ -27,6 +27,11 @@
     height: 60px;
 }
 
+.menu_chat h2 {
+    vertical-align: middle;
+    font-family: $font-stack;
+}
+
 .content_chat {
     background-color: #F4F4F4;
 }
@@ -50,8 +55,89 @@
 }
 
 .boxtexto {
-    position: fixed;
+    position: relative;
     bottom: 0px;
-    right: 0px;
-    padding: 0px 20px 0px 20px;
+    background-color: rgb(248, 248, 248);
+    padding: 20px;
+    width: 100%;
+}
+
+.incoming_msg_img {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid $border-color;
+}
+
+.received_msg {
+    display: inline-block;
+    padding: 0 0 0 10px;
+    vertical-align: top;
+    width: 92%;
+}
+
+.received_withd_msg p {
+    background: #ebebeb none repeat scroll 0 0;
+    border-radius: 3px;
+    color: #646464;
+    text-align: justify;
+    font-size: 16px;
+    margin: 0;
+    padding: 10px;
+}
+
+.time_date {
+    color: #747474;
+    display: block;
+    font-size: 12px;
+    margin: 8px 0 0;
+}
+
+.received_withd_msg {
+    width: 57%;
+}
+
+.mesgs {
+    float: initial;
+    height: 450px;
+    padding: 30px 25px 0px 25px;
+    width: 100%;
+    overflow-y: scroll;
+    background-color: rgb(248, 248, 248);
+}
+
+.sent_msg p {
+    background: $primary-color none repeat scroll 0 0;
+    border-radius: 3px;
+    font-size: 16px;
+    margin: 0;
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+}
+
+.outgoing_msg {
+    overflow: hidden;
+    margin: 20px 0 26px;
+}
+
+.sent_msg {
+    float: right;
+    width: 50%;
+}
+
+.boxtexto input {
+    box-shadow: 1px 1px 10px 1px rgb(224, 224, 224);
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    color: #3a3a3a;
+    font-weight: normal;
+    padding: 4px 4px 4px 35px;
+}
+
+.enviarmsg img {
+    height: 25px;
+    width: 25px;
 }
