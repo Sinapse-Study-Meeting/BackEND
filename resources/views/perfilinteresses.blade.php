@@ -32,12 +32,6 @@
             </div>
             <ul class="list-group">
                 <li class="list-group-item">
-                    <a href="perfil.html"><i class='bx bxs-user-rectangle left-button-icon user-options-icon'></i>Perfil</a>
-                </li>
-                <li class="list-group-item">
-                    <a href="perfilInteresses.html"><i class='far fa-list-alt left-button-icon user-options-icon'></i>Adicionar Interesse</a>
-                </li>
-                <li class="list-group-item">
                     <a href="#" data-toggle="modal" data-target="#myModal"><i class='bx bxs-key left-button-icon user-options-icon'></i>Redefinir Senha </a>
                 </li>
             </ul>
