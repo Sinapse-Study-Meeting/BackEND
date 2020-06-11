@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Categoria;
+use App\Events\EventoEnvioMensagem;
 use App\Interesse;
 use App\User;
 use Illuminate\Http\Request;
@@ -35,6 +36,8 @@ class HomeController extends Controller
         $usuario = Auth::user();
 
         $usuarioint = $usuario->interesses()->first();
+
+
 
         return view('home', [
             'categorias' => $cat,

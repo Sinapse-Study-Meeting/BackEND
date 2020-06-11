@@ -8,10 +8,32 @@
 @section('css')
 <link rel="stylesheet" href="{{asset('css/home.min.css')}}">
 
+<script src="https://js.pusher.com/6.0/pusher.min.js"></script>
+<script>
+    // Enable pusher logging - don't include this in production
+    Pusher.logToConsole = true;
+    var pusher = new Pusher('24c8c9f5c522d5df5fde', {
+        cluster: 'mt1'
+    });
+    var channel = pusher.subscribe('mensagens');
+    channel.bind('mensagem-enviada', function(data) {
+    var mensagens = document.getElementById('mensagens')
+        p = document.createElement('p')
+        p.textContent = ' Nova mensagem recebida: ' +data.message
+        mensagens.appendChild(p)
+    });
+
+
+
+
+</script>
+
 @endsection
 @section('content')
 @include("layouts.navbar")
 @include("layouts.search-bar")
+<br>
+<br>
 
 @if(session('status'))
 <p>{{session('status')}}</p>
@@ -61,11 +83,14 @@
                         @enderror
                     </div>
                 </div>
+
                 <button type="submit" class="btn--primary"> Adicionar </button>
             </form>
         </section>
         @endif
-        <div class="grupospessoais">
+
+
+            <div class="grupospessoais">
             <h1 class="hclaro h1-size">Grupos que eu participo</h1>
             <div class="gruposparticipo">
                 <img src="{!! asset('img/estudos.png')!!}" class="participoimg">
@@ -83,6 +108,8 @@
             </div>
         </div>
         <br>
+
+
 
         <form action="/enviar_mensagem" method="post">
             @csrf
@@ -105,15 +132,21 @@
 
             </textarea>
 
-            <input type="submit" value="Submit">
+            <br>
+            <br>
+
+            <button type="submit">Enviar</button>
+
+            <br>
+            <br>
 
         </form>
 
-
-        @foreach(Auth::user()->chats as $chat)
+            <div id="mensagens">gi
+                @foreach(Auth::user()->chats as $chat)
         <h2>
             @foreach($chat->users as $user)
-            {{$user->name}},
+                {{$user->name}},
             @endforeach
         </h2>
 
@@ -123,6 +156,7 @@
             @endforeach
         </p>
 
+            </div>
         @endforeach
 
     </article>

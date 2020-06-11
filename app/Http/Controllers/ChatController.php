@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Chat;
+use App\Events\EventoEnvioMensagem;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -40,6 +41,8 @@ class ChatController extends Controller
         }
 
         $chat->mensagens()->create(['mensagem'=>$request->mensagem, 'user_id'=>Auth::id()]);
+
+        event(new EventoEnvioMensagem($request->mensagem, 7));
 
         return redirect()->back()->with('status', 'Mensagem enviada com sucesso');
     }

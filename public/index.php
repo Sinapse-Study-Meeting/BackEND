@@ -7,6 +7,8 @@
  * @author   Taylor Otwell <taylor@laravel.com>
  */
 
+use App\Events\EventoEnvioMensagem;
+
 define('LARAVEL_START', microtime(true));
 
 /*
@@ -22,6 +24,8 @@ define('LARAVEL_START', microtime(true));
 */
 
 require __DIR__.'/../vendor/autoload.php';
+
+
 
 /*
 |--------------------------------------------------------------------------
