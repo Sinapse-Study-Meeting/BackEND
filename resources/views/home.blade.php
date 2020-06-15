@@ -142,7 +142,7 @@
 
         </form>
 
-            <div id="mensagens">gi
+            <div id="mensagens">
                 @foreach(Auth::user()->chats as $chat)
         <h2>
             @foreach($chat->users as $user)
