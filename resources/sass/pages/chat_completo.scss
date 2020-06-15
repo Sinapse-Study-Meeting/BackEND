@@ -183,18 +183,16 @@
     display: inline-block;
     padding: 0 0 0 10px;
     vertical-align: top;
-    width: 100%;
 }
 
 .received_withd_msg p {
     background: #ebebeb none repeat scroll 0 0;
     border-radius: 3px;
     color: #646464;
-    text-align: justify;
     font-size: 16px;
     margin: 0;
     padding: 10px;
-    max-width: 57%;
+    max-width: 100%;
 }
 
 .time_date {
@@ -202,10 +200,6 @@
     display: block;
     font-size: 12px;
     margin: 8px 0 0;
-}
-
-.received_withd_msg {
-    width: 100%;
 }
 
 .mesgs {
@@ -224,6 +218,7 @@
     margin: 0;
     color: #fff;
     padding: 10px;
+    max-width: 100%;
 }
 
 .outgoing_msg {
@@ -233,7 +228,6 @@
 
 .sent_msg {
     float: right;
-    width: 50%;
 }
 
 .boxtexto input {
@@ -263,5 +257,4 @@
 
 .inputchat {
     margin-left: 50px;
-    width: 90%;
 }
