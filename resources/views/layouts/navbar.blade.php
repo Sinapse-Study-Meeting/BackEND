@@ -1,6 +1,6 @@
  <header class="navbar">
      <!-- ínicio header -->
-     <a href="/" class="logo">
+     <a href="{{route('home')}}" class="logo">
          <h1 class="logo__replacement">Sinapse</h1>
      </a>
      <img src="{{asset('img/menu.svg')}}" class="navbar__trigger" alt="Menu" title="Menu">
@@ -44,7 +44,6 @@
                      <i class='bx bx-chevron-down dropdown-icon'></i>
                  </a>
                  <nav class="dropdown-nav__sub" id="sub_meu_perfil">
-                     <a href="#" class="dropdown-nav__sub__item">Ver Meu Perfil</a>
                      <a href="{{route('interesses')}}" class="dropdown-nav__sub__item">Meus Interesses</a>
                      <a href="#" class="dropdown-nav__sub__item">PREMIUM GRÁTIS</a>
                  </nav>
