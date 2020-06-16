@@ -20,18 +20,6 @@
         <div class="messaging">
             <div class="inbox_msg">
                 <div class="inbox_people">
-                    <div class="headind_srch">
-                        <div class="recent_heading">
-                            <h4>Recent</h4>
-                        </div>
-                        <div class="srch_bar">
-                            <div class="stylish-input-group">
-                                <input type="text" class="search-bar" placeholder="Search">
-                                <span class="input-group-addon">
-                                    <button type="button"> <i class="fa fa-search" aria-hidden="true"></i> </button>
-                                </span> </div>
-                        </div>
-                    </div>
                     <div class="inbox_chat">
                         <div class="chat_list active_chat">
                             <div class="chat_people">
@@ -104,8 +92,8 @@
             <img src="{!! asset('img/coruja-perfil.svg')!!}" class="imgchat_inicio">
             <h2>Nome completo</h2>
             <div class="imgmenuchat">
-                <img src="{!! asset('img/dots-vertical.png')!!}">
-                <img src="{!! asset('img/search-alt.png')!!}">
+                <img src="{!! asset('img/dots-vertical.png')!!}" class="confchat">
+                <img src="{!! asset('img/search-alt.png')!!}" class="pesquisarchat">
             </div>
         </div>
         <div class="mesgs">

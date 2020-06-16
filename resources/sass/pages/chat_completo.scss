@@ -22,13 +22,12 @@
 }
 
 .menu_chat {
-    border: 1px solid $border-color;
+    border: 1px solid rgb(240, 240, 240);
     padding: 10px;
     height: 60px;
 }
 
 .menu_chat h2 {
-    vertical-align: middle;
     font-family: $font-stack;
 }
 
@@ -47,11 +46,19 @@
 }
 
 .imgmenuchat img {
+    float: right;
+}
+
+.confchat {
     height: 35px;
     width: 35px;
-    float: right;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: -15px 10px 0px 10px;
+}
+
+.pesquisarchat {
+    height: 30px;
+    width: 30px;
+    margin: -10px 10px 0px 10px;
 }
 
 .boxtexto {
@@ -114,13 +121,9 @@
 .srch_bar .input-group-addon button {
     background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
     border: medium none;
-    padding: 0;
+    padding: 5px;
     color: #707070;
     font-size: 18px;
-}
-
-.srch_bar .input-group-addon {
-    margin: 0 0 0 -27px;
 }
 
 .chat_ib h5 {
@@ -163,7 +166,7 @@
 }
 
 .inbox_chat {
-    height: 390px;
+    height: 460px;
     overflow-y: scroll;
 }
 
@@ -181,8 +184,9 @@
 
 .received_msg {
     display: inline-block;
-    padding: 0 0 0 10px;
+    padding: 0px 0px 0px 10px;
     vertical-align: top;
+    max-width: 50%;
 }
 
 .received_withd_msg p {
