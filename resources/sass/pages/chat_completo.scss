@@ -28,7 +28,6 @@
 }
 
 .menu_chat h2 {
-    vertical-align: middle;
     font-family: $font-stack;
 }
 
@@ -47,11 +46,19 @@
 }
 
 .imgmenuchat img {
+    float: right;
+}
+
+.confchat {
     height: 35px;
     width: 35px;
-    float: right;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: -15px 10px 0px 10px;
+}
+
+.pesquisarchat {
+    height: 30px;
+    width: 30px;
+    margin: -10px 10px 0px 10px;
 }
 
 .boxtexto {

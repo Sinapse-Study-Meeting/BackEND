@@ -91,8 +91,8 @@
             <img src="{!! asset('img/coruja-perfil.svg')!!}" class="imgchat_inicio">
             <h2>Nome completo</h2>
             <div class="imgmenuchat">
-                <img src="{!! asset('img/dots-vertical.png')!!}">
-                <img src="{!! asset('img/search-alt.png')!!}">
+                <img src="{!! asset('img/dots-vertical.png')!!}" class="confchat">
+                <img src="{!! asset('img/search-alt.png')!!}" class="pesquisarchat">
             </div>
         </div>
         <div class="mesgs">
