@@ -37,6 +37,10 @@ Route::post('/grupo/{grupo}/apagar', 'GruposController@apagar');
 
 Route::post('/grupo/{grupo}/editar', 'GruposController@editar');
 
+Route::get('/chat', 'ChatController@chat');
+
+Route::get('/chat/conversas', 'ChatController@conversas');
+
 Route::view('/teste', 'chat_completo');
 
 

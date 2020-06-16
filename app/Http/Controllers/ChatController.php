@@ -46,4 +46,14 @@ class ChatController extends Controller
 
         return redirect()->back()->with('status', 'Mensagem enviada com sucesso');
     }
+
+    public function chat(){
+        return view('chat_completo');
+    }
+
+    public function conversas(){
+      $UsuarioConversas =  Auth::user()->chats()->with('users')->get();
+
+      return response()->json(json_encode($UsuarioConversas));
+    }
 }

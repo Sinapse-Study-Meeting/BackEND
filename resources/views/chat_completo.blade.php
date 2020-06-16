@@ -12,6 +12,7 @@
 @section('content')
 @include("layouts.navbar")
 <main class="container l-content-aside">
+    @csrf
     <aside class="l-content-aside__chat">
         <div class="menu_mensagem">
             <img src="{!! asset('img/dots-vertical.png')!!}" class="imgmenu">
@@ -171,3 +172,8 @@
     </article>
 </main>
 @endsection
+
+@section('scripts')
+    <script src="{{asset('js/chat.js')}}"> </script>
+@endsection
+
