@@ -1,0 +1,143 @@
+@import '../assets/variables';
+@import '../components/reset';
+@import '../components/logo';
+@import '../components/navbar';
+@import '../components/style';
+@import '../components/form';
+.btn {
+    background-color: #0b0b31;
+    margin-top: 50px;
+}
+
+.input-pesquisar-grupos {
+    margin-top: 30px;
+}
+
+.search {
+    margin-left: 250px;
+}
+
+aside {
+    flex: 20%;
+}
+
+main {
+    flex: 100%;
+    background-color: #fcfcfc;
+    border: 1px solid $border-color;
+    margin-left: 10px;
+    padding: 20px;
+}
+
+.image-circle-grupo {
+    background-color: white;
+    border: 4px solid rgb(247, 248, 248);
+    height: 50px;
+    overflow: hidden;
+    width: 50px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.hazul {
+    font-family: $font-stack;
+    padding-bottom: 20px;
+    color: #0b0b31;
+    font-weight: bold;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.h-titulo {
+    font-family: $font-stack;
+    padding-bottom: 20px;
+    color: #0b0b31;
+    font-weight: bold;
+    margin-left: 10px;
+    font-size: 25px;
+}
+
+.icone-alterar,
+.icone-deletar {
+    size: 7x;
+    margin-left: 40px;
+}
+
+.group-wrapper {
+    display: flex;
+}
+
+.group-content {
+    display: flex;
+    margin-right: 40px;
+}
+
+.group-profile-buttons .buttons {
+    background-color: #0b0b31;
+    color: #fff;
+    border-radius: 4px 4px 4px 4px;
+    padding: 7px 10px 7px 10px;
+}
+
+.margin-usuarios {
+    margin-left: 150px;
+}
+
+.menu-grupos a,
+.pensando-grupo a {
+    color: #0b0b31;
+    font-weight: bold;
+}
+
+.menu-grupos a:hover {
+    //background-color: #3d396b;
+    color: #fff;
+    font-weight: bold;
+    background-color: #0b0b31;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.pensando-grupo a:hover {
+    color: rgb(34, 48, 61);
+}
+
+.pensando-grupo {
+    flex: 55%;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.sobre-grupo {
+    flex: 45%;
+    margin-left: 10px;
+}
+
+.sobre-grupo .hazul {
+    margin-top: 15px;
+}
+
+.texto-sobre-grupos {
+    margin-left: 10px;
+}
+
+.texto-sobre-grupos p {
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+.buttons:hover {
+    background-color: rgb(34, 48, 61);
+}
+
+.icone-coruja-triste {
+    display: flex;
+    align-items: center;
+}
+
+.descricao-membros {
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
