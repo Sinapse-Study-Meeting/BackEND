@@ -52,7 +52,15 @@ class ChatController extends Controller
     }
 
     public function conversas(){
-      $UsuarioConversas =  Auth::user()->chats()->with('users')->get();
+
+      $UsuarioConversas =  Auth::user()->chats()->with('users')->with('mensagens')->get();
+
+      DB::table('user')->join('chat_user', 'user.id', '=',
+          'chat_user.user_id')->join('chat', 'chat.id', '=',
+          'chat_user.chat_id');
+
+
+
 
       return response()->json(json_encode($UsuarioConversas));
     }
