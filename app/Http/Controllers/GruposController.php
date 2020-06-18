@@ -20,28 +20,31 @@ class GruposController extends Controller
 
     public function criargrupo(Request $request)
     {
+        //validacao dos campos necessarios
         $request->validate([
             'nome' => ['required'],
             'descricao' => ['required'],
             'areas_estudo' => ['required']
         ]);
 
-        //validacao dos campos necessarios
+        //separar as areas em um array
         $areas_estudo = explode(',', $request->areas_estudo);
 
+        //criando grupo
         $grupocriado= Grupo::create([
            'nome'=>$request->nome,
            'descricao'=>$request->descricao,
         ]);
-        //criando grupo
 
+        //adicionar as areas no grupo
         foreach($areas_estudo as $area) {
             $grupocriado->areas_estudo()->create([
                 'area'=> trim($area)
             ]);
         }
-        $grupocriado->users()->attach(Auth::user(),['papel'=>'administrador']);
+        
         //adicionando usuario no grupo como adm
+        $grupocriado->users()->attach(Auth::user(),['papel'=>'administrador']);
 
        return redirect("/grupo/$grupocriado->id");
     }
