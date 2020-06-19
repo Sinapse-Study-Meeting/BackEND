@@ -52,13 +52,11 @@ class ChatController extends Controller
 
     public function conversas()
     {
-        $UsuarioConversas = Auth::user()->chats()->with('users')->with('mensagens')->get();
+        $UsuarioConversas = Auth::user()->chats()->with('users')->get();
 
 
         for($i=0; $i<count($UsuarioConversas); $i++){
-            $resul = $UsuarioConversas[$i]->mensagens->max('created_at');
-            $ultimaMensagem = $UsuarioConversas[$i]->mensagens->where('created_at', $resul);
-            $UsuarioConversas[$i]->mensagens = $ultimaMensagem;
+            $UsuarioConversas[$i]->mensagens = $UsuarioConversas[$i]->mensagens()->latest()->first();
         }
 
 
