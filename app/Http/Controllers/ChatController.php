@@ -52,21 +52,15 @@ class ChatController extends Controller
 
     public function conversas()
     {
+        $UsuarioConversas = Auth::user()->chats()->with('users')->with('mensagens')->get();
 
-        $mensagens = DB::table('mensagens')->select('mensagens.mensagem', 'chat_id', DB::raw('MAX(created_at) as mensagem_created_at'))->groupBy('chat_id');
 
-        $UsuarioConversas =
-            Auth::user()->chats()->select(
-                'mensagens_chat.mensagem',
-                'chats.id as chat_id',
-                'users.name',
-                'mensagens_chat.mensagem_created_at'
-            )
-            ->with('users')
-            ->join('users', 'users.id', '=', 'chat_user.user_id')
-            ->joinSub($mensagens, 'mensagens_chat', function ($join) {
-                $join->on('chats.id', '=', 'mensagens_chat.chat_id');
-            })->get();
+        for($i=0; $i<count($UsuarioConversas); $i++){
+            $resul = $UsuarioConversas[$i]->mensagens->max('created_at');
+            $ultimaMensagem = $UsuarioConversas[$i]->mensagens->where('created_at', $resul);
+            $UsuarioConversas[$i]->mensagens = $ultimaMensagem;
+        }
+
 
         $user_id = Auth::id();
         for ($i = 0; $i < count($UsuarioConversas); $i++) {
