@@ -140,7 +140,7 @@
             <div class="pensando-grupo">
                 <div class = "input-pesquisar-grupos">
                     <div class="input-group ">
-                        <img src="{!! asset('img/coruja-perfil.svg')!!}"  style="height: 30px; width: 30px">
+                        <img src="{{ asset('img/coruja-perfil.svg')}}"  style="height: 30px; width: 30px">
                         <input style="border-radius: 4px" class="form-control ml-3" type="text" placeholder="No que você está pensando, bb?" >
                     </div>
                     <div class="pt-2 ml-5">

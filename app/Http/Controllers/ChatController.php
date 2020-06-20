@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Chat;
 use App\Events\EventoEnvioMensagem;
 use App\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -56,7 +57,10 @@ class ChatController extends Controller
 
 
         for($i=0; $i<count($UsuarioConversas); $i++){
-            $UsuarioConversas[$i]->mensagens = $UsuarioConversas[$i]->mensagens()->latest()->first();
+
+            $date = $UsuarioConversas[$i]->mensagens()->latest()->first();
+            $date->created_at = Carbon::parse($date->created_at, 'UTC');
+            $UsuarioConversas[$i]->mensagens = $date;
         }
 
 

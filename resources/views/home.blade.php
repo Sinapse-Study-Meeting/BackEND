@@ -32,12 +32,7 @@
 @section('content')
 @include("layouts.navbar")
 @include("layouts.search-bar")
-<br>
-<br>
 
-@if(session('status'))
-<p>{{session('status')}}</p>
-@endif
 <main class="container l-content-aside">
     <article class="l-content-aside__main">
         @if(!$teminteresses)
@@ -108,56 +103,6 @@
             </div>
         </div>
         <br>
-
-
-
-        <form action="/enviar_mensagem" method="post">
-            @csrf
-
-            <label for="user"> Selecione os usuários: </label>
-
-
-            <select name="user" id="users">
-
-                @foreach(\App\User::all() as $user)
-                <option value="{{$user->id}}">{{$user->name}}</option>
-                @endforeach
-
-
-            </select>
-            <br>
-            Mensagem:
-            <br>
-            <textarea name="mensagem">
-
-            </textarea>
-
-            <br>
-            <br>
-
-            <button type="submit">Enviar</button>
-
-            <br>
-            <br>
-
-        </form>
-
-            <div id="mensagens">
-                @foreach(Auth::user()->chats as $chat)
-        <h2>
-            @foreach($chat->users as $user)
-                {{$user->name}},
-            @endforeach
-        </h2>
-
-        <p>
-            @foreach($chat->mensagens as $user)
-            {{$user->mensagem}},
-            @endforeach
-        </p>
-
-            </div>
-        @endforeach
 
     </article>
 

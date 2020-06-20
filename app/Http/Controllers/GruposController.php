@@ -24,7 +24,7 @@ class GruposController extends Controller
         $request->validate([
             'nome' => ['required'],
             'descricao' => ['required'],
-            'areas_estudo' => ['required']
+            'areas_estudo' => ['regitquired']
         ]);
 
         //separar as areas em um array
@@ -42,7 +42,7 @@ class GruposController extends Controller
                 'area'=> trim($area)
             ]);
         }
-        
+
         //adicionando usuario no grupo como adm
         $grupocriado->users()->attach(Auth::user(),['papel'=>'administrador']);
 
