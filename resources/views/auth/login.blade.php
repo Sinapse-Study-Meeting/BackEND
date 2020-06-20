@@ -46,7 +46,7 @@
                <label class="custom-control-label" for="lembrar">Lembre de mim</label>
             </div>
 
-            <input class="submit-entrar " type="submit" value="ENTRAR">
+            <input class="submit-entrar " type="submit" value="Entrar">
             <div class="top">
                <a href="{{ route('password.request') }}" class="negrito link right">Esqueceu senha?</a>
                <a href="{{ route('register') }}" class="negrito link position-left">Cadastre-se</a>

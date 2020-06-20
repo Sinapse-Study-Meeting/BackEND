@@ -11,7 +11,7 @@
 @endsection
 @section('content')
     @include("layouts.navbar")
-    <main class="container l-content-aside">
+    <main class="mainchat container l-content-aside">
         @csrf
         <aside class="historico l-content-aside__chat">
             <div class="menu_mensagem">
@@ -22,6 +22,24 @@
                     <div class="inbox_people">
                         <div class="inbox_chat">
                             <div class="chat_list active_chat">
+                                <div class="chat_people">
+                                    <div class="chat_img"><img src="{!! asset('img/coruja-perfil.svg')!!}"></div>
+                                    <div class="chat_ib">
+                                        <h5>Nome Completo <span class="chat_date">25 Dez</span></h5>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chat_list">
+                                <div class="chat_people">
+                                    <div class="chat_img"><img src="{!! asset('img/coruja-perfil.svg')!!}"></div>
+                                    <div class="chat_ib">
+                                        <h5>Nome Completo <span class="chat_date">25 Dez</span></h5>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chat_list">
                                 <div class="chat_people">
                                     <div class="chat_img"><img src="{!! asset('img/coruja-perfil.svg')!!}"></div>
                                     <div class="chat_ib">
@@ -156,11 +174,11 @@
             </div>
             <div class="boxtexto">
                 <div class="form-group">
-                    <div class="form-group adicionardoc">
+                   <!--  <div class="form-group adicionardoc">
                         <label for="fupload" class="control-label"><img src="{!! asset('img/plus-regular-180.png')!!}"
                                                                         id="trocarfoto"></label>
                         <input type="file" id="fupload" name="fupload" class="upload fupload form-control "/>
-                    </div>
+                    </div> -->
                     <div class="inputchat">
                         <input type="text" class="adicionarinpult" value="Mensagens..">
                         <button class="enviarmsg"><img src="{{asset('img/navigation-solid-180.png')}}"></button>
