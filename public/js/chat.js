@@ -1,4 +1,3 @@
-moment.locale('pt-br');
 (async () => {
     let url = '/chat/conversas';
 

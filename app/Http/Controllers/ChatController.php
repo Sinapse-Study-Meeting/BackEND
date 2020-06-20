@@ -53,24 +53,13 @@ class ChatController extends Controller
 
     public function conversas()
     {
-        $UsuarioConversas = Auth::user()->chats()->with('users')->get();
-
-
+        $UsuarioConversas = Auth::user()->chats()->get();
         for($i=0; $i<count($UsuarioConversas); $i++){
-
-            $date = $UsuarioConversas[$i]->mensagens()->latest()->first();
-            $date->created_at = Carbon::parse($date->created_at, 'UTC');
-            $UsuarioConversas[$i]->mensagens = $date;
+            $UsuarioConversas[$i]->mensagens = $UsuarioConversas[$i]->mensagens()->latest()->first();
         }
-
-
         $user_id = Auth::id();
         for ($i = 0; $i < count($UsuarioConversas); $i++) {
-            for ($j = 0; $j < count($UsuarioConversas[$i]->users); $j++) {
-                if ($UsuarioConversas[$i]->users[$j]->id == $user_id) {
-                    unset($UsuarioConversas[$i]->users[$j]);
-                }
-            }
+            $UsuarioConversas[$i]->users = $UsuarioConversas[$i]->users()->where('users.id', '<>', $user_id)->get();
         }
         return response()->json(json_encode($UsuarioConversas));
     }
