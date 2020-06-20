@@ -1,5 +1,4 @@
 @extends('layouts.base')
-
 @section('title',"Sinapse - Home")
 @section('metas')
 <meta name="description" content="A plataforma para você encontrar sua companhia de estudos">

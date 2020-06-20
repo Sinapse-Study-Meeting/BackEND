@@ -1,0 +1,95 @@
+@import '../assets/variables';
+@import '../components/reset';
+@import '../components/logo';
+@import '../components/style';
+.navbar {
+    position: fixed;
+    width: 100%;
+    padding-left: 4rem;
+}
+
+.top-right {
+    padding: 20px;
+    right: 10px;
+    top: 18px;
+}
+
+.content {
+    height: 100vh;
+    text-align: center;
+    background-image: url("../img/telaInicio.svg");
+    background-repeat: no-repeat;
+    width: 100vw;
+    background-size: cover;
+}
+
+.title {
+    font-size: 2.2rem;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.links>a {
+    color: #ffffff;
+    padding: 0 25px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.m-b-md {
+    position: relative;
+}
+
+.botaoinicio {
+    background-color: #09182c;
+    padding: 14px;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.botaoinicio:hover {
+    background-color: #071324;
+}
+
+.botaosaiba {
+    border: 2px solid #ffffff;
+    padding: 12px;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 7px;
+}
+
+.botaosaiba:hover {
+    background-color: #213c5f;
+}
+
+.homebutton {
+    padding-top: 25px;
+    display: grid;
+    position: relative;
+    width: 17rem;
+    left: 10em;
+}
+
+.conteudo-home {
+    text-align: center;
+    position: relative;
+    float: right;
+    right: 4em;
+    width: 40em;
+    text-align: center;
+    top: 250px;
+}
+
+a:hover {
+    text-decoration: none;
+    font-weight: bold;
+    color: #ffffff;
+}

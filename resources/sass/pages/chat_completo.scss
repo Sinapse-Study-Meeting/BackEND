@@ -14,6 +14,11 @@
     height: 60px;
 }
 
+.historico,
+.mensagem-individual {
+    height: 100vh;
+}
+
 .imgmenu {
     height: 35px;
     width: 35px;
@@ -25,10 +30,14 @@
     border: 1px solid rgb(240, 240, 240);
     padding: 10px;
     height: 60px;
+    display: inline-flex;
+    width: 100%;
+    position: relative;
 }
 
 .menu_chat h2 {
     font-family: $font-stack;
+    width: 100%;
 }
 
 .content_chat {
@@ -38,34 +47,41 @@
 .imgchat_inicio {
     height: 50px;
     width: 50px;
-    margin-top: -5px;
+    position: relative;
+    bottom: 5px;
     float: left;
     margin-left: 30px;
     border-radius: 50%;
     border: 1px solid $border-color;
 }
 
+.imgmenuchat {
+    width: 100%;
+}
+
 .imgmenuchat img {
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
     float: right;
 }
 
 .confchat {
     height: 35px;
     width: 35px;
-    margin: -15px 10px 0px 10px;
 }
 
 .pesquisarchat {
     height: 30px;
     width: 30px;
-    margin: -10px 10px 0px 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .boxtexto {
     position: relative;
-    bottom: 0px;
     background-color: rgb(248, 248, 248);
-    padding: 20px;
+    padding: 15px;
     width: 100%;
 }
 
@@ -166,7 +182,6 @@
 }
 
 .inbox_chat {
-    height: 460px;
     overflow-y: scroll;
 }
 
@@ -180,6 +195,11 @@
     height: 35px;
     border-radius: 50%;
     border: 1px solid $border-color;
+    background-color: white;
+}
+
+.incoming_msg_img img {
+    border-radius: 50%;
 }
 
 .received_msg {
@@ -212,7 +232,8 @@
     padding: 30px 25px 0px 25px;
     width: 100%;
     overflow-y: scroll;
-    background-color: rgb(248, 248, 248);
+    background-image: url("../img/footer-claro.svg");
+    background-size: cover;
 }
 
 .sent_msg p {
@@ -234,14 +255,15 @@
     float: right;
 }
 
-.boxtexto input {
+.adicionarinpult {
     box-shadow: 1px 1px 10px 1px rgb(224, 224, 224);
     width: 100%;
+    position: relative;
     height: 40px;
     font-size: 16px;
     color: #3a3a3a;
     font-weight: normal;
-    padding: 4px 4px 4px 35px;
+    padding: 4px 4px 4px 20px;
 }
 
 .enviarmsg img {
@@ -257,8 +279,4 @@
     padding: 5px;
     background-color: white;
     margin-top: 10px;
-}
-
-.inputchat {
-    margin-left: 50px;
 }

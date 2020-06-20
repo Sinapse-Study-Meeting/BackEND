@@ -45,8 +45,8 @@
         </div>
 
         <div class="interesses-cadastrados">
+        <a href="#" class="navbar__menu__item btn-primary toggle buttonadicionar" data-target="interesseModal">Adicionar</a>
             <h2>Meus interesses</h2>
-            <button type="submit" class="btninteresse btn--primary "> Adicionar </button>
             <div class="todosinteresses">
                 @forelse($ListarInteresses as $interesse)
                 <div class="editar">
@@ -65,6 +65,7 @@
                     @endforelse
         </div>
     </div>
+
     <div>
         <!-- The Modal -->
         <div class="modal" id="myModal">
@@ -112,9 +113,8 @@
         </div>
     </div>
 </main>
-@endsection
+
 @section('scripts')
-<script src="{{asset('js/navbar.js') }}"></script>
+<script src="{{asset('js/toggle.js')}}"></script>
 <script src="{{asset('js/mostrarsenha.js') }}"></script>
-<script src="{{asset('js/trocarfoto.js') }}"></script>
 @endsection
