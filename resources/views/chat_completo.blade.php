@@ -13,7 +13,7 @@
 @include("layouts.navbar")
 <main class="container l-content-aside">
     @csrf
-    <aside class="l-content-aside__chat">
+    <aside class="historico l-content-aside__chat">
         <div class="menu_mensagem">
             <img src="{!! asset('img/dots-vertical.png')!!}" class="imgmenu">
         </div>
@@ -23,7 +23,7 @@
                     <div class="inbox_chat">
                         <div class="chat_list active_chat">
                             <div class="chat_people">
-                                <div class="chat_img"> <img src="{!! asset('img/coruja-perfil.svg')!!}" > </div>
+                                <div class="chat_img"> <img src="{!! asset('img/coruja-perfil.svg')!!}"> </div>
                                 <div class="chat_ib">
                                     <h5>Nome Completo <span class="chat_date">25 Dez</span></h5>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -32,7 +32,7 @@
                         </div>
                         <div class="chat_list">
                             <div class="chat_people">
-                                <div class="chat_img"> <img src="{!! asset('img/coruja-perfil.svg')!!}" > </div>
+                                <div class="chat_img"> <img src="{!! asset('img/coruja-perfil.svg')!!}"> </div>
                                 <div class="chat_ib">
                                     <h5>Nome Completo <span class="chat_date">25 Dez</span></h5>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -41,7 +41,7 @@
                         </div>
                         <div class="chat_list">
                             <div class="chat_people">
-                                <div class="chat_img"> <img src="{!! asset('img/coruja-perfil.svg')!!}" > </div>
+                                <div class="chat_img"> <img src="{!! asset('img/coruja-perfil.svg')!!}"> </div>
                                 <div class="chat_ib">
                                     <h5>Nome Completo <span class="chat_date">25 Dez</span></h5>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -50,7 +50,7 @@
                         </div>
                         <div class="chat_list">
                             <div class="chat_people">
-                                <div class="chat_img"> <img src="{!! asset('img/coruja-perfil.svg')!!}" > </div>
+                                <div class="chat_img"> <img src="{!! asset('img/coruja-perfil.svg')!!}"> </div>
                                 <div class="chat_ib">
                                     <h5>Nome Completo <span class="chat_date">25 Dez</span></h5>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -59,7 +59,7 @@
                         </div>
                         <div class="chat_list">
                             <div class="chat_people">
-                                <div class="chat_img"> <img src="{!! asset('img/coruja-perfil.svg')!!}" > </div>
+                                <div class="chat_img"> <img src="{!! asset('img/coruja-perfil.svg')!!}"> </div>
                                 <div class="chat_ib">
                                     <h5>Nome Completo <span class="chat_date">25 Dez</span></h5>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -87,8 +87,9 @@
                     </div>
                 </div>
     </aside>
-    <article class="l-content-aside__conversa">
+    <article class="mensagem-individual l-content-aside__conversa">
         <div class="menu_chat">
+            <img src="{{asset('img/seta-voltar.png')}}" class="navbar__trigger" alt="Menu" title="Menu">
             <img src="{!! asset('img/coruja-perfil.svg')!!}" class="imgchat_inicio">
             <h2>Nome completo</h2>
             <div class="imgmenuchat">
@@ -96,6 +97,7 @@
                 <img src="{!! asset('img/search-alt.png')!!}" class="pesquisarchat">
             </div>
         </div>
+        
         <div class="mesgs">
             <div class="msg_history">
                 <div class="incoming_msg">
@@ -149,10 +151,10 @@
             <div class="form-group">
                 <div class="form-group adicionardoc">
                     <label for="fupload" class="control-label"><img src="{!! asset('img/plus-regular-180.png')!!}" id="trocarfoto"></label>
-                    <input type="file" id="fupload" name="fupload" class="upload fupload form-control" />
+                    <input type="file" id="fupload" name="fupload" class="upload fupload form-control " />
                 </div>
                 <div class="inputchat">
-                    <input type="text" id="email" name="email" value="Mensagens..">
+                    <input type="text" class="adicionarinpult" value="Mensagens..">
                     <button class="enviarmsg"><img src="{{asset('img/navigation-solid-180.png')}}"></button>
                 </div>
             </div>
@@ -162,6 +164,5 @@
 @endsection
 
 @section('scripts')
-    <script src="{{asset('js/chat.js')}}"> </script>
+<script src="{{asset('js/chat.js')}}"> </script>
 @endsection
-

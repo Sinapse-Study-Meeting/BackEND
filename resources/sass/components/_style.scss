@@ -226,12 +226,6 @@ hr {
     opacity: 0.3;
 }
 
-.center {
-    display: block;
-    text-align: center;
-    margin-top: -20px;
-}
-
 .right {
     position: relative;
     display: block;
@@ -271,10 +265,10 @@ input[type="file"] {
     float: right;
     height: 35px;
     width: 35px;
-    margin-left: 35px;
+    margin-right: 85px;
     margin-top: -50px;
     box-shadow: 2px 2px 0 rgb(224, 224, 224);
-    position: absolute;
+    position: relative;
 }
 
 .label-bordered:hover {

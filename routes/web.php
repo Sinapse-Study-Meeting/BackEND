@@ -41,6 +41,6 @@ Route::get('/chat', 'ChatController@chat');
 
 Route::get('/chat/conversas', 'ChatController@conversas');
 
-Route::view('/teste', 'grupos_perfil');
+Route::view('/teste', 'chat_completo');
 
 
