@@ -14,7 +14,7 @@
 <main class="l-content-aside main-grupo">
     <aside class="l-content-aside__perquisargrupo">
         <div class="lateral-grupo">
-           
+
             <div class="input-pesquisar-grupos">
                 <div class="input-group ">
                     <input class="form-control" type="text" placeholder="Pesquisar grupos">
@@ -25,47 +25,26 @@
             <hr>
 
             <h1 class="welcome-sub-info d-flex justify-content-start h-titulo">Seus grupos</h1>
-            <div class="group-wrapper">
+            @foreach($grupos as $grupo)
+
+                <div class="group-wrapper">
                 <div class="group-content">
                     <img src="{{ asset('img/estudos.png')}}" class="image-grupo">
-                    <h1 class="hazul ">Programação PP1</h1>
+                    <h3 class="hazul ">{{$grupo->nome}}</h3>
                 </div>
 
                 <div class="group-profile-buttons">
-                    <button type="submit"><img src="{!! asset('img/trash-solid-180.png')!!} " class="botaowhite"></button>
-                    <a href="perfileditar.html"><img src="{!! asset('img/pencil-regular-36.png')!!}" class="botaowhite"></a>
+                    <form action="{{url("/grupo/$grupo->id/apagar")}}" method="post">
+                        @csrf
+                      <button type="submit"><img src="{!! asset('img/trash-solid-180.png')!!} " class="botaowhite"></button>
+                    </form>
+                    <a data-target="EditagrupoModal" data-id="{{$grupo->id}}" class="toggle clickEditar"><img src="{!! asset('img/pencil-regular-36.png')!!}" class="botaowhite"></a>
                 </div>
             </div>
 
             <hr>
+                @endforeach
 
-            <div class="group-wrapper">
-                <div class="group-content">
-                    <img src="{{ asset('img/estudos.png')}}" class="image-grupo">
-                    <h2 class="hazul">Programação PP2</h2>
-                </div>
-
-                <div class="group-profile-buttons">
-                    <button type="submit"><img src="{!! asset('img/trash-solid-180.png')!!} " class="botaowhite"></button>
-                    <a href="perfileditar.html"><img src="{!! asset('img/pencil-regular-36.png')!!}" class="botaowhite"></a>
-                </div>
-            </div>
-
-            <hr>
-
-            <div class="group-wrapper">
-                <div class="group-content">
-                    <img src="{{ asset('img/estudos.png')}}" class="image-grupo">
-                    <h1 class="hazul ">Programação PP3</h1>
-                </div>
-
-                <div class="group-profile-buttons">
-                    <button type="submit"><img src="{!! asset('img/trash-solid-180.png')!!} " class="botaowhite"></button>
-                    <a href="perfileditar.html"><img src="{!! asset('img/pencil-regular-36.png')!!}" class="botaowhite"></a>
-                </div>
-            </div>
-
-            <hr>
 
             <div class="notgrupo">
                 <div class="d-flex justify-content-center">
@@ -111,7 +90,7 @@
             <a href="">Postagens</a>
             <a href="">Arquivos</a>
             <a href="">Midia</a>
-  
+
         </div>
 
         <div class="d-flex flex-row">
@@ -181,3 +160,38 @@
             </div>
     </article>
 </main>
+
+<div class="toggle-target__modal modal toggle-close-when-out" id="EditagrupoModal">
+    <span class='bx bx-x modal-close toggle' data-target="EditargrupoModal"></span>
+    <form action="" method="post" id="editar-grupo-form">
+        @csrf
+        <div class="form-group">
+            <label for="editar-nome">Nome do grupo</label>
+            <input class="form-field" id="editar-nome" type="text" name="nome">
+            @error('nome')
+            <p class="">{{$message}}</p>
+            @enderror
+        </div>
+        <div class="form-group">
+            <label for="editar-interesse">Áreas de estudo do grupo </label>
+            <input class="form-field" id="editar-interesse" name="areas_estudo">
+            <span class="field-helper">Separe as áreas por vírgula</span>
+            @error('interesse')
+            <span class="form-group__error">{{$message}}</span>
+            @enderror
+        </div>
+        <div class="form-group">
+            <label for="editar-descricao">Crie uma descrição marcante para seu grupo</label>
+            <textarea name="descricao" class="form-field" id="editar-descricao"></textarea>
+            @error('descricao')
+            <span class="form-group__error">{{$message}}</span>
+            @enderror
+        </div>
+        <button type="submit" class="btn--primary"> Enviar </button>
+    </form>
+</div>
+
+    @section('scripts')
+        <script src="{{asset('js/toggle.js')}}"></script>
+        <script src="{{asset('js/grupo.js')}}"></script>
+    @endsection

@@ -16,8 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::view('/', 'welcome');
 
 
-
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -32,7 +30,9 @@ Route::post('/perfil/interesses/{interesse}/editar', 'InteresseController@editar
 
 Route::post('/perfil/interesses/{interesse}/apagar', 'InteresseController@apagar');
 
-// CHAT ROUTES
+// GRUPOS ROUTES
+
+Route::get('/grupos', 'GruposController@meusgrupos')->name('grupos');
 
 Route::get('/grupo/{grupo}', 'GruposController@grupo');
 
@@ -51,8 +51,4 @@ Route::get('/chat/conversas', 'ChatController@conversas');
 Route::post('/enviar_mensagem/{chat?}', 'ChatController@enviar_mensagem');
 
 Route::get('/chat/{chat}/mensagens', 'ChatController@mensagens_chat');
-
-
-Route::view('/teste', 'grupos_perfil');
-
 
