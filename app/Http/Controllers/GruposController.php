@@ -51,7 +51,12 @@ class GruposController extends Controller
 
     public function grupo(Grupo $grupo)
     {
-        return view('grupos_perfil');
+        return response()->json($grupo->with('areas_estudo')->get());
+    }
+
+    public function meusgrupos(){
+        $grupos = Auth::user()->grupos;
+        return view('grupos_perfil', ['grupos'=>$grupos, 'grupoAtivo'=>$grupos[0]]);
     }
 
     public function  editar(Request $request, Grupo $grupo){
@@ -70,7 +75,7 @@ class GruposController extends Controller
     public function apagar(Grupo $grupo) {
         $grupo->users()->detach();
         $grupo->delete();
-        return redirect()->route('home')->with('status', 'Grupo deletado com sucesso');
+        return redirect()->route('grupos')->with('status', 'Grupo deletado com sucesso');
     }
 
 }
