@@ -114,7 +114,7 @@
 
         <div class="group-wrapper">
             <div class="group-content">
-                    <span><i class="fas fa-lock"></i> Grupo privado - 43 pessoas<span>
+                    <span><img src="{{ asset('img/bxs-group.svg')}}" alt=""> Grupo - 43 pessoas<span>
 
                     <img src="{{ asset('img/coruja-perfil.svg')}}" class="margin-usuarios"  style="height: 30px; width: 30px">
                     <img src="{{ asset('img/coruja-perfil.svg')}}"  style="height: 30px; width: 30px">
@@ -143,7 +143,7 @@
                 <div class = "input-pesquisar-grupos">
                     <div class="input-group ">
                         <img src="{{ asset('img/coruja-perfil.svg')}}"  style="height: 30px; width: 30px">
-                        <input style="border-radius: 4px" class="form-control ml-3" type="text" placeholder="No que você está pensando, bb?" >
+                        <input style="border-radius: 4px" class="form-control ml-3" type="text" placeholder="No que você está pensando?" >
                     </div>
                     <div class="pt-2 ml-5">
                         <a href=""><i class="fas fa-images "></i><span>Foto/video</span></a>
@@ -165,11 +165,16 @@
 
                 <div class="sobre-grupo">
                     <h3 class= " hazul">Sobre o grupo</h3>
-                    <div class="texto-sobre-grupos">
+
+                    <!-- <div class="texto-sobre-grupos">
                         <span><i class="fas fa-lock"></i> Privado</span> <br>
                         <p>Somente membros do grupo podem ver as postagens do grupo e visualizar os participantes</p>
                         <span><i class="fas fa-eye-slash"></i> Oculto </span> <br>
                         <p>Somente membros do grupo podem encontrar o grupo na barra de pesquisa</p>
+                    </div> -->
+
+                    <div class="texto-sobre-grupos">
+                    <p>Descrição do grupo - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
 
                             <hr>

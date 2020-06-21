@@ -1,3 +1,4 @@
+@import '../assets/variables';
 .input-field {
     position: relative;
     width: 100%;
@@ -99,11 +100,10 @@ textarea {
 
 .submit-entrar {
     color: #fff;
-    background-color: #111147;
-    border: 2px solid #fff;
+    background-color: #09182c;
     padding: 10px 10px;
     width: 200px;
-    border-radius: 60px;
+    border-radius: 4px;
     cursor: pointer;
     display: block;
     margin: 0 auto;

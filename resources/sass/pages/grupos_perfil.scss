@@ -86,15 +86,12 @@ main {
 .menu-grupos a,
 .pensando-grupo a {
     color: #0b0b31;
+    padding: 10px;
     font-weight: bold;
 }
 
 .menu-grupos a:hover {
-    //background-color: #3d396b;
-    color: #fff;
-    font-weight: bold;
-    background-color: #0b0b31;
-    padding: 10px;
+    background-color: #f1f1f1;
     border-radius: 4px;
 }
 

@@ -16,11 +16,11 @@
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
-<header class="navbar">
+<header class="navbar__home">
     <a href="{{route('home')}}" class="logo">
         <h1 class="logo__replacement__white">Sinapse</h1>
     </a>
-    <nav class="navbar__menu">
+    <nav class="navbar__menu__home">
         @if (Route::has('login'))
         <div class="top-right links">
             @auth
@@ -43,11 +43,14 @@
         </div>
         <div class="homebutton">
             <a href="{{ route('register') }}" class="botaoinicio">Começar agora</a>
-            <a href="{{ route('register') }}" class="botaosaiba">Já faço parte</a>
+            <a href="{{ route('login') }}" class="botaosaiba">Já faço parte</a>
         </div>
 
     </div>
 </div>
+<!-- <footer class="footer-inicial">
+
+</footer> -->
 @section('scripts')
 <script src="{{asset('js/toggle.js')}}"></script>
 <script src="{{asset('js/mostrarsenha.js') }}"></script>
