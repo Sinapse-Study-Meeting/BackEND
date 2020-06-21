@@ -54,7 +54,7 @@
                         @csrf
                         <button type="submit" class="button-excluir"><img src="{!! asset('img/trash-solid-180.png')!!} " class="botaowhite"></button>
                     </form>
-                    <a href="perfilInteresses.html"><img src="{!! asset('img/pencil-regular-36.png')!!}" class="botaowhite"></a>
+                    <a href="perfilInteresses.html"><img src="{{ asset('img/pencil-regular-36.png')}}" class="botaowhite"></a>
                     <h3> {{$interesse->assunto}}</h3>
                     <p>Categoria: {{$interesse->categorias->first()->nome}} </p>
                     <p>Nivel de Conhecimento: {{$interesse->nivel_conhecimento}}</p>

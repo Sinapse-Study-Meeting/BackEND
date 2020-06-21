@@ -4,29 +4,31 @@
 @import '../components/navbar';
 @import '../components/style';
 @import '../components/form';
+@import '../layouts/l-content-aside';
 .btn {
-    background-color: #0b0b31;
+    background-color: $primary-color;
     margin-top: 50px;
+}
+
+.main-grupo {
+    background-color: $background-color;
+    border-top: 2px solid $border-color;
+}
+
+.lateral-grupo {
+    padding: 25px;
+    border-radius: 0px 0px 4px 0px;
+    background-color: white;
+    border-right: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+}
+
+.conteudo-grupo {
+    padding: 25px;
 }
 
 .input-pesquisar-grupos {
     margin-top: 30px;
-}
-
-.search {
-    margin-left: 250px;
-}
-
-aside {
-    flex: 20%;
-}
-
-main {
-    flex: 100%;
-    background-color: #fcfcfc;
-    border: 1px solid $border-color;
-    margin-left: 10px;
-    padding: 20px;
 }
 
 .image-circle-grupo {
@@ -41,20 +43,56 @@ main {
 
 .hazul {
     font-family: $font-stack;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     color: #0b0b31;
     font-weight: bold;
     margin-left: 10px;
-    font-size: 20px;
+    font-size: 18px;
+    margin-top: 10px;
 }
 
 .h-titulo {
     font-family: $font-stack;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     color: #0b0b31;
     font-weight: bold;
     margin-left: 10px;
     font-size: 25px;
+}
+
+.pessoas-grupos {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid $border-color;
+    margin-right: -8px;
+    background-color: white;
+}
+
+.membros-grupos {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid $border-color;
+    margin-right: -8px;
+    background-color: white;
+}
+
+.notgrupo {
+    text-align: center;
+}
+
+.img-notgrupo {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+}
+
+.perfil-gropoimg {
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
 }
 
 .icone-alterar,
@@ -72,8 +110,13 @@ main {
     margin-right: 40px;
 }
 
+.image-grupo {
+    height: 45px;
+    width: 45px;
+}
+
 .group-profile-buttons .buttons {
-    background-color: #0b0b31;
+    background-color: $primary-color;
     color: #fff;
     border-radius: 4px 4px 4px 4px;
     padding: 7px 10px 7px 10px;
@@ -101,13 +144,12 @@ main {
 
 .pensando-grupo {
     flex: 55%;
-    background-color: #f4f4f4;
     border-radius: 10px;
     padding: 5px;
 }
 
 .sobre-grupo {
-    flex: 45%;
+    flex: 35%;
     margin-left: 10px;
 }
 
@@ -137,4 +179,23 @@ main {
     margin-left: 10px;
     margin-top: 5px;
     margin-bottom: 30px;
+}
+
+.group-profile-buttons button {
+    background-color: white;
+    border: none;
+}
+
+.box-post img {
+    height: 20em;
+    width: 100%;
+    opacity: 0.2;
+}
+
+.box-post {
+    width: 100%;
+    background-color: white;
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px;
 }
