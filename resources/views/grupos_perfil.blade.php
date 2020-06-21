@@ -12,6 +12,8 @@
 @section('content')
 @include('layouts.navbar')
 
+
+
 <div class="container d-flex flex-row mt-5" >
     <aside class="p-2 bd-highlight">
         <h3 class="welcome-sub-info d-flex justify-content-start h-titulo ">Grupos<i class="fas fa-cog search"></i></h3>
@@ -20,7 +22,7 @@
                 <input class="form-control" type="text" placeholder="Pesquisar grupos" >
             </div>
         </div>
-
+        
          <div class=" d-flex justify-content-center">
             <div>
                 <button class="btn btn-primary" type="button">Criar novo grupo</button>

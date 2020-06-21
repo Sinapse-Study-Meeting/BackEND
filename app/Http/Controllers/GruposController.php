@@ -51,7 +51,7 @@ class GruposController extends Controller
 
     public function grupo(Grupo $grupo)
     {
-        return view('grupo', compact('grupo'));
+        return view('grupos_perfil', compact('grupos_perfil'));
     }
 
     public function  editar(Request $request, Grupo $grupo){
