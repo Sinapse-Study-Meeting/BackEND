@@ -106,7 +106,6 @@
         </div>
 
         <hr>
-
         <div class="d-flex flex-row justify-content-between p-3 menu-grupos">
             <a href="">Sobre</a>
             <a href="">Postagens</a>
