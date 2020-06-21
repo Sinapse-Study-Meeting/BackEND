@@ -21,88 +21,9 @@
                 <div class="inbox_msg">
                     <div class="inbox_people">
                         <div class="inbox_chat">
-                            <div class="chat_list active_chat">
-                                <div class="chat_people">
-                                    <div class="chat_img"><img src="{!! asset('img/coruja-perfil.svg')!!}"></div>
-                                    <div class="chat_ib">
-                                        <h5>Nome Completo <span class="chat_date">25 Dez</span></h5>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="chat_list">
-                                <div class="chat_people">
-                                    <div class="chat_img"><img src="{!! asset('img/coruja-perfil.svg')!!}"></div>
-                                    <div class="chat_ib">
-                                        <h5>Nome Completo <span class="chat_date">25 Dez</span></h5>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="chat_list">
-                                <div class="chat_people">
-                                    <div class="chat_img"><img src="{!! asset('img/coruja-perfil.svg')!!}"></div>
-                                    <div class="chat_ib">
-                                        <h5>Nome Completo <span class="chat_date">25 Dez</span></h5>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="chat_list">
-                                <div class="chat_people">
-                                    <div class="chat_img"><img src="{!! asset('img/coruja-perfil.svg')!!}"></div>
-                                    <div class="chat_ib">
-                                        <h5>Nome Completo <span class="chat_date">25 Dez</span></h5>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="chat_list">
-                                <div class="chat_people">
-                                    <div class="chat_img"><img src="{!! asset('img/coruja-perfil.svg')!!}"></div>
-                                    <div class="chat_ib">
-                                        <h5>Nome Completo <span class="chat_date">25 Dez</span></h5>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="chat_list">
-                                <div class="chat_people">
-                                    <div class="chat_img"><img src="{!! asset('img/coruja-perfil.svg')!!}"></div>
-                                    <div class="chat_ib">
-                                        <h5>Nome Completo <span class="chat_date">25 Dez</span></h5>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="chat_list">
-                                <div class="chat_people">
-                                    <div class="chat_img"><img src="{!! asset('img/coruja-perfil.svg')!!}"></div>
-                                    <div class="chat_ib">
-                                        <h5>Nome Completo <span class="chat_date">25 Dez</span></h5>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="chat_list">
-                                <div class="chat_people">
-                                    <div class="chat_img"><img src="{!! asset('img/coruja-perfil.svg')!!}" alt="sunil">
-                                    </div>
-                                    <div class="chat_ib">
-                                        <h5>Nome Completo <span class="chat_date">25 Dez</span></h5>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="chat_list">
-                                <div class="chat_people">
-                                    <div class="chat_img"><img src="{!! asset('img/coruja-perfil.svg')!!}"></div>
-                                    <div class="chat_ib">
-                                        <h5>Nome Completo <span class="chat_date">25 Dez</span></h5>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                    </div>
-                                </div>
-                            </div>
+
+
+
                         </div>
                     </div>
                 </div>

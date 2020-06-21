@@ -24,7 +24,7 @@ class GruposController extends Controller
         $request->validate([
             'nome' => ['required'],
             'descricao' => ['required'],
-            'areas_estudo' => ['regitquired']
+            'areas_estudo' => ['required']
         ]);
 
         //separar as areas em um array
@@ -51,7 +51,7 @@ class GruposController extends Controller
 
     public function grupo(Grupo $grupo)
     {
-        return view('grupos_perfil', compact('grupos_perfil'));
+        return view('grupos_perfil');
     }
 
     public function  editar(Request $request, Grupo $grupo){
