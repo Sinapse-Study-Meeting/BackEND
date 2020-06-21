@@ -14,7 +14,7 @@
 <main class="l-content-aside main-grupo">
     <aside class="l-content-aside__perquisargrupo">
         <div class="lateral-grupo">
-           
+
             <div class="input-pesquisar-grupos">
                 <div class="input-group ">
                     <input class="form-control" type="text" placeholder="Pesquisar grupos">
@@ -24,14 +24,14 @@
 
             <hr>
 
-            <h1 class="welcome-sub-info d-flex justify-content-start h-titulo">Seus grupos</h1>
+            <h1 class="d-flex justify-content-start h3-size hclaro">Seus grupos</h1>
             <div class="group-wrapper">
                 <div class="group-content">
                     <img src="{{ asset('img/estudos.png')}}" class="image-grupo">
                     <h1 class="hazul ">Programação PP1</h1>
                 </div>
 
-                <div class="group-profile-buttons">
+                <div class="organizar-button">
                     <button type="submit"><img src="{!! asset('img/trash-solid-180.png')!!} " class="botaowhite"></button>
                     <a href="perfileditar.html"><img src="{!! asset('img/pencil-regular-36.png')!!}" class="botaowhite"></a>
                 </div>
@@ -45,7 +45,7 @@
                     <h2 class="hazul">Programação PP2</h2>
                 </div>
 
-                <div class="group-profile-buttons">
+                <div class="organizar-button">
                     <button type="submit"><img src="{!! asset('img/trash-solid-180.png')!!} " class="botaowhite"></button>
                     <a href="perfileditar.html"><img src="{!! asset('img/pencil-regular-36.png')!!}" class="botaowhite"></a>
                 </div>
@@ -59,7 +59,7 @@
                     <h1 class="hazul ">Programação PP3</h1>
                 </div>
 
-                <div class="group-profile-buttons">
+                <div class="organizar-button">
                     <button type="submit"><img src="{!! asset('img/trash-solid-180.png')!!} " class="botaowhite"></button>
                     <a href="perfileditar.html"><img src="{!! asset('img/pencil-regular-36.png')!!}" class="botaowhite"></a>
                 </div>
@@ -81,42 +81,41 @@
         </div>
     </aside>
     <article class="conteudo-grupo l-content-aside__main">
+        <div class="cabecalhoperfil">
+            <h3 class="d-flex justify-content-center h1-size hclaro">Informação do grupo</h3>
 
-        <h3 class="welcome-sub-info d-flex justify-content-center h-titulo">Informação do grupo</h3>
-
-        <div class="d-flex flex-row">
-        <img src="{{ asset('img/estudos.png')}}" class="perfil-gropoimg">
-            <h4 class=" hazul align-self-center"> Programação PP2 </h4>
-        </div>
-
-        <div class="group-wrapper">
-            <div class="group-content">
-                <span><img src="{{ asset('img/bxs-group.svg')}}" alt=""> Grupo - 43 pessoas<span>
-
-                        <img src="{{ asset('img/coruja-perfil.svg')}}" class="pessoas-grupos margin-usuarios">
-                        <img src="{{ asset('img/coruja-perfil.svg')}}" class="pessoas-grupos">
-                        <img src="{{ asset('img/coruja-perfil.svg')}}" class="pessoas-grupos">
-                        <img src="{{ asset('img/coruja-perfil.svg')}}" class="pessoas-grupos">
-
+            <div class="d-flex flex-row">
+                <img src="{{ asset('img/estudos.png')}}" class="perfil-gropoimg">
+                <h4 class=" hazul align-self-center"> Programação PP2 </h4>
             </div>
 
-            <div class="group-profile-buttons">
-                <button class="buttons" type="button">Convidar +</button>
+            <div class="group-wrapper ">
+                <div class="group-content">
+                    <span><img src="{{ asset('img/bxs-group.svg')}}" alt=""> Grupo - 43 pessoas<span>
+
+                            <img src="{{ asset('img/coruja-perfil.svg')}}" class="pessoas-grupos margin-usuarios">
+                            <img src="{{ asset('img/coruja-perfil.svg')}}" class="pessoas-grupos">
+                            <img src="{{ asset('img/coruja-perfil.svg')}}" class="pessoas-grupos">
+                            <img src="{{ asset('img/coruja-perfil.svg')}}" class="pessoas-grupos">
+                </div>
+
+                <div class="group-profile-buttons convidar ">
+                    <button class="buttons" type="button">Convidar +</button>
+                </div>
+            </div>
+
+            <hr>
+            <div class="d-flex flex-row justify-content-between menu-grupos">
+                <a href="">Sobre</a>
+                <a href="">Postagens</a>
+                <a href="">Arquivos</a>
+                <a href="">Midia</a>
+
             </div>
         </div>
-
-        <hr>
-        <div class="d-flex flex-row justify-content-between p-3 menu-grupos">
-            <a href="">Sobre</a>
-            <a href="">Postagens</a>
-            <a href="">Arquivos</a>
-            <a href="">Midia</a>
-  
-        </div>
-
         <div class="d-flex flex-row">
             <div class="pensando-grupo">
-                <div class="input-pesquisar-grupos">
+                <div class="input-pesquisar-grupos pesquisar-grupos">
                     <div class="input-group ">
                         <img src="{{ asset('img/coruja-perfil.svg')}}" class="pessoas-grupos">
                         <input style="border-radius: 4px" class="form-control ml-3" type="text" placeholder="No que você está pensando, bb?">
@@ -128,34 +127,35 @@
                 </div>
 
                 <div class="box-aside mt-3">
-                    <div class="post"><img src="{{ asset('img/news-regular-24.png')}}" alt="">Post</div>
-                    <div class="box-post"><img src="{{ asset('img/image-regular-240.png')}}">
+                    <div class="hclaro"><img src="{{ asset('img/news-claro-24.png')}}" alt="">Post</div>
+                    <div class="box-post"><img src="{{ asset('img/bx-image.svg')}}">
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
                     </div>
 
-                    <div class="box-post"><img src="{{ asset('img/image-regular-240.png')}}">
+                    <div class="box-post"><img src="{{ asset('img/bx-image.svg')}}">
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
                     </div>
                 </div>
             </div>
 
             <div class="sobre-grupo">
-                <h3 class=" hazul">Sobre o grupo</h3>
+                <div class="informacao-grupo">
+                    <h3 class=" hazul">Sobre o grupo</h3>
 
-                <!-- <div class="texto-sobre-grupos">
+                    <!-- <div class="texto-sobre-grupos">
                         <span><i class="fas fa-lock"></i> Privado</span> <br>
                         <p>Somente membros do grupo podem ver as postagens do grupo e visualizar os participantes</p>
                         <span><i class="fas fa-eye-slash"></i> Oculto </span> <br>
                         <p>Somente membros do grupo podem encontrar o grupo na barra de pesquisa</p>
                     </div> -->
 
-                <div class="texto-sobre-grupos">
-                    <p>Descrição do grupo - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <div class="texto-sobre-grupos">
+                        <p>Descrição do grupo - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+
                 </div>
 
-                <hr>
-
-                <div>
+                <div class="membros">
                     <h3 class="hazul">Membros - 43 pessoas</h3>
                     <div class="d-flex justify-content-start icones-membros-grupos">
                         <img src="{{ asset('img/coruja-perfil.svg')}}" class="membros-grupos">
@@ -172,10 +172,11 @@
                         <img src="{{ asset('img/coruja-perfil.svg')}}" class="membros-grupos">
                     </div>
                     <p class="descricao-membros">Thaís e Janaína são administradores. João e Safira são moderadores.</p>
+                    <div class="group-profile-buttons d-flex justify-content-center">
+                        <button type="submit" class="buttons"><i class="fas fa-search"></i>Visualizar tudo </button>
+                    </div>
                 </div>
-                <div class="group-profile-buttons d-flex justify-content-center">
-                    <button type="submit" class="buttons"><i class="fas fa-search"></i>Visualizar tudo </button>
-                </div>
+
             </div>
             <div>
             </div>
