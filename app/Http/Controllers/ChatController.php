@@ -6,6 +6,7 @@ use App\Chat;
 use App\Events\EventoEnvioMensagem;
 use App\User;
 use Carbon\Carbon;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -39,11 +40,11 @@ class ChatController extends Controller
             }
         }
 
-        $chat->mensagens()->create(['mensagem' => $request->mensagem, 'user_id' => Auth::id()]);
+        $mensagem = $chat->mensagens()->create(['mensagem' => $request->mensagem, 'user_id' => Auth::id()]);
 
-        event(new EventoEnvioMensagem($request->mensagem, 7));
-
-        return redirect()->back()->with('status', 'Mensagem enviada com sucesso');
+        // event(new EventoEnvioMensagem($request->mensagem, 7));
+      
+        return response()->json($mensagem);
     }
 
     public function chat()
@@ -63,4 +64,17 @@ class ChatController extends Controller
         }
         return response()->json(json_encode($UsuarioConversas));
     }
+
+    public function mensagens_chat(Chat $chat){
+        $mensagens = $chat->mensagens;
+        $usuariosDoChat = $chat->users()->where('users.id', '<>', Auth::id())->get();
+        $quantidadeDeUsuarios = $usuariosDoChat->count();
+
+        if($quantidadeDeUsuarios > 1) {//significa que é um chat de grupo
+            throw new Exception('O chat para grupos ainda não está implementado');
+        }
+        $mensagens->remetente = $usuariosDoChat[0]->name;
+        return response()->json(json_encode($mensagens));
+    }
 }
+
