@@ -27,7 +27,7 @@
              <i class='bx bx-plus-circle left-button-icon'></i>
              Grupo
          </a>
-         <a href="#" class="navbar__menu__item ">
+         <a href="{{url('/chat')}}" class="navbar__menu__item ">
              <i class='bx bxs-chat left-button-icon'></i>
              Chat
          </a>

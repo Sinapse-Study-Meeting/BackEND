@@ -15,19 +15,24 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'welcome');
 
-Route::post('/enviar_mensagem/{chat?}', 'ChatController@enviar_mensagem');
 
-Route::post('/interesse/criar', 'InteresseController@create')->name('criarinteresse');
+
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+// INTERESSE ROUTES
+
+Route::post('/interesse/criar', 'InteresseController@create')->name('criarinteresse');
 
 Route::get('/perfil/interesses', 'InteresseController@interesses')->name('interesses');
 
 Route::post('/perfil/interesses/{interesse}/editar', 'InteresseController@editar');
 
 Route::post('/perfil/interesses/{interesse}/apagar', 'InteresseController@apagar');
+
+// CHAT ROUTES
 
 Route::get('/grupo/{grupo}', 'GruposController@grupo');
 
@@ -37,11 +42,16 @@ Route::post('/grupo/{grupo}/apagar', 'GruposController@apagar');
 
 Route::post('/grupo/{grupo}/editar', 'GruposController@editar');
 
+// CHAT ROUTES
+
 Route::get('/chat', 'ChatController@chat');
 
 Route::get('/chat/conversas', 'ChatController@conversas');
 
+Route::post('/enviar_mensagem/{chat?}', 'ChatController@enviar_mensagem');
+
 Route::get('/chat/{chat}/mensagens', 'ChatController@mensagens_chat');
+
 
 Route::view('/teste', 'grupos_perfil');
 
