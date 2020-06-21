@@ -41,6 +41,8 @@ Route::get('/chat', 'ChatController@chat');
 
 Route::get('/chat/conversas', 'ChatController@conversas');
 
+Route::get('/chat/{chat}/mensagens', 'ChatController@mensagens_chat');
+
 Route::view('/teste', 'grupos_perfil');
 
 

@@ -63,4 +63,9 @@ class ChatController extends Controller
         }
         return response()->json(json_encode($UsuarioConversas));
     }
+
+    public function mensagens_chat(Chat $chat){
+        return response()->json(json_encode($chat->mensagens));
+    }
 }
+

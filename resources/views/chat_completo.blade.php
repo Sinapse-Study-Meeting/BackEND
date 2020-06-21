@@ -22,6 +22,7 @@
                     <div class="inbox_people">
                         <div class="inbox_chat">
 
+                            <input type="hidden" id="user_id" value="{{Auth::id()}}">
 
 
                         </div>
@@ -32,11 +33,11 @@
         <article class="mensagem-individual l-content-aside__conversa">
             <div class="menu_chat">
                 <img src="{{asset('img/seta-voltar.png')}}" class="navbar__trigger" alt="Menu" title="Menu">
-                <img src="{!! asset('img/coruja-perfil.svg')!!}" class="imgchat_inicio">
+                <img src="{{ asset('img/coruja-perfil.svg')}}" class="imgchat_inicio">
                 <h2>Nome completo</h2>
                 <div class="imgmenuchat">
-                    <img src="{!! asset('img/dots-vertical.png')!!}" class="confchat">
-                    <img src="{!! asset('img/search-alt.png')!!}" class="pesquisarchat">
+                    <img src="{{ asset('img/dots-vertical.png')}}" class="confchat">
+                    <img src="{{asset('img/search-alt.png')}}" class="pesquisarchat">
                 </div>
             </div>
 
@@ -59,7 +60,7 @@
                         </div>
                     </div>
                     <div class="incoming_msg">
-                        <div class="incoming_msg_img"><img src="{!! asset('img/coruja-perfil.svg')!!}" alt="sunil">
+                        <div class="incoming_msg_img"><img src="{{ asset('img/coruja-perfil.svg')}}" alt="sunil">
                         </div>
                         <div class="received_msg">
                             <div class="received_withd_msg">
