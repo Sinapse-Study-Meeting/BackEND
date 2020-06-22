@@ -25,24 +25,12 @@
             <hr>
 
             <h1 class="d-flex justify-content-start h3-size hclaro">Seus grupos</h1>
-            @foreach($grupos as $grupo)
-            <div class="group-wrapper">
-                <div class="group-content">
-                    <img src="{{ asset('img/estudos.png')}}" class="image-grupo">
-                    <h1 class="hazul ">Programação PP1</h1>
-                </div>
-
-                <div class="organizar-button">
-                    <button type="submit"><img src="{!! asset('img/trash-solid-180.png')!!} " class="botaowhite"></button>
-                    <a href="perfileditar.html"><img src="{!! asset('img/pencil-regular-36.png')!!}" class="botaowhite"></a>
-                </div>
-            </div>
-
-            <hr>
+            @forelse($grupos as $grupo)
+           <div class="d-flex justify-content-between">
                 <div class="group-wrapper">
-                <div class="group-content">
-                    <img src="{{ asset('img/estudos.png')}}" class="image-grupo">
-                    <h3 class="hazul ">{{$grupo->nome}}</h3>
+                    <div class="group-content">
+                        <img src="{{ asset('img/estudos.png')}}" class="image-grupo">
+                    <h3 class="hazul "><a href="{{url("/meus-grupos/$grupo->id")}}">{{$grupo->nome}}</a></h3>
                 </div>
 
                 <div class="organizar-button">
@@ -53,35 +41,23 @@
                     <a data-target="EditagrupoModal" data-id="{{$grupo->id}}" class="toggle clickEditar"><img src="{!! asset('img/pencil-regular-36.png')!!}" class="botaowhite"></a>
                 </div>
             </div>
-
+        </div>
             <hr>
-                @endforeach
-
-            <div class="group-wrapper">
-                <div class="group-content">
-                    <img src="{{ asset('img/estudos.png')}}" class="image-grupo">
-                    <h1 class="hazul ">Programação PP3</h1>
+           
+            @empty
+                <div class="notgrupo">
+                    <div class="d-flex justify-content-center">
+                        <img src="{{ asset('img/coruja-triste.svg')}}" class="img-notgrupo">
+                    </div>
+                    <h2 class="hclaro h3-size ml-2 ">Você não participa de nenhum grupo de estudos</h2>
+                    <div class="group-profile-buttons">
+                        <h3 class="hazul">Você pode tentar:</h3>
+                        <button type="submit" class="buttons"><i class="fas fa-plus"></i>Criar um grupo </button>
+                        <button type="submit" class="buttons"><i class="fas fa-search"></i>Encontrar um grupo </button>
+                    </div>
                 </div>
+            @endforelse
 
-                <div class="organizar-button">
-                    <button type="submit"><img src="{!! asset('img/trash-solid-180.png')!!} " class="botaowhite"></button>
-                    <a href="perfileditar.html"><img src="{!! asset('img/pencil-regular-36.png')!!}" class="botaowhite"></a>
-                </div>
-            </div>
-
-            <hr>
-
-            <div class="notgrupo">
-                <div class="d-flex justify-content-center">
-                    <img src="{{ asset('img/coruja-triste.svg')}}" class="img-notgrupo">
-                </div>
-                <h2 class="hclaro h3-size ml-2 ">Você não participa de nenhum grupo de estudos</h2>
-                <div class="group-profile-buttons">
-                    <h3 class="hazul">Você pode tentar:</h3>
-                    <button type="submit" class="buttons"><i class="fas fa-plus"></i>Criar um grupo </button>
-                    <button type="submit" class="buttons"><i class="fas fa-search"></i>Encontrar um grupo </button>
-                </div>
-            </div>
         </div>
     </aside>
     <article class="conteudo-grupo l-content-aside__main">
@@ -90,12 +66,12 @@
 
             <div class="d-flex flex-row">
                 <img src="{{ asset('img/estudos.png')}}" class="perfil-gropoimg">
-                <h4 class=" hazul align-self-center"> Programação PP2 </h4>
+                <h4 class=" hazul align-self-center"> {{$grupoAtivo->nome}} </h4>
             </div>
 
             <div class="group-wrapper ">
                 <div class="group-content">
-                    <span><img src="{{ asset('img/bxs-group.svg')}}" alt=""> Grupo - 43 pessoas<span>
+                    <span><img src="{{ asset('img/bxs-group.svg')}}" alt=""> Grupo - {{$grupoAtivo->users->count()}} pessoas<span>
 
                             <img src="{{ asset('img/coruja-perfil.svg')}}" class="pessoas-grupos margin-usuarios">
                             <img src="{{ asset('img/coruja-perfil.svg')}}" class="pessoas-grupos">
@@ -154,7 +130,7 @@
                     </div> -->
 
                     <div class="texto-sobre-grupos">
-                        <p>Descrição do grupo - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>Descrição do grupo - {{$grupoAtivo->descricao}}.</p>
                     </div>
 
                 </div>

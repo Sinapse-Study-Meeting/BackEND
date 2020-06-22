@@ -32,13 +32,15 @@ Route::post('/perfil/interesses/{interesse}/apagar', 'InteresseController@apagar
 
 // GRUPOS ROUTES
 
-Route::get('/grupos', 'GruposController@meusgrupos')->name('grupos');
+Route::get('/meus-grupos/{grupo?}', 'GruposController@meusgrupos');
 
 Route::get('/grupo/{grupo}', 'GruposController@grupo');
 
+Route::post('/grupo/{grupo}/apagar', 'GruposController@apagar');
+
+
 Route::post('/criargrupos', 'GruposController@criargrupo')->name('criargrupo');
 
-Route::post('/grupo/{grupo}/apagar', 'GruposController@apagar');
 
 Route::post('/grupo/{grupo}/editar', 'GruposController@editar');
 

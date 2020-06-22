@@ -46,7 +46,7 @@ class GruposController extends Controller
         //adicionando usuario no grupo como adm
         $grupocriado->users()->attach(Auth::user(),['papel'=>'administrador']);
 
-       return redirect("/grupo/$grupocriado->id");
+       return redirect("/meus-grupos/$grupocriado->id");
     }
 
     public function grupo(Grupo $grupo)
@@ -54,9 +54,9 @@ class GruposController extends Controller
         return response()->json($grupo->with('areas_estudo')->get());
     }
 
-    public function meusgrupos(){
+    public function meusgrupos(Grupo $grupo = null){
         $grupos = Auth::user()->grupos;
-        return view('grupos_perfil', ['grupos'=>$grupos, 'grupoAtivo'=>$grupos[0]]);
+        return view('grupos_perfil', ['grupos'=>$grupos, 'grupoAtivo'=> $grupo ? $grupo: $grupos[0]]);
     }
 
     public function  editar(Request $request, Grupo $grupo){
@@ -75,7 +75,9 @@ class GruposController extends Controller
     public function apagar(Grupo $grupo) {
         $grupo->users()->detach();
         $grupo->delete();
-        return redirect()->route('grupos')->with('status', 'Grupo deletado com sucesso');
+        if(Auth::user()->grupos->count() > 0)
+            return redirect('/meus-grupos')->with('status', 'Grupo deletado com sucesso');
+        return redirect()->route('home')->with('status', 'Grupo deletado com sucesso');
     }
 
 }

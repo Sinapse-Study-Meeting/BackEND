@@ -34,6 +34,8 @@ class HomeController extends Controller
         $int = Interesse::all();
 
         $usuario = Auth::user();
+        
+        $grupos = $usuario->grupos;
 
         $usuarioint = $usuario->interesses()->first();
 
@@ -42,7 +44,8 @@ class HomeController extends Controller
         return view('home', [
             'categorias' => $cat,
             'interesses' => $int,
-            'teminteresses' => $usuarioint
+            'teminteresses' => $usuarioint,
+            'grupos' => $grupos
         ]);
     }
 }
