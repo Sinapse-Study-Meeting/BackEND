@@ -16,15 +16,11 @@
     });
     var channel = pusher.subscribe('mensagens');
     channel.bind('mensagem-enviada', function(data) {
-    var mensagens = document.getElementById('mensagens')
+        var mensagens = document.getElementById('mensagens')
         p = document.createElement('p')
-        p.textContent = ' Nova mensagem recebida: ' +data.message
+        p.textContent = ' Nova mensagem recebida: ' + data.message
         mensagens.appendChild(p)
     });
-
-
-
-
 </script>
 
 @endsection
@@ -84,21 +80,21 @@
         @endif
 
 
-            <div class="grupospessoais">
+        <div class="grupospessoais">
             <h1 class="hclaro h1-size">Grupos que eu participo</h1>
             <div class="gruposparticipo">
-                <img src="{!! asset('img/estudos.png')!!}" class="participoimg">
+                <img src="{{ asset('img/estudos.png')}}" class="participoimg">
                 <h1 class="hclaro h1-size">Programação PP</h1>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p><br>
-                <button type="submit" class="btn--primary"><img src="{!! asset('img/group-solid.png')!!}"> Ver grupo </button>
-                <button type="submit" class="btn--primary"><img src="{!! asset('img/message-add.png')!!}"> Abrir Chat </button>
+                <button type="submit" class="btn--primary"><img src="{{ asset('img/group-solid.png')}}"> Ver grupo </button>
+                <button type="submit" class="btn--primary"><img src="{{ asset('img/message-add.png')}}"> Abrir Chat </button>
             </div>
             <div class="notgrupo">
-                <img src="{!! asset('img/coruja-triste.svg')!!}">
+                <img src="{{ asset('img/coruja-triste.svg')}}">
                 <h2 class="hclaro h2-size">Você não participa de nenhum grupo de estudos</h2>
                 <h3 class="hclaro h3-size"> Você pode</h3>
-                <button type="submit" class="btn--primary btmbig"><img src="{!! asset('img/plus-circle.png')!!}"> Criar um grupo </button>
-                <button type="submit" class="btn--primary btmbig"><img src="{!! asset('img/search-white.png')!!}"> Encontrar um grupo </button>
+                <button type="submit" class="btn--primary btmbig"><img src="{{ asset('img/plus-circle.png')}}"> Criar um grupo </button>
+                <button type="submit" class="btn--primary btmbig"><img src="{{ asset('img/search-white.png')}}"> Encontrar um grupo </button>
             </div>
         </div>
         <br>
@@ -107,25 +103,25 @@
 
     <aside class="l-content-aside__aside">
         <div class="box-aside">
-            <div class="online"><img src="{!! asset('img/circle-solid-24.png')!!}" alt="">Online Agora</div>
-            <div class="pessoas-online"><img src="{!! asset('img/coruja-perfil.svg')!!}" alt=""><a href="">Nome completo</a></div>
-            <div class="pessoas-online"><img src="{!! asset('img/coruja-perfil.svg')!!}" alt=""><a href="">Nome completo</a></div>
-            <div class="pessoas-online"><img src="{!! asset('img/coruja-perfil.svg')!!}" alt=""><a href="">Nome completo</a></div>
-            <div class="pessoas-online"><img src="{!! asset('img/coruja-perfil.svg')!!}" alt=""><a href="">Nome completo</a></div>
+            <div class="online"><img src="{{ asset('img/circle-solid-24.png')}}" alt="">Online Agora</div>
+            <div class="pessoas-online"><img src="{{ asset('img/coruja-perfil.svg')}}" alt=""><a href="">Nome completo</a></div>
+            <div class="pessoas-online"><img src="{{ asset('img/coruja-perfil.svg')}}" alt=""><a href="">Nome completo</a></div>
+            <div class="pessoas-online"><img src="{{ asset('img/coruja-perfil.svg')}}" alt=""><a href="">Nome completo</a></div>
+            <div class="pessoas-online"><img src="{{ asset('img/coruja-perfil.svg')}}" alt=""><a href="">Nome completo</a></div>
         </div>
         <div class="box-aside">
-            <div class="post"><img src="{!! asset('img/news-regular-24.png')!!}" alt="">Post</div>
-            <div class="box-post"><img src="{!! asset('img/image-regular-240.png')!!}">
+            <div class="post"><img src="{{ asset('img/news-regular-24.png')}}" alt="">Post</div>
+            <div class="box-post"><img src="{{ asset('img/bx-image.svg')}}">
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
             </div>
-            <div class="box-post"><img src="{!! asset('img/image-regular-240.png')!!}">
+            <div class="box-post"><img src="{{ asset('img/bx-image.svg')}}">
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
             </div>
         </div>
     </aside>
     <div class="chat">
         <a href="" class="button-chat"><i class='bx bxs-chat'></i> Chat</a>
-        <a href="" class="button-chatCompleto"><img src="{!! asset('img/arrow-from-left.png')!!}"> Chat Completo</a>
+        <a href="{{url('/chat')}}" class="button-chatCompleto"><img src="{{ asset('img/arrow-from-left.png')}}"> Chat Completo</a>
     </div>
 </main>
 @section('scripts')
