@@ -22,9 +22,7 @@
                 <div class="inbox_msg">
                     <div class="inbox_people">
                         <div class="inbox_chat">
-
                             <input type="hidden" id="user_id" value="{{Auth::id()}}">
-
 
                         </div>
                     </div>
@@ -68,4 +66,20 @@
 
 @section('scripts')
     <script src="{{asset('js/chat.js')}}"></script>
+    
+    <script src="https://js.pusher.com/6.0/pusher.min.js"></script>
+    <script>
+        // Enable pusher logging - don't include this in production
+        Pusher.logToConsole = true;
+        var pusher = new Pusher('24c8c9f5c522d5df5fde', {
+            cluster: 'mt1'
+        });
+        var channel = pusher.subscribe('mensagens');
+        channel.bind('mensagem-enviada', function(data) {
+            var mensagens = document.getElementById('mensagens')
+            p = document.createElement('p')
+            p.textContent = ' Nova mensagem recebida: ' + data.message
+            mensagens.appendChild(p)
+        });
+    </script>
 @endsection

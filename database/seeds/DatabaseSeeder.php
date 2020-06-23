@@ -3,7 +3,6 @@
 use Illuminate\Database\Seeder;
 
 
-
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -14,6 +13,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call(CategoriasTableSeeder::class);
+        $this->call(RolesTableSeeder::class);
         $this->call(UserTableSeeder::class);
     }
 }

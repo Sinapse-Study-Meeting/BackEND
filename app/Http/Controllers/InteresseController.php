@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Categoria;
 use App\Interesse;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\Rule;
@@ -65,8 +66,18 @@ class InteresseController extends Controller
 
     }
     public function apagar(Interesse $interesse) {
-        $interesse->categorias()->detach();
-        $interesse->delete();
-        return redirect()->back()->with('status', 'Interesse atualizado com sucesso');
+        $mensagem = 'Interesse apagado com sucesso';
+        DB::beginTransaction();
+        try {
+            $interesse->categorias()->detach();
+            $interesse->delete();
+            DB::commit();
+        }
+        catch(Exception $ex)
+        {
+            DB::rollback();
+            $mensagem = 'Não foi possível apagar seu interesse, tente novamente mais tarde.'
+        }
+        return redirect()->back()->with('status', $mensagem);
     }
 }

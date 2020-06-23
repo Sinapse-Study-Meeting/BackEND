@@ -54,3 +54,8 @@ Route::post('/enviar_mensagem/{chat?}', 'ChatController@enviar_mensagem');
 
 Route::get('/chat/{chat}/mensagens', 'ChatController@mensagens_chat');
 
+
+Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function() {
+    Route::get('/', 'AdminController@index')->name('index');
+    Route::post('/', 'AdminController@atualizar_relatorio_user')->name('atualizar_relatorio_user');
+});
