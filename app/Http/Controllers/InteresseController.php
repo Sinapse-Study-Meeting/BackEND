@@ -76,7 +76,7 @@ class InteresseController extends Controller
         catch(Exception $ex)
         {
             DB::rollback();
-            $mensagem = 'Não foi possível apagar seu interesse, tente novamente mais tarde.'
+            $mensagem = 'Não foi possível apagar seu interesse, tente novamente mais tarde.';
         }
         return redirect()->back()->with('status', $mensagem);
     }

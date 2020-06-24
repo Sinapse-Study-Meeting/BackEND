@@ -8,20 +8,19 @@ use Illuminate\Database\QueryException;
 
 class AdminController extends Controller
 {
-    
+
     public function __construct()
     {
         $this->middleware('admin');
     }
 
     public function index() {
-       
+
         $relatorio = '';
         try{
             $relatorio = Relatorio_users::all();
         }
         catch(QueryException $exception) {
-            throw $exception;
             $relatorio = $this->gerar_relatorio_user();
         }
         return view('admin.index', ['relatorio' => $relatorio]);

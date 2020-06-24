@@ -28,11 +28,30 @@
         </tr>
     @endforeach
 </table>
-
+<br>
 <form action="{{route('admin.atualizar_relatorio_user')}}" method="POST">
     @csrf
-<button type="submit">ATUALIZAR RELATÓRIO</button>
+    <button type="submit">ATUALIZAR RELATÓRIO</button>
 </form>
+
+<hr>
+<table>
+    <tr>
+        <th>Quantidade de usuarios</th>
+        <th>Quantidade de interesses</th>
+        <th>Quantidade de mensagens</th>
+    </tr>
+    @foreach (DB::table('relatorio_geral')->get() as $item)
+        <tr>
+            <td>{{$item->qtd_usuarios}}</td>
+            <td>{{$item->qtd_interesses}}</td>
+            <td>{{$item->qtd_mensagens}}</td>
+        </tr>
+    @endforeach
+
+</table>
+
+
 
 @section('scripts')
 <script src="{{asset('js/search-bar.js')}}"></script>
