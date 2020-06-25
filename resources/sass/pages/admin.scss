@@ -1,0 +1,92 @@
+@import '../assets/variables';
+@import '../components/reset';
+@import "../components/navbar";
+@import '../components/logo';
+@import '../components/style';
+@import '../components/search-bar';
+@import '../layouts/l-content-aside';
+@import "../components/btn";
+@import "../components/modal";
+body {
+    background-color: #F9F9F9;
+}
+
+.admin {
+    padding: 20px;
+    width: 870px;
+}
+
+.h1-size {
+    color: $primary-color;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.inicio {
+    display: flex;
+    margin-top: 30px;
+    padding: 10px;
+}
+
+.inicio table {
+    padding: 10px;
+    margin-right: 40px;
+}
+
+.inicio td,
+.inicio th {
+    text-align: center;
+    color: #2C3E50;
+    font-weight: bold;
+    padding: 15px 15px 10px 15px;
+    background-color: white;
+    border-left: 20px solid #F9F9F9;
+}
+
+.inicio td {
+    font-size: 22px;
+}
+
+.listagem td,
+.listagem th {
+    padding: 10px 7px 10px 7px;
+    text-align: center;
+    border-right: 1px solid #b6b5b5;
+    border-left: 1px solid #b6b5b5;
+}
+
+.listagem tr {
+    border-bottom: 1px solid #b6b5b5;
+}
+
+.col-principal {
+    background-color: #657a8f;
+    color: white;
+}
+
+.admin-conteudo {
+    background-color: white;
+    padding: 50px;
+}
+
+.admin-principal {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.admin button {
+    background-color: #2C3E50;
+    width: 200px;
+    margin-top: 25px;
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
