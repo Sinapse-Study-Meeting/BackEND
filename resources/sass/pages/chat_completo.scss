@@ -309,8 +309,32 @@
         height: 24px;
         width: 24px;
     }
-    /* @media(max-width: 670px) {
-        .mensagem-individual {
-            display: none;
+    
+    @media(max-width: 670px) {
+        .mainchat {
+            position: relative;
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+            -webkit-transition: 300ms ease all;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
         }
-    } */
+        .mainchat-show {
+            -webkit-transform: translateX(650px);
+            transform: translateX(650px);
+            -webkit-transform: translate3d(650px, 0, 0);
+            transform: translate3d(650px, 0, 0);
+        }
+        .historico {
+            top: 0;
+            width: 100%;
+        }
+        .mensagem-individual {
+            top: 0;
+            position: absolute;
+            left: -650px;
+            width: 100%;
+        }
+    }

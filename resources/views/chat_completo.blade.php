@@ -30,6 +30,7 @@
                     <div class="inbox_people">
                         <div class="inbox_chat">
                             <input type="hidden" id="user_id" value="{{Auth::id()}}">
+                            <a href="#" class="toggle-nav btn-nav">Teste</a>
                         </div>
                     </div>
                 </div>
@@ -37,7 +38,7 @@
         </aside>
         <article class="mensagem-individual l-content-aside__conversa">
             <div class="menu_chat">
-                <img src="{{asset('img/seta-voltar.png')}}" class="navbar__trigger" alt="Menu" title="Menu">
+                <img src="{{asset('img/seta-voltar.png')}}" class="navbar__trigger toggle-nav" alt="Menu" title="Menu">
                 <img src="{{ asset('img/coruja-perfil.svg')}}" class="imgchat_inicio">
                 <h2 class="menu-chat__user-name">Nome completo</h2>
                 <div class="imgmenuchat">
