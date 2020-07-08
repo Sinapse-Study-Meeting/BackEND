@@ -16,14 +16,20 @@
         @csrf
         <aside class="historico l-content-aside__chat">
             <div class="menu_mensagem">
+                <h2 class="">Conversas</h2>
                 <img src="{!! asset('img/dots-vertical.png')!!}" class="imgmenu">
+            </div>
+            <div class="pesquisar-chat">
+                <input type="text" placeholder="Pesquisar.."> 
+                <div class="icones">
+                    <img src="{{  asset('img/search-alt-regular-180.png') }}">
+                </div>
             </div>
             <div class="messaging">
                 <div class="inbox_msg">
                     <div class="inbox_people">
                         <div class="inbox_chat">
                             <input type="hidden" id="user_id" value="{{Auth::id()}}">
-
                         </div>
                     </div>
                 </div>
@@ -41,17 +47,10 @@
             </div>
 
             <div class="mesgs">
-                <div class="msg_history">
-                    
-                </div>
+                <div class="msg_history"></div>
             </div>
             <div class="boxtexto">
                 <div class="form-group">
-                   <!--  <div class="form-group adicionardoc">
-                        <label for="fupload" class="control-label"><img src="{!! asset('img/plus-regular-180.png')!!}"
-                                                                        id="trocarfoto"></label>
-                        <input type="file" id="fupload" name="fupload" class="upload fupload form-control "/>
-                    </div> -->
                     <div class="inputchat">
                         <form method="POST" id="enviar-mensagem-form">
                             <input type="text" class="adicionarinpult" name="mensagem" placeholder="Mensagens..">
