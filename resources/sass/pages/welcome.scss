@@ -86,7 +86,8 @@
     justify-content: right;
     right: calc(8%/2);
     max-width: 100%;
-    top: 250px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 a:hover {
