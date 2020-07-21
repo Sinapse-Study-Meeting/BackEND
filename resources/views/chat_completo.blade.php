@@ -20,10 +20,7 @@
                 <img src="{!! asset('img/dots-vertical.png')!!}" class="imgmenu">
             </div>
             <div class="pesquisar-chat">
-                <input type="text" placeholder="Pesquisar.."> 
-                <div class="icones">
-                    <img src="{{  asset('img/search-alt-regular-180.png') }}">
-                </div>
+                <input type="text" placeholder="Pesquisar.." class="input-pesquisar"> 
             </div>
             <div class="messaging">
                 <div class="inbox_msg">
@@ -43,7 +40,7 @@
                 <h2 class="menu-chat__user-name">Nome completo</h2>
                 <div class="imgmenuchat">
                     <img src="{{ asset('img/dots-vertical.png')}}" class="confchat">
-                    <img src="{{asset('img/search-alt.png')}}" class="pesquisarchat">
+                    <form><input type="text" name="search" placeholder="Pesquisar" class="pesquisarchat"></form>
                 </div>
             </div>
 
