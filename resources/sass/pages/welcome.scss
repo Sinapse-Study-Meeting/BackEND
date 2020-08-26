@@ -117,5 +117,43 @@ a:hover {
     background-image: url("../img/footer.svg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 10em;
+    height: 70vh;
+    position: relative;
+    width: 100%;
+    color: #ffffff;
+}
+
+.conteudofooter {
+    position: relative;
+    top: 30%;
+    background-color: rgb(202, 16, 219);
+}
+
+.leftfooter {
+    background-color: red;
+    width: 40%;
+}
+
+.alinha {
+    display: inline-block;
+    padding: 20px;
+}
+
+.leftfooter p {
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.menufooter {
+    width: 20%;
+    background-color: #ffff00;
+}
+
+.linkconstatos {
+    width: 35%;
+    background-color: green;
+}
+
+.copyright {
+    background-color: blue;
 }

@@ -42,9 +42,32 @@
 
     </div>
 </div>
-<!-- <footer class="footer-inicial">
+<footer class="footer-inicial">
+    <div class="conteudofooter">
+        <div class="leftfooter alinha">
+            <a href="{{ route('home') }}" class="logo lfooter">
+                <h1 class="logo__replacement__white">Sinapse</h1>
+            </a>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <ul class="menufooter alinha">
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Mapa do site</a></li>
+            <li><a href="#">Entre em contato</a></li>
+        </ul>
 
-</footer> -->
+        <div class="linkconstatos alinha">
+            <h2>Fique conectado !</h2>
+            <ul>
+                <li><a href="#">Email</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Youtube</a></li>
+                <li><a href="#">Facebook</a></li>
+            </ul>
+        </div>
+    </div>
+    <small class="copyright">Copyright © 2020 </small>
+</footer>
 @endsection
 @section('scripts')
 <script src="{{ asset('js/toggle.js') }}"></script>

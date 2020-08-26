@@ -13,3 +13,11 @@
     color: white;
     @include hoverDarkenEffect($primary-color)
 }
+
+.btn--secondary {
+    @extend %btn;
+    background-color: $background-color;
+    color: rgb(80, 80, 80);
+    border: 1px solid rgb(148, 148, 148);
+    @include hoverDarkenEffect($background-color);
+}
