@@ -9,7 +9,7 @@
 @import "../components/btn";
 .perfiluser {
     background-color: $background-color;
-    padding: 20px;
+    padding: 20px 50px 0px 50px;
 }
 
 .divisaoperfil {
@@ -29,7 +29,32 @@
     border-radius: 50%;
 }
 
-.infototal {
+.infototal p {
     position: relative;
+    display: inline;
+}
+
+.infototal {
     text-align: right;
+}
+
+.image-perfil,
+.infoperfil {
+    display: inline-block;
+}
+
+.infoperfil {
+    position: relative;
+    left: 20px;
+    width: 70%;
+    padding: 10px;
+    vertical-align: top;
+}
+
+.paragrafos {
+    padding-bottom: 20px;
+}
+
+.infoperfil h1 {
+    padding-bottom: 20px;
 }

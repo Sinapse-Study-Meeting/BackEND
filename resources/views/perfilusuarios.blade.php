@@ -16,12 +16,16 @@
             <div class="image-perfil">
                 <img src="{!! asset('img/coruja-perfil.svg')!!}" alt="usuario" id="imagemusuario">
             </div>
-            <h1 class="hazul h1-size">Janaina Silva Rapanelli</h1>
-            <p>Email</p>
-            <p>Cidade</p>
-            <p>Estado</p>
-            <button type="submit" class="btn--primary">Seguir</button>
-            <button type="submit" class="btn--secondary">Mensagem</button>
+            <div class="infoperfil">
+                <h1 class="hazul h1-size">Janaina Silva Rapanelli</h1>
+                <div class="paragrafos">
+                    <p>Email</p>
+                    <p>Cidade</p>
+                    <p>Estado</p>
+                </div>
+                <button type="submit" class="btn--primary">Seguir</button>
+                <button type="submit" class="btn--secondary">Mensagem</button>
+            </div>
             <hr>
             <div class="infototal">
                 <p class="hazul">120 Amigos</p>
