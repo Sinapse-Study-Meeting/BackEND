@@ -39,21 +39,23 @@
 <aside class="l-content-aside__aside">
     <div class="divisaoperfil">
         <h3 class="hazul h3-size">Amigos em comum</h3>
-        {{-- <div class="d-flex justify-content-start icones-membros-grupos">
-            <img src="{{ asset('img/coruja-perfil.svg')}}" class="membros-grupos">
-            <img src="{{ asset('img/coruja-perfil.svg')}}" class="membros-grupos">
-            <img src="{{ asset('img/coruja-perfil.svg')}}" class="membros-grupos">
-            <img src="{{ asset('img/coruja-perfil.svg')}}" class="membros-grupos">
-        </div> --}}
+        <div class="iconesamigoscomum">
+            <img src="{{ asset('img/coruja-perfil.svg')}}" class="amigoscomum">
+            <img src="{{ asset('img/coruja-perfil.svg')}}" class="amigoscomum">
+            <img src="{{ asset('img/coruja-perfil.svg')}}" class="amigoscomum">
+            <img src="{{ asset('img/coruja-perfil.svg')}}" class="amigoscomum">
+        </div> 
         <p class="descricao-membros">Thaís, Janaína e outras 2 pessoas são membros. (Aqui mostra somente os seus amigos que estão nesse grupo)</p>
         <button type="submit" class="btn--primary"><i class="fas fa-search"></i>Visualizar tudo </button>
     </div>
     <div class="grupospessoais">
         <h1 class="hclaro h3-size">Grupos que eu participo</h1>
         <div class="divisaoperfil">
-            <h1 class="hazul h3-size">Nome do grupo</h1>
-           {{--  <a href="" class="btn--primary"><img src="{{ asset('img/group-solid.png')}}"> Ver grupo </a>
-            <button type="submit" class="btn--primary"><img src="{{ asset('img/message-add.png')}}"> Abrir Chat </button> --}}
+            <div class="brevegrupo">
+                <img src="{{asset('img/coruja-perfil.svg')}}">
+                <h1 class="hazul h3-size">Nome do grupo</h1>
+            </div>
+            <a href="" class="btn--primary"><img src="{{ asset('img/group-solid.png')}}"> Ver grupo </a>
         </div>
     </div>
 </aside>

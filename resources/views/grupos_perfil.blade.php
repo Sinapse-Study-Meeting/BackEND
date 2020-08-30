@@ -20,8 +20,6 @@
                     <input class="form-control" type="text" placeholder="Pesquisar grupos">
                 </div>
             </div>
-
-
             <hr>
 
             <h1 class="d-flex justify-content-start h3-size hclaro">Seus grupos</h1>

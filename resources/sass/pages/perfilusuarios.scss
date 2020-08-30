@@ -58,3 +58,47 @@
 .infoperfil h1 {
     padding-bottom: 20px;
 }
+
+.iconesamigoscomum {
+    display: inline-block;
+    position: relative;
+    margin-top: 20px;
+}
+
+.amigoscomum {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    border: 1px solid $border-color;
+    position: relative;
+}
+
+.descricao-membros {
+    margin-bottom: 20px;
+}
+
+.brevegrupo {
+    margin-bottom: 20px;
+}
+
+.brevegrupo img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 1px solid $border-color;
+}
+
+.brevegrupo img,
+.brevegrupo h1 {
+    display: inline;
+}
+
+.brevegrupo h1 {
+    position: relative;
+    bottom: 20px;
+}
+
+.divisaoperfil a img {
+    height: 20px;
+    width: 20px;
+}
