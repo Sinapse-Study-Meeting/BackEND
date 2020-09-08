@@ -42,6 +42,50 @@
 
     </div>
 </div>
+<div class="corpohome">
+    <div class="titulomotivos">
+        <h1 class="hazul h1-size">Motivos do porquê aprender com a Sinapse?</h1>
+    </div>
+    <div class="motivos">
+        <div class="conteudomotivos">
+            <img src="{{  asset('img/verde.svg') }}" class="porquesinapse">
+            <p>Aprendizagem personalizada e colaborativa<p>
+        </div>
+    
+        <div class="conteudomotivos">
+            <img src="{{  asset('img/vermelho.svg') }}" class="porquesinapse">
+            <p>Ferramentas que facitam aprendizado<p>
+    </div>
+    </div>
+    <div class="motivos">
+    <div class="conteudomotivos">
+        <img src="{{  asset('img/amarelo.svg') }}" class="porquesinapse">
+        <p>A qualquer hora, em qualquer lugar<p>
+    </div>
+    <div class="conteudomotivos">
+        <img src="{{  asset('img/azul.svg') }}" class="porquesinapse">
+        <p>Abrange matérias e conteúdos diversificados<p>
+    </div>
+</div>
+    <div class="recomendacao">
+        <h2 class="hazul h2-size">Receba recomendações para melhorar o aprendizado.</h2>
+        <a href="{{ route('register') }}" class="btn--primary">Inscreva-se</a>
+    </div>
+    <div>
+        <h1 class="hazul h1-size">Como funciona?</h1>
+        <hr>
+    </div>
+    <div>
+        <h1 class="hazul h1-size">Principais categoria acessadas</h1>
+        <p>Transforme sua vida por meio da educação e deixe a Sinapse te ajudar nisso.</p>
+        <hr>
+    </div>
+
+<div>
+    <h1 class="hazul h1-size">Depoimentos</h1>
+</div>
+</div>
+
 <footer class="footer-inicial">
     <div class="conteudofooter">
         <div class="leftfooter alinha">
@@ -56,13 +100,13 @@
             <li><a href="#">Entre em contato</a></li>
         </ul>
 
-        <div class="linkconstatos alinha">
-            <h2>Fique conectado !</h2>
+        <div class="linkcontatos alinha">
+            <h3 class="h3-size">Fique conectado !</h3>
             <ul>
-                <li><a href="#">Email</a></li>
-                <li><a href="#">Twitter</a></li>
-                <li><a href="#">Youtube</a></li>
-                <li><a href="#">Facebook</a></li>
+                <li><a href="#"><img src="{{  asset('img/google-logo-24.png') }}"></a></li>
+                <li><a href="#"><img src="{{  asset('img/twitter-logo-24.png') }}"></a></li>
+                <li><a href="#"><img src="{{  asset('img/instagram-alt-logo-24.png') }}"></a></li>
+                <li><a href="#"><img src="{{  asset('img/facebook-logo-24.png') }}"></a></li>
             </ul>
         </div>
     </div>

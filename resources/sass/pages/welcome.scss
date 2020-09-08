@@ -2,6 +2,7 @@
 @import '../components/reset';
 @import '../components/logo';
 @import '../components/style';
+@import "../components/btn";
 .navbar__home {
     position: fixed;
     padding: 10px calc(8%/2);
@@ -123,15 +124,18 @@ a:hover {
     color: #ffffff;
 }
 
+.footer-inicial a {
+    color: white;
+}
+
 .conteudofooter {
     position: relative;
     top: 30%;
-    background-color: rgb(202, 16, 219);
+    text-align: center;
 }
 
 .leftfooter {
-    background-color: red;
-    width: 40%;
+    width: 250px;
 }
 
 .alinha {
@@ -145,15 +149,72 @@ a:hover {
 }
 
 .menufooter {
-    width: 20%;
-    background-color: #ffff00;
+    position: relative;
+    bottom: 50px;
+    min-width: 40%;
 }
 
-.linkconstatos {
-    width: 35%;
-    background-color: green;
+.linkcontatos {
+    text-align: center;
+    min-width: 30%;
+    position: relative;
+    bottom: 40px;
+}
+
+.linkcontatos li {
+    display: inline-block;
+}
+
+.linkcontatos a {
+    position: relative;
+}
+
+.linkcontatos img {
+    border: 1px solid white;
+    border-radius: 50%;
+    margin: 10px;
 }
 
 .copyright {
-    background-color: blue;
+    bottom: 15px;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+}
+
+.corpohome {
+    text-align: center;
+}
+
+.recomendacao {
+    background-color: rgb(212, 223, 245);
+    padding: 40px;
+    margin: 20px;
+    height: 30vh;
+    border-radius: 5px;
+}
+
+.recomendacao a {
+    position: relative;
+    top: 30px;
+}
+
+.porquesinapse {
+    width: 150px;
+    left: 200px;
+}
+
+.motivos {
+    position: relative;
+    width: 100%;
+    display: table;
+}
+
+.motivos .conteudomotivos {
+    display: inline-table;
+    padding: 40px;
+}
+
+.titulomotivos {
+    margin-top: 40px;
 }
