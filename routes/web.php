@@ -61,3 +61,6 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function() {
 });
 
 Route::view('/perfil', 'perfilusuarios');
+
+
+Route::view('/menu', 'menuadm');

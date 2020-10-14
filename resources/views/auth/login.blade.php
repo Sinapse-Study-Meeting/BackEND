@@ -1,5 +1,4 @@
 @extends('layouts.base')
-@include('vendor.bootstrap')
 @section('title',"Sinapse Grupo de Estudos")
 @section('metas')
 <meta name="description" content="A plataforma para você encontrar sua companhia de estudos">
@@ -41,16 +40,15 @@
             </span>
             @enderror
             <br>
-            <div class="custom-control custom-switch">
+            {{-- <div class="custom-control custom-switch">
                <input type="checkbox" name="remember" class="custom-control-input" id="lembrar">
                <label class="custom-control-label" for="lembrar">Lembre de mim</label>
-            </div>
-
+            </div> --}}
+               <div class="loginlink">
+               <a href="{{ route('password.request') }}" class="negrito link loginlink">Esqueceu senha?</a>
+               <a href="{{ route('register') }}" class="negrito link">Cadastre-se</a>
+               </div>
             <input class="submit-entrar " type="submit" value="Entrar">
-            <div class="top">
-               <a href="{{ route('password.request') }}" class="negrito link right">Esqueceu senha?</a>
-               <a href="{{ route('register') }}" class="negrito link position-left">Cadastre-se</a>
-            </div>
          </form>
       </div>
       <div class="register-section__item">

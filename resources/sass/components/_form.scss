@@ -121,6 +121,20 @@ a:hover {
     text-decoration: none;
 }
 
+@media(min-width: 700px) {
+    .input60 {
+        margin-left: 25px;
+        width: 60%;
+    }
+    .input50 {
+        margin-left: 25px;
+    }
+    .formajuntar {
+        display: inline-flex;
+        width: 100%;
+    }
+}
+
 .progress {
     height: 20px;
 }

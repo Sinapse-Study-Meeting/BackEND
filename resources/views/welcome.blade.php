@@ -75,15 +75,31 @@
         <h1 class="hazul h1-size">Como funciona?</h1>
         <hr>
     </div>
-    <div>
+    <div class="categoriawelcome">
         <h1 class="hazul h1-size">Principais categoria acessadas</h1>
+        <div class="primeiralinha">
+            <img src="{{ asset('img/historia.jpeg')}}" class="catewelcome">
+            <img src="{{ asset('img/direito.jpeg')}}" class="catewelcome">
+            <img src="{{ asset('img/geografia.jpeg')}}" class="catewelcome">
+            <img src="{{ asset('img/ingles.jpeg')}}" class="catewelcome">
+        </div>
+        <div class="segundalinha">
+            <img src="{{ asset('img/matematica.jpg')}}" class="catewelcome">
+            <img src="{{ asset('img/ciencia.jpeg')}}" class="catewelcome">
+            <img src="{{ asset('img/tecnologia.jpeg')}}" class="catewelcome">
+            <img src="{{ asset('img/saude.jpeg')}}" class="catewelcome">
+        </div>
         <p>Transforme sua vida por meio da educação e deixe a Sinapse te ajudar nisso.</p>
         <hr>
     </div>
 
 <div>
-    <h1 class="hazul h1-size">Depoimentos</h1>
-</div>
+    <h1 class="hazul h1-size">Veja feedbacks sobre o Sinapse</h1>
+    <div class="feedback">
+        <img src="img/coruja-perfil.svg" alt="" class="fotoperfil">
+        <h3 class="hazul h3-size">Nome Completo</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
 </div>
 
 <footer class="footer-inicial">

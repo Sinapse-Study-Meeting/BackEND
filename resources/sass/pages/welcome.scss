@@ -1,220 +1,243 @@
-@import '../assets/variables';
-@import '../components/reset';
-@import '../components/logo';
-@import '../components/style';
-@import "../components/btn";
-.navbar__home {
-    position: fixed;
-    padding: 10px calc(8%/2);
-    display: inline-flex;
-    width: 100%;
-}
-
-.top-right {
-    padding: 20px;
-    right: 10px;
-    position: absolute;
-}
-
-.content {
-    height: 100vh;
-    text-align: center;
-    background-image: url("../img/telaInicio.svg");
-    background-repeat: no-repeat;
-    width: 100%;
-    background-size: cover;
-}
-
-.title {
-    font-size: 2.2rem;
-    color: #ffffff;
-    font-weight: bold;
-}
-
-.links>a {
-    color: #ffffff;
-    padding: 0 25px;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: .1rem;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-.m-b-md {
-    position: relative;
-}
-
-.botaoinicio {
-    background-color: #09182c;
-    padding: 14px;
-    color: white;
-    font-size: 1rem;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    font-weight: 600;
-}
-
-.botaoinicio:hover {
-    background-color: #071324;
-}
-
-.botaosaiba {
-    border: 2px solid #ffffff;
-    padding: 12px;
-    width: 17em;
-    color: #ffffff;
-    font-weight: 600;
-    font-size: 1rem;
-    border-radius: 7px;
-}
-
-.botaosaiba:hover {
-    background-color: #213c5f;
-}
-
-.homebutton {
-    padding-top: 25px;
-    display: grid;
-    width: 100%;
-    position: absolute;
-    justify-content: center;
-}
-
-.conteudo-home {
-    text-align: center;
-    position: absolute;
-    justify-content: right;
-    right: calc(8%/2);
-    max-width: 100%;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-a:hover {
-    text-decoration: none;
-    font-weight: bold;
-    color: #ffffff;
-}
-
-@media(max-width: 1100px) {
-    .content {
-        background-image: url("../img/telaLampamin.svg");
-        background-position: center;
-    }
-    .conteudo-home {
-        padding: 10px;
-        position: absolute;
-        justify-content: center;
-        align-items: center;
-        right: 0;
-        top: calc(110%/2);
-        left: 0;
-        padding-left: 20px;
-    }
-}
-
-.footer-inicial {
-    background-image: url("../img/footer.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 70vh;
-    position: relative;
-    width: 100%;
-    color: #ffffff;
-}
-
-.footer-inicial a {
-    color: white;
-}
-
-.conteudofooter {
-    position: relative;
-    top: 30%;
-    text-align: center;
-}
-
-.leftfooter {
-    width: 250px;
-}
-
-.alinha {
-    display: inline-block;
-    padding: 20px;
-}
-
-.leftfooter p {
-    margin-top: 20px;
-    text-align: justify;
-}
-
-.menufooter {
-    position: relative;
-    bottom: 50px;
-    min-width: 40%;
-}
-
-.linkcontatos {
-    text-align: center;
-    min-width: 30%;
-    position: relative;
-    bottom: 40px;
-}
-
-.linkcontatos li {
-    display: inline-block;
-}
-
-.linkcontatos a {
-    position: relative;
-}
-
-.linkcontatos img {
-    border: 1px solid white;
-    border-radius: 50%;
-    margin: 10px;
-}
-
-.copyright {
-    bottom: 15px;
-    text-align: center;
-    width: 100%;
-    position: absolute;
-}
-
-.corpohome {
-    text-align: center;
-}
-
-.recomendacao {
-    background-color: rgb(212, 223, 245);
-    padding: 40px;
-    margin: 20px;
-    height: 30vh;
-    border-radius: 5px;
-}
-
-.recomendacao a {
-    position: relative;
-    top: 30px;
-}
-
-.porquesinapse {
-    width: 150px;
-    left: 200px;
-}
-
-.motivos {
-    position: relative;
-    width: 100%;
-    display: table;
-}
-
-.motivos .conteudomotivos {
-    display: inline-table;
-    padding: 40px;
-}
-
-.titulomotivos {
-    margin-top: 40px;
-}
+        @import '../assets/variables';
+        @import '../components/reset';
+        @import '../components/logo';
+        @import '../components/style';
+        @import "../components/btn";
+        .navbar__home {
+            position: fixed;
+            padding: 10px calc(8%/2);
+            display: inline-flex;
+            width: 100%;
+        }
+        
+        .top-right {
+            padding: 20px;
+            right: 10px;
+            position: absolute;
+        }
+        
+        .content {
+            height: 100vh;
+            text-align: center;
+            background-image: url("../img/telaInicio.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .title {
+            font-size: 2.2rem;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        
+        .links>a {
+            color: #ffffff;
+            padding: 0 25px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: .1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        
+        .m-b-md {
+            position: relative;
+        }
+        
+        .botaoinicio {
+            background-color: #09182c;
+            padding: 14px;
+            color: white;
+            font-size: 1rem;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .botaoinicio:hover {
+            background-color: #071324;
+        }
+        
+        .botaosaiba {
+            border: 2px solid #ffffff;
+            padding: 12px;
+            width: 17em;
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 7px;
+        }
+        
+        .botaosaiba:hover {
+            background-color: #213c5f;
+        }
+        
+        .homebutton {
+            padding-top: 25px;
+            display: grid;
+            width: 100%;
+            position: absolute;
+            justify-content: center;
+        }
+        
+        .conteudo-home {
+            text-align: center;
+            position: absolute;
+            justify-content: right;
+            right: calc(8%/2);
+            max-width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        a:hover {
+            text-decoration: none;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        
+        @media(max-width: 1100px) {
+            .content {
+                background-image: url("../img/telaLampamin.svg");
+                background-position: center;
+            }
+            .conteudo-home {
+                padding: 10px;
+                position: absolute;
+                justify-content: center;
+                align-items: center;
+                right: 0;
+                top: calc(110%/2);
+                left: 0;
+                padding-left: 20px;
+            }
+        }
+        
+        .footer-inicial {
+            background-image: url("../img/footer.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 70vh;
+            position: relative;
+            color: #ffffff;
+        }
+        
+        .footer-inicial a {
+            color: white;
+        }
+        
+        .conteudofooter {
+            position: relative;
+            top: 30%;
+            text-align: center;
+        }
+        
+        .leftfooter {
+            width: 250px;
+        }
+        
+        .alinha {
+            display: inline-block;
+            padding: 20px;
+        }
+        
+        .leftfooter p {
+            margin-top: 20px;
+            text-align: justify;
+        }
+        
+        .menufooter {
+            position: relative;
+            bottom: 50px;
+            min-width: 40%;
+        }
+        
+        .linkcontatos {
+            text-align: center;
+            min-width: 30%;
+            position: relative;
+            bottom: 40px;
+        }
+        
+        .linkcontatos li {
+            display: inline-block;
+        }
+        
+        .linkcontatos a {
+            position: relative;
+        }
+        
+        .linkcontatos img {
+            border: 1px solid white;
+            border-radius: 50%;
+            margin: 10px;
+        }
+        
+        .copyright {
+            bottom: 15px;
+            text-align: center;
+            position: absolute;
+        }
+        
+        .corpohome {
+            text-align: center;
+        }
+        
+        .recomendacao {
+            background-color: rgb(222, 231, 248);
+            padding: 40px;
+            margin: 20px 0px;
+            height: 30vh;
+        }
+        
+        .recomendacao a {
+            position: relative;
+            top: 30px;
+        }
+        
+        .porquesinapse {
+            width: 150px;
+            left: 200px;
+        }
+        
+        .motivos {
+            position: relative;
+            width: 100%;
+            display: table;
+        }
+        
+        .motivos .conteudomotivos {
+            display: inline-table;
+            padding: 40px;
+        }
+        
+        .titulomotivos {
+            margin-top: 40px;
+        }
+        
+        .categoriawelcome img {
+            height: 260px;
+            width: 160px;
+        }
+        
+        .primeiralinha {
+            display: inline-block;
+        }
+        
+        .categoriawelcome img {
+            margin: 10px;
+        }
+        
+        .fotoperfil {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            background-color: white;
+        }
+        
+        .feedback {
+            background-color: rgb(241, 241, 241);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
