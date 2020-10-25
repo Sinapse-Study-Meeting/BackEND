@@ -46,13 +46,13 @@ Route::post('/grupo/{grupo}/editar', 'GruposController@editar');
 
 // CHAT ROUTES
 
-Route::get('/chat', 'ChatController@chat');
+// Route::get('/chat', 'ChatController@chat');
 
-Route::get('/chat/conversas', 'ChatController@conversas');
+// Route::get('/chat/conversas', 'ChatController@conversas');
 
-Route::post('/enviar_mensagem/{chat?}', 'ChatController@enviar_mensagem');
+// Route::post('/enviar_mensagem/{chat?}', 'ChatController@enviar_mensagem');
 
-Route::get('/chat/{chat}/mensagens', 'ChatController@mensagens_chat');
+// Route::get('/chat/{chat}/mensagens', 'ChatController@mensagens_chat');
 
 
 Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function() {

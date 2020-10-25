@@ -13,14 +13,14 @@ class CreateMensagensTable extends Migration
      */
     public function up()
     {
-        Schema::create('mensagens', function (Blueprint $table) {
-            $table->id();
-            $table->text('mensagem');
-            $table->foreignId('user_id')->references('id')->on('users');
-            $table->foreignId('chat_id')->references('id')->on('chats');
-            $table->timestamps();
-            $table->engine = 'MyISAM';
-        });
+        // Schema::create('mensagens', function (Blueprint $table) {
+        //     $table->id();
+        //     $table->text('mensagem');
+        //     $table->foreignId('user_id')->references('id')->on('users');
+        //     $table->foreignId('chat_id')->references('id')->on('chats');
+        //     $table->timestamps();
+        //     $table->engine = 'MyISAM';
+        // });
     }
 
     /**

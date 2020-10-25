@@ -13,13 +13,13 @@ class CreateChatUserTable extends Migration
      */
     public function up()
     {
-        Schema::create('chat_user', function (Blueprint $table) {
-            $table->foreignId('user_id')->constrained();
-            $table->foreignId('chat_id')->constrained();
-            $table->id();
-            $table->timestamps();
-            $table->engine = 'MyISAM';
-        });
+        // Schema::create('chat_user', function (Blueprint $table) {
+        //     $table->foreignId('user_id')->constrained();
+        //     $table->foreignId('chat_id')->constrained();
+        //     $table->id();
+        //     $table->timestamps();
+        //     $table->engine = 'MyISAM';
+        // });
     }
 
     /**
