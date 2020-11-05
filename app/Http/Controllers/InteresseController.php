@@ -39,9 +39,9 @@ class InteresseController extends Controller
 
     public function interesses(){
 
-        $ListarInteresses = Auth::user()->interesses()->get();
-
-        return view('perfilinteresses', ['ListarInteresses' => $ListarInteresses]);
+        $ListarInteresses = Auth::user()->interesses;
+        $categorias = Categoria::all();
+        return view('perfilinteresses', ['ListarInteresses' => $ListarInteresses, 'categorias' => $categorias]);
     }
 
     public function  editar(Request $request, Interesse $interesse){
@@ -76,7 +76,7 @@ class InteresseController extends Controller
         catch(Exception $ex)
         {
             DB::rollback();
-            $mensagem = 'Não foi possível apagar seu interesse, tente novamente mais tarde.'
+            $mensagem = 'Não foi possível apagar seu interesse, tente novamente mais tarde.';
         }
         return redirect()->back()->with('status', $mensagem);
     }

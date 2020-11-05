@@ -11,6 +11,8 @@ sans-serif;
 //Layout
 $side-spaces: 8%;
 $box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .04);
+
+$mobile-screen: 740px;
 //Mixins
 @mixin basicBorderBox {
     border: 1px solid $border-color;

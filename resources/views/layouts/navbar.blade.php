@@ -75,4 +75,5 @@
          </div>
      </nav>
  </header>
- @include('vendor.bootstrap')
+
+ @include('layouts.modal') 

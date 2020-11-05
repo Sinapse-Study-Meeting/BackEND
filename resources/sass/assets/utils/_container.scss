@@ -1,0 +1,4 @@
+@import '../variables';
+.container {
+    padding: 0px calc(#{$side-spaces}/2);
+}

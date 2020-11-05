@@ -10,7 +10,7 @@
                 <p class="">{{$message}}</p>
                 @enderror
                 <datalist id="interesse">
-                    @foreach ($interesses as $item)
+                    @foreach ($ListarInteresses as $item)
                     <option>{{$item->assunto}}</option>
                     @endforeach
                 </datalist>

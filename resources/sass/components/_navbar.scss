@@ -1,7 +1,7 @@
 .navbar {
     display: flex;
     justify-content: space-between;
-    padding: 10px calc(8%/2);
+    padding: 10px calc(#{$side-spaces}/2);
     background-color: white;
 }
 
@@ -227,7 +227,7 @@
     display: none;
 }
 
-@media(max-width: 740px) {
+@media(max-width: $mobile-screen) {
     .navbar__trigger {
         display: block;
     }

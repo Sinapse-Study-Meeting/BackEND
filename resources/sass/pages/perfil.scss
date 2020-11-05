@@ -9,8 +9,82 @@
 @import "../components/btn";
 @import "../components/modal";
 @import '../components/form';
+@import '../assets/utils/container';
+
 body {
     background-color: #F9F9F9;
+}
+
+.perfil-layout
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 25px;
+
+    &__aside {
+        padding: 25px 15px 15px 15px;
+        @include basicBorderBox;
+        min-width: 320px;
+        background-color: white;
+        @media (min-width: $mobile-screen) {
+            margin-right: 20px;
+        }
+        .user-information {
+            text-align: center;
+        }
+        ul {
+            border-radius: 0px;
+        }
+        
+        h5 {
+            color: $primary-color;
+            font-family: 'Nunito', sans-serif;
+            font-weight: bold;
+            font-size: 25px;
+        }
+
+        .form-perfil {
+            margin-top: 25px;
+            padding: 50px 40px 20px 40px;
+            border: 1px solid rgb(235, 235, 235);
+        }
+        
+        .data-list-edit {
+            background-color: $background-color;
+            padding: 20px 10px;
+            @include basicBorderBox;
+            margin: 20px 0px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &__data > li:not(:last-child) {
+                margin-bottom: 12px;
+            }
+            a {
+                position: relative;
+            }
+        }
+
+        .buttonadicionar {
+            position: relative;
+            float: right;
+            padding: 12px;
+            width: 100px;
+            right: 10px;
+        }
+
+        .rpassaword {
+            @extend .btn--primary;
+            color: white;
+            display: block;
+            text-align: center;
+            .left-button-icon
+            {
+                color: white;
+                vertical-align: middle;
+            }
+        }
+    }
 }
 
 .interesses-cadastrados {
@@ -66,25 +140,7 @@ body {
     text-transform: capitalize;
 }
 
-.information {
-    margin-top: 25px;
-    border: 2px solid rgb(235, 235, 235);
-    width: 320px;
-    height: 100%;
-    border-radius: 7px;
-    background-color: white;
-}
 
-.information ul {
-    border-radius: 0px;
-}
-
-.information h5 {
-    color: $primary-color;
-    font-family: 'Nunito', sans-serif;
-    font-weight: bold;
-    font-size: 25px;
-}
 
 ul .list-group-item {
     border: none;
@@ -100,15 +156,7 @@ ul .list-group-item {
     font-weight: 500;
 }
 
-.fundo-perfil {
-    padding-top: 50px;
-}
 
-.form-perfil {
-    margin-top: 25px;
-    padding: 50px 40px 20px 40px;
-    border: 1px solid rgb(235, 235, 235);
-}
 
 .img-redefinirsenha {
     display: block;
@@ -125,28 +173,4 @@ ul .list-group-item {
 
 .toggle {
     text-decoration: none;
-}
-
-.dadospessoais {
-    background-color: #F9F9F9;
-    padding: 20px;
-    border: 1px solid $border-color;
-    margin: 20px;
-}
-
-.dadospessoais p {
-    margin-bottom: 10px;
-}
-
-.dadospessoais a {
-    position: relative;
-    float: right;
-}
-
-.buttonadicionar {
-    position: relative;
-    float: right;
-    padding: 12px;
-    width: 100px;
-    right: 10px;
 }
