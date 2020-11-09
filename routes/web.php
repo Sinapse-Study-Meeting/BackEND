@@ -60,7 +60,4 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function() {
     Route::post('/', 'AdminController@atualizar_relatorio_user')->name('atualizar_relatorio_user');
 });
 
-Route::view('/perfil', 'perfilusuarios');
-
-
-Route::view('/menu', 'menuadm');
+Route::view('/perfil', 'perfilamigos');

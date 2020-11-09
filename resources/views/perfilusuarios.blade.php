@@ -13,8 +13,8 @@
 <main class="container l-content-aside perfiluser">
     <article class="l-content-aside__main">
         <div class="divisaoperfil">
-            <div class="image-perfil">
-                <img src="{!! asset('img/coruja-perfil.svg')!!}" alt="usuario" id="imagemusuario">
+            <div class="image-circle">
+                <img src="{{ asset('img/coruja-perfil.svg') }}" alt="usuario" id="imagemusuario">
             </div>
             <div class="infoperfil">
                 <h1 class="hazul h1-size">Janaina Silva Rapanelli</h1>
