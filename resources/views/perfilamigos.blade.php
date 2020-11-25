@@ -21,12 +21,12 @@
                 </div>
             </div>
             <div class="conteudoperfil">
-                <h1 class="h1-size hazul">Nome Usuario</h1>
+                <h1 class="h1-size hazul">Janaina Silva Rapanelli</h1>
                 <button type="submit" class="btn--primary"><i class="fas fa-plus"></i>Adicionar</button>
                 <div class="sobreuser">
-                    <p>E-mail:</p>
-                    <p>Cidade:</p>
-                    <p>Estado:</p>
+                    <p>E-mail: janaina1234s@gmail.com</p>
+                    <p>Cidade: Presidente Prudente</p>
+                    <p>Estado: São Paulo</p>
                 </div>
                 <div class="sobreperfil">
                     <p class="hclaro">350 Amigos</p>
@@ -54,11 +54,11 @@
             <div class="blocoperfil">
                 <h2 class="h2-size hclaro"> Interesses</h2>
                 <h3 class="hazul h3-size">Javascript</h3>
-                <p>Categoria: </p>
-                <p>Nivel de Conhecimento:</p>
-                <h3 class="hazul h3-size">Javascript</h3>
-                <p>Categoria: </p>
-                <p>Nivel de Conhecimento:</p>
+                <p>Categoria: Tecnologia</p>
+                <p>Nivel de Conhecimento: Básico</p>
+                <h3 class="hazul h3-size">Direito Penal</h3>
+                <p>Categoria: Direito</p>
+                <p>Nivel de Conhecimento: intermediário</p>
             </div>
         </div>
         </div>

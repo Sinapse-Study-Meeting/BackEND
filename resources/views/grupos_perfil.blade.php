@@ -1,5 +1,4 @@
 @extends('layouts.base')
-@include('vendor.bootstrap')
 @section('title',"Sinapse Grupo de Estudos")
 @section('metas')
 <meta name="description" content="A plataforma para você encontrar sua companhia de estudos">
@@ -14,11 +13,14 @@
 <main class="l-content-aside main-grupo">
     <aside class="l-content-aside__perquisargrupo">
         <div class="lateral-grupo">
-
             <div class="input-pesquisar-grupos">
-                <div class="input-group ">
-                    <input class="form-control" type="text" placeholder="Pesquisar grupos">
+                <div class="input-field">
+                    <input type="text" placeholder="Pesquisar grupos">
+                    <div class="icones">
+                        <img src="{{asset('img/bx-search-alt.svg')}}">
+                     </div>
                 </div>
+                
             </div>
             <hr>
 
@@ -47,7 +49,7 @@
                     <div class="d-flex justify-content-center">
                         <img src="{{ asset('img/coruja-triste.svg')}}" class="img-notgrupo">
                     </div>
-                    <h2 class="hclaro h3-size ml-2 ">Você não participa de nenhum grupo de estudos</h2>
+                    <h3 class="hclaro h3-size ml-2 ">Você não participa de nenhum grupo de estudos</h3>
                     <div class="group-profile-buttons">
                         <h3 class="hazul">Você pode tentar:</h3>
                         <button type="submit" class="buttons"><i class="fas fa-plus"></i>Criar um grupo </button>
@@ -60,14 +62,13 @@
     </aside>
     <article class="conteudo-grupo l-content-aside__main">
         <div class="cabecalhoperfil">
-            <h3 class="d-flex justify-content-center h1-size hclaro">Informação do grupo</h3>
-
-            <div class="d-flex flex-row">
+            <h1 class="h1-size hclaro">Informação do grupo</h1>
+            <div class="nomegrupo">
                 <img src="{{ asset('img/estudos.png')}}" class="perfil-gropoimg">
                 <h4 class=" hazul align-self-center"> {{$grupoAtivo->nome}} </h4>
             </div>
 
-            <div class="group-wrapper ">
+            <div class="group-wrapper">
                 <div class="group-content">
                     <span><img src="{{ asset('img/bxs-group.svg')}}" alt=""> Grupo - {{$grupoAtivo->users->count()}} pessoas<span>
 
@@ -77,13 +78,14 @@
                             <img src="{{ asset('img/coruja-perfil.svg')}}" class="pessoas-grupos">
                 </div>
 
-                <div class="group-profile-buttons convidar ">
-                    <button class="buttons" type="button">Convidar +</button>
+                <div class="convidar ">
+                    <a href="#" class="btn--primary toggle "
+                    data-target="convidarGrupo">Convidar +</a>
                 </div>
             </div>
 
             <hr>
-            <div class="d-flex flex-row justify-content-between menu-grupos">
+            <div class="menu-grupos">
                 <a href="">Sobre</a>
                 <a href="">Postagens</a>
                 <a href="">Arquivos</a>
@@ -91,14 +93,14 @@
 
             </div>
         </div>
-        <div class="d-flex flex-row">
+        <div class="">
             <div class="pensando-grupo">
                 <div class="input-pesquisar-grupos pesquisar-grupos">
-                    <div class="input-group ">
+                    <div class="input-field">
                         <img src="{{ asset('img/coruja-perfil.svg')}}" class="pessoas-grupos">
-                        <input style="border-radius: 4px" class="form-control ml-3" type="text" placeholder="No que você está pensando, bb?">
+                        <input type="text" placeholder="No que você está pensando? ">
                     </div>
-                    <div class="pt-2 ml-5">
+                    <div class="">
                         <a href=""><i class="fas fa-images "></i><span>Foto/video</span></a>
                         <a href=""><i class="fas fa-user-check ml-3 "></i><span>Marcar </span></a>
                     </div>
@@ -190,8 +192,9 @@
         <button type="submit" class="btn--primary"> Enviar </button>
     </form>
 </div>
-
+@include('modalConvidarGrupo')
     @section('scripts')
         <script src="{{asset('js/toggle.js')}}"></script>
         <script src="{{asset('js/grupo.js')}}"></script>
     @endsection
+   
