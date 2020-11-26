@@ -145,6 +145,12 @@
     font-weight: bold;
 }
 
+.menu-grupos {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
 .menu-grupos a:hover {
     background-color: #f1f1f1;
     border-radius: 4px;
@@ -155,14 +161,15 @@
 }
 
 .pensando-grupo {
-    flex: 55%;
     border-radius: 10px;
     padding: 5px;
+    max-width: 650px;
 }
 
 .sobre-grupo {
-    flex: 35%;
+    position: relative;
     margin-left: 10px;
+    max-width: 350px;
 }
 
 .sobre-grupo .hazul {
@@ -236,18 +243,60 @@
 }
 
 //Modal Convidar usuario para grupo 
+.titulomodal {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.conteudomodal {
+    border-bottom: 2px solid $border-color;
+}
+
 .sugestaoparticipante {
     display: flex;
     width: 100%;
 }
 
+.sugestao {
+    overflow-y: auto;
+    height: 200px;
+    padding: 10px;
+}
+
+.sugestaogrupo {
+    width: 59%;
+}
+
+.amigosselecionados {
+    width: 40%;
+    position: absolute;
+    top: 100px;
+    padding: 10px;
+    height: 290px;
+    background-color: $background-color;
+}
+
+.listaamigos {
+    overflow-y: auto;
+}
+
+.sugestaogrupo,
+.amigosselecionados {
+    display: inline-block;
+}
+
 .sugestaoparticipante input {
-    width: 20px;
+    min-width: 20px;
     height: 20px;
     position: relative;
     margin-top: auto;
     margin-bottom: auto;
     display: block;
+    margin-left: 35%;
+}
+
+.input-pesquisar-grupos {
+    margin-right: 10px;
 }
 
 .sugestaoparticipante h4 {
@@ -266,6 +315,8 @@
     border: 1px solid $border-color;
 }
 
-.amigosselecionados {
-    background-color: $background-color;
+.modalconvidarusuario button {
+    position: relative;
+    margin-top: 20px;
+    float: right;
 }

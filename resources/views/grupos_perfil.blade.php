@@ -46,7 +46,7 @@
            
             @empty
                 <div class="notgrupo">
-                    <div class="d-flex justify-content-center">
+                    <div class="justify-content-center">
                         <img src="{{ asset('img/coruja-triste.svg')}}" class="img-notgrupo">
                     </div>
                     <h3 class="hclaro h3-size ml-2 ">Você não participa de nenhum grupo de estudos</h3>
@@ -102,11 +102,11 @@
                     </div>
                     <div class="">
                         <a href=""><i class="fas fa-images "></i><span>Foto/video</span></a>
-                        <a href=""><i class="fas fa-user-check ml-3 "></i><span>Marcar </span></a>
+                        <a href=""><i class="fas fa-user-check "></i><span>Marcar </span></a>
                     </div>
                 </div>
 
-                <div class="box-aside mt-3">
+                <div class="box-aside">
                     <div class="hclaro"><img src="{{ asset('img/news-claro-24.png')}}" alt="">Post</div>
                     <div class="box-post"><img src="{{ asset('img/bx-image.svg')}}">
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
@@ -158,8 +158,7 @@
                 </div>
 
             </div>
-            <div>
-            </div>
+
     </article>
 </main>
 
