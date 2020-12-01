@@ -9,6 +9,7 @@
 @endsection
 @section('content')
 @include("layouts.navbar")
+    <div class="mainperfil">
     <div class="perfilcompleto">
         <div class="blocoperfil">
             <div class="avatar">
@@ -63,6 +64,7 @@
         </div>
         </div>
     </div>
+</div>
 @section('scripts')
 <script src="{{asset('js/search-bar.js')}}"></script>
 <script src="{{asset('js/toggle.js')}}"></script>

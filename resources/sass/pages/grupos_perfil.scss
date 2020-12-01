@@ -13,9 +13,16 @@
     margin-top: 50px;
 }
 
+.perfildireito {
+    max-width: 400px;
+}
+
+.perfilesquerdo {
+    max-width: 650px;
+}
+
 .main-grupo {
-    background-color: $background-color;
-    border-top: 2px solid $border-color;
+    border-top: 6px solid #2C3E50;
 }
 
 .lateral-grupo {
@@ -65,7 +72,6 @@
     height: 30px;
     border-radius: 50%;
     border: 1px solid $border-color;
-    margin-right: 10px;
     background-color: white;
 }
 
@@ -115,7 +121,7 @@
 }
 
 .convidar {
-    margin-left: 20px;
+    position: relative;
 }
 
 .group-profile-buttons .buttons {
@@ -163,13 +169,11 @@
 .pensando-grupo {
     border-radius: 10px;
     padding: 5px;
-    max-width: 650px;
 }
 
 .sobre-grupo {
     position: relative;
     margin-left: 10px;
-    max-width: 350px;
 }
 
 .sobre-grupo .hazul {
@@ -242,6 +246,12 @@
     width: 100%;
 }
 
+.convidar {
+    position: absolute;
+    margin-top: 20px;
+    right: 90px;
+}
+
 //Modal Convidar usuario para grupo 
 .titulomodal {
     margin-top: 10px;
@@ -255,6 +265,8 @@
 .sugestaoparticipante {
     display: flex;
     width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .sugestao {

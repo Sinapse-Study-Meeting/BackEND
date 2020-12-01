@@ -10,42 +10,41 @@
             <div class="register-section__item">   
                <h2 class="welcome-sub-info">Faça seu cadastro abaixo:</h2>
                <hr>
-               <form method="POST" action="{{ route('register') }}" class="formcadastrar">
+               <form method="POST" action="{{ route('register') }}" class="form-control">
                   @csrf
                   <div class="input-field"> 
                      <input type="text" id="name" name="name" class="@error('name') is-invalid @enderror" value="{{ old('name') }}" required autocomplete="name" autofocus>
                      <label for="name">Nome</label>
                      <div class="icones">
-                           <img src="{{asset('img/bxs-user.svg')}}">
-                  </div>
-                     
+                        <img src="{{asset('img/bxs-user.svg')}}">
+                     </div>
                   </div>
                   @error('name')
-                     <span class="invalid-feedback" role="alert" style="display: block;">
+                     <span class="invalid-feedback" role="alert" >
                            <strong>{{ $message }}</strong>
                      </span>
                   @enderror
                   <div class="formajuntar">
-                  <div class="form-group " >
+                  <div class="form-groupselect" >
                      <label for="estado">Estados</label>
                      <select class="form-control" id="estado" name="state" class="@error('state') is-invalid @enderror" required>
                         <option disabled selected>Selecione</option>
                      </select>
-                     </div>
+                  </div>
                      @error('state')
-                     <span class="invalid-feedback" role="alert" style="display: block;">
+                     <span class="invalid-feedback" role="alert" >
                            <strong>{{ $message }}</strong>
                      </span>
                      @enderror
-                     <div class="form-group input60">
+                     <div class="form-groupselect cidadeselect">
                      <label for="cidade">Cidades</label>
                         <select class="form-control" id="cidade"  name="city" class="@error('city') is-invalid @enderror" required>
-                           <option disabled selected>Selecione o estado primeiro</option>
+                        <option disabled selected>Selecione o estado primeiro</option>
                         </select>
                      </div>
                   </div>
                      @error('city')
-                        <span class="invalid-feedback" role="alert" style="display: block;">
+                        <span class="invalid-feedback" role="alert">
                               <strong>{{ $message }}</strong>
                         </span>
                      @enderror
@@ -56,12 +55,12 @@
                         <img src="{{asset('img/mail-send.svg')}}">
                      </div>
                      @error('email')
-                     <span class="invalid-feedback" role="alert" style="display: block;">
+                     <span class="invalid-feedback" role="alert">
                            <strong>{{ $message }}</strong>
                      </span>
                      @enderror
-                  </div>
-                  <div class="formajuntar">   
+                  </div> 
+                  <div class="formajuntar">
                   <div class="input-field">
                      <input type="password" id="senha" name="password" class="@error('password') is-invalid @enderror" value="{{ old('password') }}" required autocomplete="new-password">
                      <label for="senha">Senha</label>
@@ -70,22 +69,23 @@
                         <img src="{{asset('img/key.svg')}}">
                      </div>
                   </div>
-                  <div class="input-field input60">
+                  <div class="input-field confirmarsenha">
                      @error('password')
-                  <span class="invalid-feedback" role="alert" style="display: block;">
+                  <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                   </span>
                   @enderror
                      <input type="password" id="confirmarsenha" name="password_confirmation" class="@error('password_confirmation') is-invalid @enderror" value="{{ old('password_confirmation') }}" required autocomplete="new-password">
-                     <label for="confirmarsenha">Confirmar senha</label>
+                     <label for="confirmarsenha" >Confirmar senha</label>
                      <div class="mostrarsenha" onclick="mostrarSenha2()"><img src="{{asset('img/bxs-show.svg')}}" alt="Mostrar senha"></div>
                      <div class="icones">
                         <img src="{{asset('img/key.svg')}}">
                      </div>
                </div>
-                  </div>
+            </div>
+
                @error('password_confirmation')
-                     <span class="invalid-feedback" role="alert" style="display: block;">
+                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                      </span>
                   @enderror

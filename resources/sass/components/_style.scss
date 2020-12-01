@@ -1,5 +1,6 @@
 @import '../assets/variables';
 @import '../assets/utils/image-circle';
+
 /* Customizar barra de rolagem */
 
 ::-webkit-scrollbar {
@@ -129,7 +130,7 @@ hr {
 }
 
 .estudos {
-    width: 100%;
+    width: 90%;
     display: block;
 }
 
@@ -157,7 +158,6 @@ hr {
         display: none;
     }
 }
-
 
 .categoria {
     padding: 20px;

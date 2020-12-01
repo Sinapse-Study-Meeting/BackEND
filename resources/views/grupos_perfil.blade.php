@@ -20,10 +20,8 @@
                         <img src="{{asset('img/bx-search-alt.svg')}}">
                      </div>
                 </div>
-                
             </div>
             <hr>
-
             <h1 class="d-flex justify-content-start h3-size hclaro">Seus grupos</h1>
             @forelse($grupos as $grupo)
            <div class="d-flex justify-content-between">
@@ -66,21 +64,11 @@
             <div class="nomegrupo">
                 <img src="{{ asset('img/estudos.png')}}" class="perfil-gropoimg">
                 <h4 class=" hazul align-self-center"> {{$grupoAtivo->nome}} </h4>
-            </div>
-
-            <div class="group-wrapper">
-                <div class="group-content">
-                    <span><img src="{{ asset('img/bxs-group.svg')}}" alt=""> Grupo - {{$grupoAtivo->users->count()}} pessoas<span>
-
-                            <img src="{{ asset('img/coruja-perfil.svg')}}" class="pessoas-grupos margin-usuarios">
-                            <img src="{{ asset('img/coruja-perfil.svg')}}" class="pessoas-grupos">
-                            <img src="{{ asset('img/coruja-perfil.svg')}}" class="pessoas-grupos">
-                            <img src="{{ asset('img/coruja-perfil.svg')}}" class="pessoas-grupos">
-                </div>
-
-                <div class="convidar ">
-                    <a href="#" class="btn--primary toggle "
-                    data-target="convidarGrupo">Convidar +</a>
+                <div class="group-wrapper">
+                    <div class="convidar">
+                        <a href="#" class="btn--primary toggle "
+                        data-target="convidarGrupo">Convidar +</a>
+                    </div>
                 </div>
             </div>
 
@@ -93,7 +81,7 @@
 
             </div>
         </div>
-        <div class="">
+            <div class="perfilesquerdo">
             <div class="pensando-grupo">
                 <div class="input-pesquisar-grupos pesquisar-grupos">
                     <div class="input-field">
@@ -117,7 +105,8 @@
                     </div>
                 </div>
             </div>
-
+            </div>
+            <div class="perfildireito">
             <div class="sobre-grupo">
                 <div class="informacao-grupo">
                     <h3 class=" hazul">Sobre o grupo</h3>
@@ -156,7 +145,6 @@
                         <button type="submit" class="buttons"><i class="fas fa-search"></i>Visualizar tudo </button>
                     </div>
                 </div>
-
             </div>
 
     </article>
