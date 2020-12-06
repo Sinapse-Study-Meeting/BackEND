@@ -51,7 +51,7 @@
             <img src="{{  asset('img/verde.svg') }}" class="porquesinapse">
             <p>Aprendizagem personalizada e colaborativa<p>
         </div>
-    
+
         <div class="conteudomotivos">
             <img src="{{  asset('img/vermelho.svg') }}" class="porquesinapse">
             <p>Ferramentas que facitam aprendizado<p>
@@ -76,18 +76,32 @@
         <hr>
     </div>
     <div class="categoriawelcome">
-        <h1 class="hazul h1-size">Principais categoria acessadas</h1>
-        <div class="primeiralinha">
-            <img src="{{ asset('img/historia.jpeg')}}" class="catewelcome">
-            <img src="{{ asset('img/direito.jpeg')}}" class="catewelcome">
-            <img src="{{ asset('img/geografia.jpeg')}}" class="catewelcome">
-            <img src="{{ asset('img/ingles.jpeg')}}" class="catewelcome">
-        </div>
-        <div class="segundalinha">
-            <img src="{{ asset('img/matematica.jpg')}}" class="catewelcome">
-            <img src="{{ asset('img/ciencia.jpeg')}}" class="catewelcome">
-            <img src="{{ asset('img/tecnologia.jpeg')}}" class="catewelcome">
-            <img src="{{ asset('img/saude.jpeg')}}" class="catewelcome">
+        <h1 class="hazul h1-size">Principais categorias acessadas</h1>
+        <div class="categorias-principais">
+            <div class="categoria-principal">
+                <img src="{{ asset('img/historia.jpeg')}}" class="catewelcome">
+            </div>
+            <div class="categoria-principal">
+                <img src="{{ asset('img/direito.jpeg')}}" class="catewelcome">
+            </div>
+            <div class="categoria-principal">
+                <img src="{{ asset('img/geografia.jpeg')}}" class="catewelcome">
+            </div>
+            <div class="categoria-principal">
+                <img src="{{ asset('img/ingles.jpeg')}}" class="catewelcome">
+            </div>
+            <div class="categoria-principal">
+                <img src="{{ asset('img/matematica.jpg')}}" class="catewelcome">
+            </div>
+            <div class="categoria-principal">
+                <img src="{{ asset('img/ciencia.jpeg')}}" class="catewelcome">
+            </div>
+            <div class="categoria-principal">
+                <img src="{{ asset('img/tecnologia.jpeg')}}" class="catewelcome">
+            </div>
+            <div class="categoria-principal">
+                <img src="{{ asset('img/saude.jpeg')}}" class="catewelcome">
+            </div>
         </div>
         <p>Transforme sua vida por meio da educação e deixe a Sinapse te ajudar nisso.</p>
         <hr>

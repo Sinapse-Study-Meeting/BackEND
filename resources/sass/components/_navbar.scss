@@ -3,6 +3,7 @@
     justify-content: space-between;
     padding: 10px calc(#{$side-spaces}/2);
     background-color: white;
+    z-index: 999999;
 }
 
 .navbar__trigger {
