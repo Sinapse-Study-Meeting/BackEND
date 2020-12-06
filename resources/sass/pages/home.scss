@@ -8,7 +8,7 @@
 @import '../layouts/l-content-aside';
 @import "../components/btn";
 @import "../components/modal";
-@import '../components/form';
+@import '../assets/utils/container';
 
 body {
     background-color: $background-color;
@@ -25,14 +25,20 @@ body {
         justify-content: space-between;
         flex-wrap: wrap;
     }
+    &__title {
+        font-size: 21px;
+        font-weight: bold;
+        color: $text-color;
+        margin-bottom: 5px;
+    }
+    &__description {
+        font-size: 14px;
+        margin-bottom: 1.8em;
+    }
 }
 
 .grupospessoais {
     padding-top: 20px;
-}
-
-.container {
-    padding: 0px $side-spaces/2;
 }
 
 .home-interesse-form-group {

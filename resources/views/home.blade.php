@@ -19,6 +19,8 @@
         <section class="interesses">
             <form class="home-adicionar-interesse" action="{{route('criarinteresse')}}" method="post">
                 @csrf
+                <h2 class="home-adicionar-interesse__title">Adicione alguns interesses</h2>
+                <p class="home-adicionar-interesse__description">Os interesses são necessários para podermos recomendar grupos e pessoas para estudar.</p>
                 <div class="home-adicionar-interesse__fields">
                     <div class="form-group home-interesse-form-group">
                         <label for="interesse-field">No que você tem interesse em estudar?</label>

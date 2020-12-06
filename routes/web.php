@@ -41,19 +41,11 @@ Route::post('/grupo/{grupo}/apagar', 'GruposController@apagar');
 
 Route::post('/criargrupos', 'GruposController@criargrupo')->name('criargrupo');
 
+Route::middleware('auth')->group(function() {
+        Route::get('search/', 'SearchController@search')->name('search');
+});
 
 Route::post('/grupo/{grupo}/editar', 'GruposController@editar');
-
-// CHAT ROUTES
-
-// Route::get('/chat', 'ChatController@chat');
-
-// Route::get('/chat/conversas', 'ChatController@conversas');
-
-// Route::post('/enviar_mensagem/{chat?}', 'ChatController@enviar_mensagem');
-
-// Route::get('/chat/{chat}/mensagens', 'ChatController@mensagens_chat');
-
 
 Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function() {
     Route::get('/', 'AdminController@index')->name('index');
