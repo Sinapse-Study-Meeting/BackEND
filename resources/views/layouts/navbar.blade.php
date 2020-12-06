@@ -27,6 +27,34 @@
              <i class='bx bx-plus-circle left-button-icon'></i>
              Grupo
          </a>
+         <x-modal id="grupoModal">
+            <form action="{{route('criargrupo')}}" method="post">
+                @csrf
+                <div class="form-group">
+                    <label for="nome-field">Nome do grupo</label>
+                    <input class="form-field" id="nome-field" type="text" name="nome">
+                    @error('nome')
+                    <p class="">{{$message}}</p>
+                    @enderror
+                </div>
+                <div class="form-group">
+                    <label for="interesse_field">Áreas de estudo do grupo </label>
+                    <input class="form-field" id="interesse_field" name="areas_estudo">
+                    <span class="field-helper">Separe as áreas por vírgula</span>
+                    @error('interesse')
+                        <span class="form-group__error">{{$message}}</span>
+                    @enderror
+                </div>
+                <div class="form-group">
+                    <label for="descricao">Crie uma descrição marcante para seu grupo</label>
+                    <textarea name="descricao" class="form-field" id="descricao"></textarea>
+                    @error('descricao')
+                        <span class="form-group__error">{{$message}}</span>
+                    @enderror
+                </div>
+                <button type="submit" class="btn--primary"> Enviar </button>
+            </form>
+         </x-modal>
          <a href="{{url('/chat')}}" class="navbar__menu__item ">
              <i class='bx bxs-chat left-button-icon'></i>
              Chat
@@ -59,6 +87,7 @@
                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                      @csrf
                  </form>
+
                  @else
                  @if(!Route::is('register'))
                  <a href="{{route('register')}}" class="navbar__menu__item">
@@ -75,5 +104,3 @@
          </div>
      </nav>
  </header>
-
- @include('layouts.modal') 
