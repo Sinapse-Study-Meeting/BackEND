@@ -20,6 +20,7 @@ class CreateNotificacoesTable extends Migration
             $table->tinyInteger('status')->unsigned();
             $table->foreignId('user_id')->constrained();
             $table->timestamps();
+            $table->engine = 'MyISAM';
         });
     }
 
@@ -30,6 +31,6 @@ class CreateNotificacoesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('notificacaos');
+        Schema::dropIfExists('notificacoes');
     }
 }
