@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -78,6 +79,12 @@ class GruposController extends Controller
         if(Auth::user()->grupos->count() > 0)
             return redirect('/meus-grupos')->with('status', 'Grupo deletado com sucesso');
         return redirect()->route('home')->with('status', 'Grupo deletado com sucesso');
+    }
+
+    public function convidar(Grupo $grupo, User $user)
+    {
+        $grupo->convites()->create(['user_id' => $user->id]);
+        return redirect()->back();
     }
 
 }

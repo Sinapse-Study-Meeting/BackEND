@@ -63,5 +63,9 @@ class User extends Authenticatable
     public function hasRole($role):bool {
         return (bool) $this->roles()->where('name', $role)->first();
     }
+    public function convites()
+    {
+        return $this->hasMany(ConviteGrupo::class);
+    }
 
 }

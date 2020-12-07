@@ -38,6 +38,7 @@ Route::get('/grupo/{grupo}', 'GruposController@grupo');
 
 Route::post('/grupo/{grupo}/apagar', 'GruposController@apagar');
 
+Route::post('/grupo/{grupo}/convidar/{user}', 'GruposController@convidar')->name('convidar-grupo');
 
 Route::post('/criargrupos', 'GruposController@criargrupo')->name('criargrupo');
 

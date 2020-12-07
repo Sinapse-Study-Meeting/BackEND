@@ -19,4 +19,11 @@ class SearchController extends Controller
             'busca' => $busca
         ]);
     }
+
+    public function searchUserByName(Request $request)
+    {
+        $busca = $request->query('nome');
+        $usuarios = User::where('name', 'like', "%$busca%")->limit(10)->get();
+        return $usuarios;
+    }
 }

@@ -20,7 +20,7 @@
                 <img src="{!! asset('img/dots-vertical.png')!!}" class="imgmenu">
             </div>
             <div class="pesquisar-chat">
-                <input type="text" placeholder="Pesquisar.." class="input-pesquisar"> 
+                <input type="text" placeholder="Pesquisar.." class="input-pesquisar">
             </div>
             <div class="messaging">
                 <div class="inbox_msg">
@@ -63,7 +63,6 @@
 
 @section('scripts')
     <script src="{{asset('js/chat.js')}}"></script>
-    
     <script src="https://js.pusher.com/6.0/pusher.min.js"></script>
     <script>
         // Enable pusher logging - don't include this in production

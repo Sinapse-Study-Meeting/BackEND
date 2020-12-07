@@ -18,4 +18,9 @@ class Grupo extends Model
     public function areas_estudo(){
         return $this->hasMany('App\AreaEstudo');
     }
+    public function convites()
+    {
+        return $this->hasMany(ConviteGrupo::class);
+    }
+
 }
