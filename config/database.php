@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Support\Str;
+$production_database = parse_url(env('DB_PRODUCTION_URL', 'postgres://evyeushqskntiq:79dec31dbab24827dcca491ca00cf53c2c8af4a3ff89713136fea1ab1498cc01@ec2-52-71-55-81.compute-1.amazonaws.com:5432/db31ec2hk3jieh'));
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Default Database Connection Name
@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('APP_ENV', 'local') == 'local' ? env('DB_CONNECTION', 'mysql') : env('DB_CONNECTION', 'pgsql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -66,11 +66,11 @@ return [
         'pgsql' => [
             'driver' => 'pgsql',
             'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', '127.0.0.1'),
-            'port' => env('DB_PORT', '5432'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'host' => $production_database['host'],
+            'port' => $production_database['port'],
+            'database' => ltrim($production_database['path'], '/'),
+            'username' => $production_database['user'],
+            'password' => $production_database['pass'],
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,
