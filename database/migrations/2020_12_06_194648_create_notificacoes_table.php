@@ -20,7 +20,6 @@ class CreateNotificacoesTable extends Migration
             $table->tinyInteger('status')->unsigned();
             $table->foreignId('user_id')->constrained();
             $table->timestamps();
-            $table->engine = 'MyISAM';
         });
     }
 

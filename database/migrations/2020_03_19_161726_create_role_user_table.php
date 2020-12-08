@@ -17,7 +17,6 @@ class CreateRoleUserTable extends Migration
             $table->id();
             $table->foreignId('role_id')->constrained();
             $table->foreignId('user_id')->constrained();
-            $table->engine = 'MyISAM';
             $table->timestamps();
         });
     }

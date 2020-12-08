@@ -19,7 +19,6 @@ use Illuminate\Support\Facades\Schema;
             $table->enum('nivel_conhecimento', ['basico', 'intermediario', 'avancado']);
             $table->string('assunto');
             $table->timestamps();
-            $table->engine = 'MyISAM';
         });
     }
 

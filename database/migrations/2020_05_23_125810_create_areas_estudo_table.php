@@ -18,7 +18,6 @@ class CreateAreasEstudoTable extends Migration
             $table->string('area');
             $table->foreignId('grupo_id')->constrainded();
             $table->timestamps();
-            $table->engine = 'MyISAM';
         });
     }
 

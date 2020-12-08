@@ -19,7 +19,6 @@ use Illuminate\Support\Facades\Schema;
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->enum('papel',['administrador','participante']);
             $table->timestamps();
-            $table->engine = 'MyISAM';
         });
     }
 

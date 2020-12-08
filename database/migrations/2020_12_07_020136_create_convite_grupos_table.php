@@ -18,7 +18,6 @@ class CreateConviteGruposTable extends Migration
             $table->foreignId('user_id')->constrained();
             $table->foreignId('grupo_id')->constrained();
             $table->timestamps();
-            $table->engine = 'MyISAM';
         });
     }
 
