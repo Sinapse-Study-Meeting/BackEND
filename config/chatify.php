@@ -107,5 +107,5 @@ return [
     | By default: Chatify\Http\Controllers
     |
     */
-    'namespace' => env('CHATIFY_ROUTES_NAMESPACE', 'App\Http\Controllers\Vendor\Chatify'),
+    'namespace' => env('CHATIFY_ROUTES_NAMESPACE', 'App\Http\Controllers'),
 ];
