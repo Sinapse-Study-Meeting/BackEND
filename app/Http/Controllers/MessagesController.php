@@ -10,6 +10,7 @@ use Chatify\Http\Models\Favorite;
 use Chatify\Facades\ChatifyMessenger as Chatify;
 use App\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 
@@ -98,7 +99,7 @@ class MessagesController extends Controller
      */
     public function download($fileName)
     {
-        $path = storage_path() . '/app/public/' . config('chatify.attachments.folder') . '/' . $fileName;
+        $path = Storage::url(config('chatify.attachments.folder') . '/' . $fileName);
         if (file_exists($path)) {
             return Response::download($path, $fileName);
         } else {
